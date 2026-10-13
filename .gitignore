@@ -1,0 +1,23 @@
+# LaTeX compilation artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdfsync
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

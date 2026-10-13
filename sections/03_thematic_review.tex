@@ -1,0 +1,60 @@
+\section{Thematic Review: Modalities and Requirement Typologies}
+\label{sec:thematic}
+
+This section addresses \textbf{RQ6.1} (Prototyping operationalization across elicitation and validation) and \textbf{RQ6.3} (Clarification efficacy categorized by requirement type).
+
+\subsection{Prototyping Operationalization and the PAM Framework (RQ6.1)}
+To systematically conceptualize how prototypes are deployed in software engineering, Bjarnason, Lang, and Mj{\"o}berg \cite{bjarnason2023empirically} proposed the Prototyping Assessment Model (PAM), derived from an extensive mapping study and a multi-case study across 11 software organizations. The PAM taxonomy classifies prototypes along five interrelated dimensions:
+\begin{enumerate}
+    \item \textbf{Purpose:} Exploration of unknown problem spaces, elicitation of requirements, validation of specified concepts, or communication across distributed teams.
+    \item \textbf{Scope:} Horizontal (broad architectural/workflow coverage with shallow depth) versus Vertical (narrow feature implementation with full technical depth).
+    \item \textbf{Media / Fidelity:} Low-fidelity (paper sketches, whiteboards, wireframe cutouts) versus High-fidelity (interactive mockups in Figma, clickable web prototypes, code simulations).
+    \item \textbf{Exploration Style:} Open-ended user-driven discovery versus structured test scenario execution.
+    \item \textbf{Lifecycle Stage / Use:} Early-stage exploratory elicitation versus late-stage confirmatory acceptance validation.
+\end{enumerate}
+
+Empirical findings from Gupta et al. \cite{gupta2022strategic} extend the PAM framework to high-uncertainty environments (e.g., startups), demonstrating that prototypes shift dynamically from low-fidelity boundary objects during initial problem exploration to iterative interactive prototypes for feature refinement.
+
+\subsection{Prototyping in Elicitation versus Validation}
+A critical finding emerging from the synthesized literature is the dual operational role of prototyping:
+\begin{itemize}
+    \item \textbf{Elicitation Mode (Unconscious to Conscious):} In early elicitation, prototypes function as exploratory probes. Non-technical stakeholders frequently suffer from tacit knowledge lock-in \cite{ferrari2016ambiguity}; when presented with interactive mockups, unarticulated domain rules and missing functional pathways surface spontaneously as stakeholders attempt realistic navigation tasks \cite{hickey1998prototyping}.
+    \item \textbf{Validation Mode (Hypothesis Testing):} In validation, prototypes serve as unambiguous verification artifacts. Rather than reading abstract behavioral sentences in an SRS, stakeholders evaluate concrete state transitions. Rej et al. \cite{rej2022evolve} observed requirements evolution during interactive discovery sessions, demonstrating that direct system simulation catalyzed real-time corrections: approximately 42\% of initial requirements underwent semantic refinement, constraint tightening, or scope modification within active discovery sessions. Antonelli et al. \cite{antonelli2022iterative} corroborated that iterative scenario walkthroughs utilizing prototype mockups significantly eliminated conflicting interpretations of textual use case scenarios.
+\end{itemize}
+
+\subsection{Efficacy Across Requirement Typologies (RQ6.3)}
+A recurring theme in requirements engineering is that different requirement categories exhibit radically disparate susceptibility to prototyping interventions. Table~\ref{tab:req_typology} synthesizes the empirical evidence across requirement categories.
+
+\begin{table*}[t]
+\centering
+\caption{Synthesis of Prototyping Clarification Efficacy by Requirement Category (RQ6.3)}
+\label{tab:req_typology}
+\begin{tabularx}{\textwidth}{l p{3.2cm} p{3.2cm} X l}
+\toprule
+\textbf{Requirement Type} & \textbf{Typical Specification Defect} & \textbf{Most Effective Prototyping Modality} & \textbf{Observed Empirical Mechanism} & \textbf{Key References} \\
+\midrule
+\textbf{Functional (FR)} & Missing business rules; unhandled alternative flows. & Paper mockups; Clickable wireframes (Low-to-Mid Fidelity). & Navigational exploration exposes absent actions, dead-end workflows, and incomplete CRUD options. & Rueda et al. \cite{rueda2020requirements}, Rej et al. \cite{rej2022evolve} \\
+\addlinespace
+\textbf{Usability / GUI} & Ambiguous layout; unclear information hierarchy; cognitive overload. & Interactive GUI mockups; Clickable high-fidelity screens. & Stakeholders directly evaluate visual affordances, click paths, responsiveness, and learnability metrics. & Panach et al. \cite{uv2023empirical}, Soares et al. \cite{jserd2019protopersona} \\
+\addlinespace
+\textbf{Non-Functional (NFR: Usability/UX)} & Tacit performance or ease-of-use expectations left unmeasured. & Loud Paper Prototyping (LPP) with Think-Aloud protocol. & Verbalizing cognitive friction during Wizard-of-Oz manipulation reveals mental hurdles and navigation bottlenecks. & Abad et al. \cite{abad2018loud} \\
+\addlinespace
+\textbf{Non-Functional (NFR: Quality/Context)} & Vague performance constraints; unquantifiable environmental conditions. & Video-based Prototyping; Narrative workflow videos. & Dynamic audio-visual context conveys temporal pressure, operational environment, and stress scenarios. & Bano et al. \cite{bano2023videos}, Brill et al. \cite{brill2010videos} \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsubsection{Functional Requirements (FR)}
+The literature demonstrates universal consensus that prototyping excels at capturing functional requirements. Visual representations allow users to trace step-by-step transaction flows, instantly identifying missing validation checks, unhandled edge cases, and omitted workflow steps that textual documentation failed to anticipate \cite{rueda2020requirements}.
+
+\subsubsection{Usability and User Interface Requirements}
+Panach et al. \cite{uv2023empirical} conducted an empirical study explicitly evaluating GUI mockups for usability requirement elicitation based on structured interview protocols. Their findings confirmed that interactive GUI mockups provide unmatched precision for defining user interface layout, navigational hierarchy, and error-feedback requirements, transforming subjective aesthetic opinions into concrete UI specifications. Concurrently, Soares et al. \cite{jserd2019protopersona} demonstrated that combining proto-personas with UI sketches empowered non-technical stakeholders to articulate subtle UX needs that conventional text specifications routinely obscure.
+
+\subsubsection{Non-Functional Requirements (NFR) and the Blind-Spot Breakthrough}
+Historically, low-fidelity paper prototyping suffered from an acute vulnerability: an inability to elicit Non-Functional Requirements (e.g., performance, reliability, security, learnability) \cite{rueda2020requirements, davis2018maturity}. Because paper cannot compute or execute background latency, stakeholders naturally focus on visible buttons and ignore systemic quality constraints.
+
+Two groundbreaking methodological interventions successfully overcome this traditional blind spot:
+\begin{enumerate}
+    \item \textbf{Loud Paper Prototyping (LPP):} Abad, Knauss, and Noor \cite{abad2018loud} augmented traditional paper prototypes with a simulated Wizard-of-Oz engine and a concurrent think-aloud protocol. By requiring participants to vocalize their thought processes while the facilitator manually manipulated interface components, LPP achieved statistically significant improvements over traditional elicitation in uncovering usability NFRs ($p = 0.001$), learnability barriers, and navigation logic, alongside a 20\% discovery rate for previously omitted features.
+    \item \textbf{Video-based Prototyping:} Bano, Zowghi, and Ferrari \cite{bano2023videos} and Brill, Schneider, and Knauss \cite{brill2010videos} demonstrated that rich multimedia prototypes (video scenarios) effectively contextualize NFRs. Video demonstrations portray realistic environmental noise, temporal pressure, and human fatigue, enabling stakeholders to recognize latency, throughput, and safety requirements that static text cannot express.
+\end{enumerate}

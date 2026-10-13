@@ -1,0 +1,32 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Requirements Engineering (RE) serves as the foundational cornerstone of the software development lifecycle. Flaws and omissions introduced during requirements activities propagate exponentially downstream, resulting in severe budgetary overruns, architectural rework, and project abandonment \cite{pohl2016requirements, davis2018maturity}. Despite decades of methodological evolution, eliciting complete requirements and specifying them unambiguously remains an open challenge.
+
+\subsection{Problem Statement and Cognitive Barriers}
+A primary root cause of requirements failure resides in human cognitive and communication limitations. Foundational RE frameworks, including the International Requirements Engineering Board (IREB) Certified Professional for Requirements Engineering (CPRE) curriculum \cite{pohl2016requirements}, emphasize that requirements elicitation is inherently an act of mutual knowledge construction between heterogeneous stakeholders. Domain experts, end users, and software engineers inhabit disparate conceptual worlds characterized by distinct professional vocabularies and mental models.
+
+Traditionally, software requirements have been documented predominantly through natural language specifications, such as Software Requirements Specifications (SRS), use case narratives, and textual user stories. However, natural language is inherently susceptible to semantic and structural imperfections, including lexical polysemy, syntactic ambiguity, scope indeterminacy, and tacit knowledge omissions \cite{ferrari2016ambiguity, cascon2025ambiguity}. Stakeholders frequently possess unconscious expectations (tacit knowledge) that remain unarticulated until they interact directly with an operational representation of the system. Textual documents often cultivate an ``illusion of completeness,'' wherein passive approval of lengthy textual specifications masks critical omissions and differing interpretations.
+
+\subsection{The Prototyping Paradigm}
+Prototyping offers a tangible, experiential mechanism to bridge this cognitive gap. By transforming abstract textual representations into concrete visual and interactive artifacts, prototyping establishes a shared mental model (\textit{shared cognitive artifact}) across technical and non-technical stakeholders \cite{bjarnason2023empirically}. Prototyping facilitates participative evaluation \cite{hickey1998prototyping}, stimulates conversational exploration, and grounds abstract requirements in contextual workflows.
+
+Nevertheless, empirical questions persist regarding whether prototyping universally outperforms conventional elicitation and specification techniques, or whether its efficacy depends upon fidelity, interaction modalities, and specific requirement classifications.
+
+\subsection{Research Questions and Analytical Framing}
+This Systematic Literature Review (SLR), conducted within the academic context of SWR302 (Software Requirements, FPT University) under Research Project 6 (RP6), investigates the overarching theme: \textit{``The Effect of Prototyping on Identifying Missing and Unclear Requirements.''} To guide this inquiry, we formalize three core Research Questions:
+\begin{itemize}
+    \item \textbf{RQ6.1 (Modality and Process):} How are prototypes operationalized to support requirements elicitation and validation across varying stages of development?
+    \item \textbf{RQ6.2 (Empirical Efficacy):} Does the utilization of prototypes assist stakeholders in identifying missing or unclear requirements more effectively than traditional textual specifications, Joint Application Design (JAD), and unstructured interviews?
+    \item \textbf{RQ6.3 (Requirement Categorization):} What specific classes of requirements (functional, usability/user interface, non-functional/quality attributes) are clarified most effectively through distinct prototyping media?
+\end{itemize}
+
+To provide academic rigor, every primary study analyzed in this review is evaluated against the mentor's tripartite analytical paradigm:
+\begin{enumerate}
+    \item \textbf{Why (The Rationale):} What cognitive barriers, tacit knowledge gaps, or textual specification failures justify prototyping?
+    \item \textbf{How (The Operational Protocol):} What empirical elicitation workflows, interaction protocols (e.g., Think-Aloud, Wizard-of-Oz), and validation sessions are executed?
+    \item \textbf{Classification (The Taxonomical Dimensions):} How are the prototypes categorized across fidelity levels, media formats, and requirement types under models such as the Prototyping Assessment Model (PAM) \cite{bjarnason2023empirically}?
+\end{enumerate}
+
+\subsection{Paper Structure}
+The remainder of this paper is organized as follows: Section~\ref{sec:methodology} delineates the systematic review methodology and inclusion criteria. Section~\ref{sec:thematic} presents a thematic synthesis addressing RQ6.1 and RQ6.3 under the PAM framework. Section~\ref{sec:comparative} conducts a rigorous empirical comparative analysis addressing RQ6.2. Section~\ref{sec:discussion} critically discusses cost-benefit trade-offs, premature idea cementing, Agile integration, and ambiguity metrics while proposing an empirical agenda to resolve identified research gaps. Finally, Section~\ref{sec:conclusion} concludes the paper.

@@ -1,0 +1,49 @@
+\section{Methodology}
+\label{sec:methodology}
+
+This systematic literature review is conducted in adherence to the established guidelines for evidence-based software engineering formulated by Kitchenham and Charters \cite{kitchenham2007guidelines}. The methodology encompasses search strategy planning, study selection via explicit inclusion/exclusion criteria, data extraction, and thematic synthesis.
+
+\subsection{Search Strategy and Databases}
+We queried four major electronic academic databases indexing high-impact software engineering literature: IEEE Xplore, ACM Digital Library, ScienceDirect (Elsevier), and SpringerLink. Supplementary backward and forward snowballing was conducted on prominent seminal surveys and conference proceedings (e.g., IEEE RE, REFSQ, WER).
+
+The search query was engineered around three conceptual facets:
+\begin{enumerate}
+    \item \textbf{Facet 1 (Intervention):} (\texttt{"prototyping"} OR \texttt{"prototype"} OR \texttt{"mock-up"} OR \texttt{"wireframe"} OR \texttt{"paper prototype"});
+    \item \textbf{Facet 2 (Domain/Phase):} (\texttt{"requirements elicitation"} OR \texttt{"requirements validation"} OR \texttt{"requirements engineering"});
+    \item \textbf{Facet 3 (Outcome/Phenomenon):} (\texttt{"missing requirements"} OR \texttt{"unclear requirements"} OR \texttt{"ambiguity"} OR \texttt{"completeness"} OR \texttt{"tacit knowledge"}).
+\end{enumerate}
+
+\subsection{Inclusion and Exclusion Criteria}
+To ensure methodological rigor and relevance to the research questions, studies were filtered according to the following explicit criteria:
+\begin{itemize}
+    \item \textbf{Inclusion Criteria (IC):}
+    \begin{itemize}
+        \item \textit{IC1:} Peer-reviewed journal articles, conference papers, or workshop proceedings published in reputable software engineering venues.
+        \item \textit{IC2:} Empirical investigation (controlled experiments, quasi-experiments, case studies, or mapping studies) examining the application of prototypes in requirements discovery or validation.
+        \item \textit{IC3:} Direct evaluation of requirement quality attributes, specifically regarding missing requirements detection, ambiguity resolution, or requirement categorization.
+    \end{itemize}
+    \item \textbf{Exclusion Criteria (EC):}
+    \begin{itemize}
+        \item \textit{EC1:} Publications where prototyping refers solely to rapid software code implementation or rapid architecture without requirements engineering stakeholder involvement.
+        \item \textit{EC2:} Short vision papers ($< 4$ pages), extended abstracts, non-peer-reviewed white papers, or tertiary editorial overviews.
+        \item \textit{EC3:} Studies lacking transparent empirical data collection or systematic analytical methodology.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Corpus Profile and Selection Results}
+Following deduplication, title/abstract screening, and full-text quality appraisal, a finalized corpus of 17 studies was established, comprising:
+\begin{itemize}
+    \item \textbf{10 Core Primary Studies:} Published predominantly between 2020 and 2025 in top-tier journals (e.g., \textit{Empirical Software Engineering}, \textit{Information and Software Technology}, \textit{Requirements Engineering}) and leading conferences, providing direct empirical measurements on RQ6.1, RQ6.2, and RQ6.3 \cite{bjarnason2023empirically, rueda2020requirements, uv2023empirical, rej2022evolve, antonelli2022iterative, bano2023videos, gupta2022strategic, acm2022proposal, diaz2021gender, cascon2025ambiguity}.
+    \item \textbf{7 Seminal / Theoretical Anchor Studies:} Providing theoretical foundations for participative evaluation, ambiguity measurement, elicitation maturity, and video/persona mediums \cite{hickey1998prototyping, abad2018loud, jserd2019protopersona, davis2018maturity, ferrari2016ambiguity, spoletini2018interview, brill2010videos}.
+\end{itemize}
+
+\subsection{Data Extraction and Synthesis Protocol}
+For each included publication, data was extracted using a structured extraction instrument structured across five operational dimensions:
+\begin{enumerate}
+    \item \textit{Bibliographic Metadata:} Authors, year, venue, study type (case study, controlled experiment, field study).
+    \item \textit{PAM Categorization:} Prototype purpose, scope, fidelity/medium, operational exploration, and stage of use \cite{bjarnason2023empirically}.
+    \item \textit{Defect Discovery Metrics:} Qualitative and quantitative evidence regarding the volume of elicited requirements, percentage of missing requirements discovered, and ambiguity reduction rates.
+    \item \textit{Requirement Typology:} Functional (FR), Non-Functional (NFR), Usability/GUI, and domain constraints.
+    \item \textit{Analytical Triad Mapping:} Explicit answers to the mentor's \textit{Why}, \textit{How}, and \textit{Classification} criteria.
+\end{enumerate}
+The extracted evidence was consolidated into the cross-study synthesis matrix, forming the empirical foundation for thematic and comparative analyses.
