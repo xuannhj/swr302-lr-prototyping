@@ -1,17 +1,11 @@
 # SWR302 Literature Review: The Effect of Prototyping on Identifying Missing and Unclear Requirements (RP6)
 
 [![LaTeX Compilation](https://img.shields.io/badge/LaTeX-IEEEtran-brightgreen.svg)](main.tex)
-[![Corpus Size](https://img.shields.io/badge/Studies-17%20Papers-blue.svg)](docs/Synthesis_Matrix.md)
+[![Corpus Size](https://img.shields.io/badge/Studies-17%20Papers-blue.svg)](docs/Papers.md)
 [![Status](https://img.shields.io/badge/Status-Scaffolded%20%26%20Synchronized-success.svg)](#)
 
 > **Môn học**: SWR302 (Software Requirements) – FPT University (Ho Chi Minh City Campus)  
-> **Nhóm thực hiện**: Group 3  
-> **Thành viên nhóm**:
-> - Nguyễn Phạm Xuân Nhi (SE201170)
-> - Nguyễn Minh Tú (SE192854)
-> - Nguyễn Lê Nhật Khoa (SE204266)
-> - Nguyễn Trí Minh Nhật (SE204263)
-> - Trần Bá Lộc (SE180247)  
+> **Sinh viên thực hiện**: Nguyễn Phạm Xuân Nhi (SE201170)  
 > **Chủ đề nghiên cứu (RP6)**: *The Effect of Prototyping on Identifying Missing and Unclear Requirements* (Ảnh hưởng của prototyping đến khả năng phát hiện yêu cầu thiếu và chưa rõ ràng).
 
 ---
@@ -39,7 +33,7 @@ Mọi bài báo và chương mục trong báo cáo đều được phân tích x
 ## 3. Checklist Giải Quyết 5 Điểm Phản Biện Của Giảng Viên
 
 Chi tiết xem tại [`docs/Mentor_Feedback_Checklist.md`](docs/Mentor_Feedback_Checklist.md):
-- [x] **FB-1 (Mở rộng kho tài liệu 10–18 bài):** Đã thu thập và trích xuất 17 bài (10 Core Studies + 7 Seminal Studies) tại [`docs/Synthesis_Matrix.md`](docs/Synthesis_Matrix.md) và [`ref.bib`](ref.bib).
+- [x] **FB-1 (Mở rộng kho tài liệu 10–18 bài):** Đã thu thập và trích xuất danh mục 17 bài (10 Core Studies + 7 Seminal Studies) tại [`docs/Papers.md`](docs/Papers.md) và [`ref.bib`](ref.bib).
 - [x] **FB-2 (Chỉ số đo lường độ mơ hồ Semantic Ambiguity Metrics):** Tích hợp taxonomy Cascon 2025 (Lexical, Syntactic, Scope, Vagueness), công thức Ambiguity Reduction Rate (ARR), và chỉ số sai lệch diễn giải $\Delta_{\text{interp}}$ (Spoletini 2018) vào Section V.
 - [x] **FB-3 (Phân tích chi phí & rủi ro Premature Idea Cementing):** Đánh giá rủi ro tâm lý và nợ kỹ thuật của High-fidelity prototypes; thiết lập nguyên tắc phân bổ Low-fi cho Elicitation và High-fi cho Validation.
 - [x] **FB-4 (Cơ chế tích hợp Low-fi với Agile, User Stories & Backlog Grooming):** Đề xuất mô hình *Enriched User Story* (Lucassen et al. 2022) kết hợp Proto-personas (2019) giảm thiểu 30–40% rework.
@@ -56,9 +50,8 @@ swr302-lr-prototyping/
 ├── ref.bib                            # Cơ sở dữ liệu BibTeX chuẩn hóa (17+ trích dẫn)
 ├── .gitignore                         # File cấu hình bỏ qua file rác biên dịch LaTeX
 ├── docs/
-│   ├── Synthesis_Matrix.md            # Bảng tổng hợp trích xuất dữ liệu 17 bài báo
 │   ├── Mentor_Feedback_Checklist.md   # Bảng theo dõi giải quyết 5 điểm phản biện
-│   └── Papers.md                      # Danh mục phân loại bài báo ban đầu
+│   └── Papers.md                      # Danh mục phân loại bài báo nghiên cứu
 ├── papers_pdf/                        # Thư mục lưu trữ toàn bộ các file PDF tài liệu gốc
 │   ├── 03_bjarnason2023empirically_PAM_Model.pdf
 │   ├── 04_rueda2020requirements_Family_Experiments.pdf

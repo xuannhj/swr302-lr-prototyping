@@ -3,22 +3,24 @@
 
 This section delivers a head-to-head empirical evaluation addressing \textbf{RQ6.2} (Defect detection and disambiguation efficacy compared against textual specifications, JAD, and unstructured interviews).
 
-\subsection{The Anchor Empirical Evidence: Rueda et al. (2020)}
-The most rigorous empirical benchmark directly comparing prototyping against established elicitation methodologies is the family of experiments conducted by Rueda, Panach, and Distante \cite{rueda2020requirements}. Spanning four controlled replications with 167 software engineering students and practitioners grouped into 30 development teams, the study systematically evaluated three treatments:
+\subsection{The Anchor Empirical Benchmark: Rueda et al. (2020)}
+The most rigorous empirical benchmark directly comparing prototyping against established elicitation methodologies is the family of experiments conducted by Rueda, Panach, and Distante \cite{rueda2020requirements}. Spanning four controlled replications across three academic years with 167 software engineering participants grouped into 30 development teams, the study systematically evaluated three treatments across three distinct domain systems: a Hotel Management System, a Flight-sale Booking System, and a Cruiser Management System.
+
+The three investigated elicitation treatments comprised:
 \begin{enumerate}
-    \item \textbf{Unstructured Interview (UI):} Traditional verbal questions without visual artifacts or structured group facilitation.
-    \item \textbf{Joint Application Design (JAD):} Highly structured group elicitation workshops mediated by a trained facilitator with formal agendas.
-    \item \textbf{Paper Prototyping (PP):} Collaborative exploration utilizing interactive paper interface mockups manipulated by stakeholders.
+    \item \textbf{Unstructured Interview (UI):} Traditional open dialogue without visual artifacts or structured facilitation.
+    \item \textbf{Joint Application Design (JAD):} Highly structured group elicitation workshops mediated by a trained facilitator with formal agendas and designated scribes.
+    \item \textbf{Paper Prototyping (PP):} Collaborative exploration utilizing interactive paper interface mockups manipulated by stakeholders during the interview.
 \end{enumerate}
 
 \subsection{Statistical Findings on Missing and Unclear Requirements}
-The empirical measurements from Rueda et al. \cite{rueda2020requirements} provide foundational insights into requirements quality metrics:
-
+The empirical measurements from Rueda et al. \cite{rueda2020requirements} provide decisive insights into requirements quality metrics:
 \begin{itemize}
-    \item \textbf{Total Elicitation Volume (Discovery of Missing Requirements):} Paper Prototyping generated a statistically significant increase in the total volume of requirements captured compared to both JAD and Unstructured Interviews ($p = 0.02$). The tactile manipulation of mockups stimulated stakeholders to volunteer unprompted functional desires, successfully surfacing latent expectations that remained dormant during interview dialogues.
-    \item \textbf{Specification Completeness ($p = 0.17$):} Despite the substantial increase in gross requirement volume, Paper Prototyping showed \textit{no statistically significant superiority} over JAD regarding specification completeness ($p = 0.17$). The empirical explanation lies in the selective visual bias: stakeholders thoroughly explored interactive screens, but frequently overlooked non-visual algorithmic constraints, background batch operations, and system-level exceptions.
-    \item \textbf{Specification Correctness ($p = 0.59$):} Requirements correctness did not exhibit a statistically significant difference between PP, JAD, and UI ($p = 0.59$). The presence of a paper prototype does not inherently prevent stakeholders from misunderstanding underlying domain logic if the analyst does not challenge underlying assumptions.
-    \item \textbf{Time Efficiency and Variance ($p = 0.08$):} Paper Prototyping required higher upfront preparation time to fabricate interface artifacts. However, during the elicitation session itself, PP demonstrated lower conversational variance and reduced the duration of contentious stakeholder debate compared to unstructured sessions.
+    \item \textbf{Total Elicitation Volume (Discovery of Missing Requirements):} Paper Prototyping achieved the highest gross volume of requirements captured among all three methods, demonstrating a statistically significant superiority over JAD and Unstructured Interviews ($p = 0.02$, effect size $\eta^2 = 0.08$). Tangible manipulation of interface mockups served as an active cognitive prompt, stimulating stakeholders to volunteer unprompted functional desires and uncovering latent business needs that remained dormant in purely verbal interviews.
+    \item \textbf{Specification Completeness ($p = 0.17$) and Correctness ($p = 0.59$):} Despite the substantial increase in gross requirement volume, Paper Prototyping demonstrated \textit{no statistically significant advantage} over JAD in specification completeness ($p = 0.17$) or correctness ($p = 0.59$). The empirical explanation lies in selective visual bias: stakeholders thoroughly explored visual pathways and layout elements but frequently overlooked non-visual algorithmic constraints, background batch calculations, and database transaction integrity.
+    \item \textbf{The Non-Functional Requirement (NFR) Deficit:} Passive paper prototyping proved to be the least effective method for capturing Non-Functional Requirements, where structured debate in JAD substantially outperformed prototyping. Visual mockups absorbed participant attention into display aesthetics, causing stakeholders to neglect systemic quality constraints (e.g., performance, security, and persistence).
+    \item \textbf{Requirement Redundancy and Overlapping ($p = 0.03, \eta^2 = 0.29$):} JAD achieved the lowest redundancy due to the presence of a dedicated scribe, whereas Unstructured Interviews generated the highest proportion of overlapping notes and conversational noise.
+    \item \textbf{Preparation Cost and Time Efficiency ($p = 0.05, \eta^2 = 0.22$):} Preparing low-fidelity paper mockups required a median of 145 minutes of upfront drawing, which was lower than JAD preparation but higher than unstructured interviews. While Unstructured Interviews concluded fastest, they yielded the poorest functional coverage.
 \end{itemize}
 
 \subsection{Methodological Validation and Confounding Variables}
@@ -41,9 +43,9 @@ Table~\ref{tab:comparative_matrix} presents a comparative synthesis of the prima
 \addlinespace
 \textbf{NFR Coverage} & Moderate-to-High. Explicit standard NFR checklists are commonly employed. & Low. Stakeholders rarely articulate quality constraints spontaneously. & Moderate. Group debate identifies systemic security/reliability goals. & \textbf{Low (Passive) / High (LPP/Video).} Passive prototypes miss NFRs; LPP \cite{abad2018loud} and Video \cite{bano2023videos} rectify this. \\
 \addlinespace
-\textbf{Upfront Preparation Cost} & Minimal initial artifact preparation; high subsequent documentation time. & Minimal. Requires only basic topic outlines. & Moderate. Requires formal facilitation guides and schedule coordination. & \textbf{Moderate-to-High.} Requires artifact fabrication (paper cutouts or digital mockups). \\
+\textbf{Upfront Preparation Cost} & Minimal initial artifact preparation; high subsequent documentation time. & Minimal. Requires only basic topic outlines. & Moderate. Requires formal facilitation guides and schedule coordination. & \textbf{Moderate (145 min median).} Requires artifact fabrication (paper cutouts or digital mockups) \cite{rueda2020requirements}. \\
 \addlinespace
-\textbf{Stakeholder Engagement} & Passive (``Sign-off on document'' syndrome). & Interpersonal dialogue; vulnerable to dominant personalities. & Collaborative structured workshop; high organizational commitment. & \textbf{Active \& Experiential.} Hands-on physical or digital manipulation \cite{diaz2021gender}. \\
+\textbf{Stakeholder Engagement} & Passive (``Sign-off on document'' syndrome). & Interpersonal dialogue; vulnerable to dominant personalities. & Collaborative structured workshop; high organizational commitment. & \textbf{Active \& Experiential.} Hands-on physical or digital manipulation; gender-egalitarian \cite{diaz2021gender}. \\
 \bottomrule
 \end{tabularx}
 \end{table*}

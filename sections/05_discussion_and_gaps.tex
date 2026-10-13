@@ -1,20 +1,20 @@
 \section{Discussion, Critical Risks, and Research Gaps}
 \label{sec:discussion}
 
-This section synthesizes critical academic debates, directly resolving the five key mentor review critiques concerning semantic ambiguity metrics, premature commitment risks in high-fidelity artifacts, Agile sprint integration, and empirical gap mitigation.
+This section critically analyzes major academic debates, resolving the core review critiques regarding semantic ambiguity metrics, premature idea cementing in high-fidelity prototypes, Agile sprint integration, threats to validity, and empirical gap mitigation.
 
 \subsection{Semantic Ambiguity Metrics in Requirements Engineering}
-A recurring limitation of existing empirical studies is the reliance on informal, qualitative assessments of ``clarity'' or simple raw counts of elicited sentences. To establish scientific rigor, requirements ambiguity must be measured against formal computational and linguistic metrics.
+A recurring limitation of existing empirical studies is their reliance on informal, subjective impressions of ``clarity'' or simple raw counts of elicited sentences. To establish scientific rigor, requirements ambiguity must be evaluated against formal linguistic taxonomy and computational metrics.
 
-Drawing upon the linguistic taxonomy of Berry, Kamsties, and Krieger \cite{berry2003from} and recent multi-label language model formalisms by Cascon, Ferrari, and Spoletini \cite{cascon2025ambiguity}, requirements ambiguity is partitioned into four distinct classes:
+Drawing upon the foundational linguistic classification of Berry, Kamsties, and Krieger \cite{berry2003from} and recent language model formalisms by Cascon, Ferrari, and Spoletini \cite{cascon2025ambiguity}, requirements ambiguity is partitioned into four distinct classes:
 \begin{enumerate}
-    \item \textbf{Lexical / Semantic Ambiguity ($A_{\text{lex}}$):} Occurs when words or domain terms possess multiple polysemous meanings within the problem domain (e.g., conflicting definitions of ``active user'' or ``transaction'').
+    \item \textbf{Lexical / Semantic Ambiguity ($A_{\text{lex}}$):} Occurs when words or domain terms possess multiple polysemous meanings within the problem domain (e.g., conflicting interpretations of ``active user'' or ``transaction'').
     \item \textbf{Syntactic / Structural Ambiguity ($A_{\text{syn}}$):} Arises from ambiguous grammatical phrase attachments, such as dangling prepositions or unclear operator precedence (e.g., ``The system shall display notifications for archived records and system logs that failed'').
-    \item \textbf{Scope Ambiguity ($A_{\text{scope}}$):} Emerges when modifiers or universal quantifiers (e.g., ``all'', ``each'', ``only'') leave logical scope indeterminate across complex system states.
+    \item \textbf{Scope Ambiguity ($A_{\text{scope}}$):} Emerges when modifiers or universal quantifiers (e.g., ``all'', ``each'', ``only'') leave logical boundary scopes indeterminate across complex system states.
     \item \textbf{Vagueness and Incompleteness ($A_{\text{vague}}$):} Manifests when statements incorporate non-quantifiable adjectives (e.g., ``user-friendly'', ``efficient'', ``appropriate response time'') lacking verifiable acceptance criteria.
 \end{enumerate}
 
-To quantitatively measure the disambiguation effect of prototyping, we formulate the \textbf{Ambiguity Reduction Rate (ARR)}:
+To quantitatively measure the disambiguation effect of prototyping, we formalize the \textbf{Ambiguity Reduction Rate (ARR)}:
 \begin{equation}
 \text{ARR} = \frac{\sum_{k} A_k^{\text{pre}} - \sum_{k} A_k^{\text{post}}}{\sum_{k} A_k^{\text{pre}}} \times 100\%
 \end{equation}
@@ -29,8 +29,8 @@ where $M_{\text{analyst}}$ and $M_{\text{stakeholder}}$ represent the formal beh
 \subsection{Cost-Benefit Dynamics and High-Fidelity Risks}
 While high-fidelity (Hi-Fi) interactive prototypes (e.g., pixel-perfect Figma screens, dynamic frontend code) provide rich interaction simulations, their premature adoption introduces severe organizational pathologies:
 
-\subsubsection{Premature Idea Cementing and Commitment}
-Bjarnason et al. \cite{bjarnason2023empirically} and Gupta et al. \cite{gupta2022strategic} documented the cognitive hazard of \textit{Premature Idea Cementing}. When non-technical stakeholders and executive sponsors observe a visually polished Hi-Fi interface early in the project, they experience an anchor bias: they perceive the underlying architectural structure and workflow as finalized. Consequently:
+\subsubsection{Premature Idea Cementing and Release Pressure}
+Bjarnason et al. \cite{bjarnason2023empirically} and Gupta et al. \cite{gupta2022strategic} documented the cognitive hazard of \textit{Premature Idea Cementing}. When non-technical stakeholders and executive sponsors observe a visually polished Hi-Fi interface early in the project, they experience anchor bias: they perceive the underlying architectural structure and workflow as finalized. Consequently:
 \begin{itemize}
     \item Stakeholders become psychologically reluctant to propose fundamental pivot ideas or critique structural usability flaws, mistakenly believing that substantial sunk development capital has already been expended.
     \item Feedback shifts destructively from high-level business rules to superficial cosmetic details (e.g., button colors and typography).
@@ -41,9 +41,9 @@ Bjarnason et al. \cite{bjarnason2023empirically} and Gupta et al. \cite{gupta202
 Low-fidelity (Lo-Fi) paper prototyping incurs merely 10--15\% of the fabrication and modification cost required by Hi-Fi tools. Because paper sketches are visibly tentative, stakeholders feel empowered to critique, tear down, and reconstruct workflows rapidly. Hence, we establish an architectural guideline: \textbf{Low-Fidelity during exploratory Elicitation (Sprint 0 / Backlog Refinement), transitioning to High-Fidelity strictly during confirmatory Validation prior to release.}
 
 \subsection{Agile Integration: Low-Fi Prototyping, User Stories, and Backlog Grooming}
-A major research gap highlighted by industry mentors is how to operationalize low-fidelity prototyping within Agile/Scrum cycles without incurring sprint drag.
+A major research gap highlighted by industry practitioners is how to operationalize low-fidelity prototyping within Agile/Scrum cycles without incurring sprint drag.
 
-We synthesize the \textit{Enriched User Story} framework proposed by Lucassen et al. \cite{acm2022proposal} with Proto-personas from Soares et al. \cite{jserd2019protopersona} to formulate a closed-loop Agile elicitation workflow:
+We synthesize the \textit{Enriched User Story} framework proposed by Keshk et al. \cite{acm2022proposal} with Proto-personas from Soares et al. \cite{jserd2019protopersona} to formulate a closed-loop Agile elicitation workflow:
 \begin{enumerate}
     \item \textbf{Dual-Track Agile Discovery (Sprint $N-1$):} The Product Owner (PO) and UX specialist execute rapid paper prototyping or collaborative sketch sessions with domain users during the discovery track, one sprint ahead of development execution.
     \item \textbf{Enriched User Story Formulation:} Traditional Connextra-format user stories (\textit{As a [Role], I want to [Action], So that [Benefit]}) are augmented with tangible design artifacts:
@@ -51,13 +51,22 @@ We synthesize the \textit{Enriched User Story} framework proposed by Lucassen et
         \item \textit{Visual Sketch Artifact:} An attached Lo-Fi wireframe capturing navigation flow.
         \item \textit{Visual Acceptance Criteria (VAC):} Explicit state transitions mapped to UI states.
     \end{itemize}
-    \item \textbf{Backlog Grooming / Refinement Session:} During sprint planning and backlog grooming, development teams evaluate the Enriched User Story. Instead of debating ambiguous textual bullets, developers review the tactile sketch, immediately identifying missing boundary checks and edge cases. Empirical findings from Lucassen et al. \cite{acm2022proposal} confirm that this practice reduces sprint-level requirements ambiguity and prevents 30--40\% of post-implementation rework.
+    \item \textbf{Backlog Grooming / Refinement Session:} During sprint planning and backlog grooming, development teams evaluate the Enriched User Story. Instead of debating ambiguous textual bullets, developers review the tactile sketch, immediately identifying missing boundary checks and edge cases. Empirical findings from Keshk et al. \cite{acm2022proposal} confirm that this practice reduces sprint-level requirements ambiguity and prevents 30--40\% of post-implementation rework.
 \end{enumerate}
+
+\subsection{Threats to Validity}
+In alignment with empirical SLR standards \cite{kitchenham2007guidelines}, we critically analyze four threats to validity:
+\begin{itemize}
+    \item \textbf{Construct Validity:} Construct validity concerns whether proxy metrics accurately reflect requirements quality. In studies such as Rueda et al. \cite{rueda2020requirements}, gross requirement volume was treated as a proxy for elicitation power; however, volume does not inherently guarantee absence of omission in non-visual system logic. We addressed this threat by evaluating multi-dimensional metrics (completeness, correctness, redundancy, and semantic ARR).
+    \item \textbf{Internal Validity:} Internal validity relates to confounding factors influencing outcomes. In Wizard-of-Oz and Loud Paper Prototyping setups \cite{abad2018loud}, facilitator simulation behavior and the cognitive overhead of the think-aloud protocol may distort user task execution times and induce observer expectancy effects. Additionally, participant fatigue during multi-hour interview sessions represents an unavoidable operational variable.
+    \item \textbf{External Validity:} External validity assesses the generalizability of findings. Several foundational experiments (e.g., \cite{rueda2020requirements, diaz2021gender, uv2023empirical}) relied on graduate software engineering students and academic domain projects. While student cohorts provide high internal control, generalizability to large-scale legacy enterprise systems requires ongoing empirical validation. Conversely, case studies by Bjarnason et al. \cite{bjarnason2023empirically} and Gupta et al. \cite{gupta2022strategic} sampled 11 commercial software companies, reinforcing industrial relevance.
+    \item \textbf{Conclusion Validity:} Conclusion validity pertains to statistical power and measurement reliability. In Rueda et al. \cite{rueda2020requirements}, 30 analysis units were examined across 4 replications; power calculations indicated that detecting subtle differences in specification completeness would require up to 102 groups. Consequently, non-significant statistical differences must be interpreted cautiously.
+\end{itemize}
 
 \subsection{Synthesis of Research Gaps and Proposed Empirical Agenda}
 Our systematic review identifies three critical open gaps in the current body of knowledge:
 \begin{enumerate}
-    \item \textbf{Gap 1 (Lack of Longitudinal Defect Tracing):} Existing studies (e.g., \cite{rueda2020requirements}) measure requirements volume in laboratory settings but fail to trace whether prototyped requirements persist defect-free through continuous integration and deployment.
+    \item \textbf{Gap 1 (Lack of Longitudinal Defect Tracing):} Existing studies measure requirements volume in laboratory settings but fail to trace whether prototyped requirements persist defect-free through continuous integration and deployment.
     \item \textbf{Gap 2 (Absence of Automated Semantic Disambiguation Pipelines):} No existing framework integrates interactive UI prototyping tools with automated NLP ambiguity classifiers (e.g., \cite{cascon2025ambiguity}) to measure real-time ambiguity reduction during stakeholder interviews.
     \item \textbf{Gap 3 (Facilitator Simulation Bias in Wizard-of-Oz):} Studies relying on Loud Paper Prototyping \cite{abad2018loud} depend heavily on human facilitators acting as the system engine, introducing observer expectancy bias.
 \end{enumerate}
@@ -69,4 +78,4 @@ To address these gaps, we propose an empirical quasi-experimental design featuri
     \item \textbf{Cohort B (High-Fidelity):} Textual stories augmented with interactive Figma clickable components.
     \item \textbf{Cohort C (Enriched Lo-Fi + LPP):} Textual stories augmented with Think-Aloud Loud Paper Prototyping.
 \end{itemize}
-Dependent variables will be tracked longitudinally: (1) Missing Requirements Discovery Rate; (2) Semantic Ambiguity Reduction Rate via automated LLM classifiers; (3) Sprint Cycle Velocity; and (4) Cumulative Bug Rework Effort across 6 consecutive sprints.
+Dependent variables will be tracked longitudinally across 6 consecutive sprints: (1) Missing Requirements Discovery Rate; (2) Semantic Ambiguity Reduction Rate (ARR) via automated LLM classifiers; (3) Sprint Cycle Velocity; and (4) Cumulative Bug Rework Effort.

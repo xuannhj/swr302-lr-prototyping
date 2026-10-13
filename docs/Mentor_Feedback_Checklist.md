@@ -1,7 +1,7 @@
 # Mentor Feedback Resolution Checklist (SWR302 - RP6)
 
 > **Dự án**: The Effect of Prototyping on Identifying Missing and Unclear Requirements  
-> **Nhóm thực hiện**: Group 3 (Department of Software Engineering, FPT University)  
+> **Sinh viên thực hiện**: Nguyễn Phạm Xuân Nhi - SE201170 (Department of Software Engineering, FPT University)  
 > **Mục tiêu**: Theo dõi và giải quyết triệt để 5 điểm phản biện cốt lõi từ Giảng viên hướng dẫn (Mentor).
 
 ---
@@ -10,7 +10,7 @@
 
 | STT | Vấn đề phản biện từ Mentor | Trạng thái | Chương / Phần xử lý tương ứng |
 | :---: | :--- | :---: | :--- |
-| **FB-1** | **Mở rộng kho tài liệu nghiên cứu (10 - 18 bài)**: Tránh dựa dẫm vào quá ít bài báo; cần đủ dung lượng đại diện cho SLR. | `[x] Đã xử lý` | `docs/Papers.md`, `docs/Synthesis_Matrix.md`, `ref.bib` (17 bài: 10 Core + 7 Seminal) |
+| **FB-1** | **Mở rộng kho tài liệu nghiên cứu (10 - 18 bài)**: Tránh dựa dẫm vào quá ít bài báo; cần đủ dung lượng đại diện cho SLR. | `[x] Đã xử lý` | `docs/Papers.md`, `ref.bib` (17 bài: 10 Core + 7 Seminal) |
 | **FB-2** | **Bổ sung chỉ số đo lường độ mơ hồ ngôn ngữ (Semantic Ambiguity Metrics)**: Đo lường khách quan "Unclear Requirements" thay vì chỉ đếm số lượng cảm tính. | `[x] Đã cấu trúc` | `sections/02_methodology.tex`, `sections/05_discussion_and_gaps.tex` (Taxonomy Cascon 2025, Berry 2003, Spoletini Metrics) |
 | **FB-3** | **Phân tích sâu chi phí vận hành & rủi ro cam kết ý tưởng sớm (Premature Idea Cementing)** của High-fidelity Prototypes. | `[x] Đã cấu trúc` | `sections/03_thematic_review.tex`, `sections/05_discussion_and_gaps.tex` (Mô hình PAM Bjarnason 2023, Gupta 2022) |
 | **FB-4** | **Cơ chế tích hợp Paper Prototyping (Low-fi) với Agile, User Stories & Backlog Grooming** nhằm giảm thiểu rework trong Sprint. | `[x] Đã cấu trúc` | `sections/03_thematic_review.tex`, `sections/05_discussion_and_gaps.tex` (Mô hình Lucassen/ACM 2022, Soares/JSERD 2019) |
