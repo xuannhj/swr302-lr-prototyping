@@ -179,3 +179,21 @@
   - *Cấu trúc Enriched User Story*: Bổ sung từ điển dữ liệu (*Data Dictionary*), kịch bản chi tiết (*Scenarios*), điều kiện trước/sau (*Pre/Post-conditions*), và đính kèm trực tiếp Prototype.
   - *Bắt trọn NFRs trong Agile*: Đưa các ràng buộc phi chức năng (bảo mật, hiệu năng, kiểm tra dữ liệu) thành các **Tiêu chí chấp nhận nâng cao (*Enhanced Acceptance Criteria*)** gắn chặt vào từng thẻ User Story, giải quyết dứt điểm điểm mù bỏ quên NFRs trong Agile.
 * **Hạn chế & Ghi chú nghiên cứu**: Đề xuất quy trình dựa trên kinh nghiệm thực tiễn và tổng hợp 17 thách thức ARE; nhóm tác giả đang tiến hành đánh giá thực nghiệm trên dự án quy mô lớn và khảo sát chuyên gia công nghiệp.
+
+### Nghiên cứu 11: Oghabi & Kahani (2025) - Multi-Label Ambiguity Taxonomy Using Language Models
+* **Tác giả & Năm**: Paniz Oghabi and Nafiseh Kahani (2025).
+* **Nguồn**: *Proceedings of the 35th Annual International Conference on Computer Science and Software Engineering (CASCON)*, pp. 145–156.
+* **File PDF**: [`papers_pdf/14_cascon2025ambiguity_Ambiguity_Taxonomy_LM.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/14_cascon2025ambiguity_Ambiguity_Taxonomy_LM.pdf).
+* **DOI / Link**: [`https://doi.org/10.1145/cascon.2025.oghabi`](https://doi.org/10.1145/cascon.2025.oghabi).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Chuẩn hóa hệ thống phân loại 4 nhóm mơ hồ (Ambiguity Taxonomy) trong đặc tả yêu cầu bằng ngôn ngữ tự nhiên (Natural Language SRS) và phát triển mô hình học sâu Transformer (RoBERTa, DistilBERT kết hợp kỹ thuật tăng cường dữ liệu Back-Translation) để phát hiện tự động đa nhãn (multi-label ambiguity detection) trên tập dữ liệu chuẩn PURE (1,266 yêu cầu thực tế).
+* **RQ6.2 (Bằng chứng đối đầu & Định lượng hóa "Unclear Requirements")**:
+  - Giải quyết câu hỏi nền tảng của đề tài: *"Thế nào là một yêu cầu không rõ ràng (Unclear) và đo lường bằng cách nào?"*.
+  - Nghiên cứu chứng minh đặc tả dạng văn bản tự nhiên có tỷ lệ chồng lấn mơ hồ rất cao (một câu thường mắc đồng thời 2-3 loại mơ hồ khác nhau).
+  - Mô hình RoBERTa + Back-Translation đạt Macro F1-score 78.84% (vượt trội so với các công cụ rule-based truyền thống: tăng 12% ở Scope ambiguity và 7% ở Structural ambiguity).
+* **RQ6.3 (Hệ thống 4 Chiều Mơ Hồ - Taxonomy of Ambiguity)**:
+  1. *Mơ hồ cú pháp / cấu trúc (Structural / Syntactic Ambiguity)*: Một câu có thể phân tích thành nhiều cây ngữ pháp khác nhau (ví dụ: liên từ "và/hoặc", cụm giới từ treo).
+  2. *Mơ hồ phạm vi (Scope Ambiguity)*: Lượng từ (all, every, each) hoặc từ phủ định (not) không rõ bao quát đến thành phần nào trong câu.
+  3. *Mơ hồ chỉ định đại từ (Anaphoric Ambiguity)*: Các đại từ (it, they, this, these) không rõ trỏ về danh từ nào đã đề cập trước đó.
+  4. *Tính mơ hồ / ước chừng (Vagueness)*: Dùng các từ ngữ định tính không đo lường được (fast, user-friendly, appropriate, secure).
+  - *Cơ chế Prototype triệt tiêu mơ hồ*: Prototype hiển thị màn hình cụ thể triệt tiêu hoàn toàn Anaphoric ambiguity (người dùng bấm nút thật chứ không phải "nó"); Prototype gắn ràng buộc số liệu cụ thể triệt tiêu Vagueness; và kịch bản phân nhánh IF-ELSE trực quan triệt tiêu Scope & Structural ambiguity!
+* **Hạn chế & Ghi chú nghiên cứu**: Tập trung vào văn bản đặc tả tiếng Anh; độ chính xác ở nhóm mơ hồ Anaphoric cần mở rộng ngữ cảnh văn bản dài; nghiên cứu mở ra hướng tích hợp bộ phát hiện mơ hồ vào các công cụ tạo mẫu tương tác.
