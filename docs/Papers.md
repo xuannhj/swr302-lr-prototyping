@@ -16,7 +16,7 @@
 | 4 | `rueda2020requirements` | Requirements elicitation methods based on interviews in comparison: A family of experiments | Rueda, Panach & Distante (2020) | Information and Software Technology, Elsevier | Core (Anchor) | RQ6.2 | **Anchor Paper**: Bằng chứng thực nghiệm đối đầu Paper Prototyping vs JAD vs Unstructured Interview ($p=0.02$). |
 | 5 | `abad2018loud` | Loud and Interactive Paper Prototyping in Requirements Elicitation: What is it Good for? | Abad et al. (2018) | IEEE EmpiRE Workshop | Background / Core | RQ6.3 | Đột phá NFRs: Loud Paper Prototyping (LPP) kết hợp Wizard-of-Oz & Think-Aloud ($p=0.001$). |
 | 6 | `uv2023empirical` | An empirical experiment of a usability requirements elicitation method to design GUIs based on interviews | Ormeño, Panach & Pastor (2023) | Information and Software Technology, Elsevier | Core | RQ6.3 | Đo lường loại requirement (usability/UI) được làm rõ qua GUI mock-up ($p=0.000$, $\eta^2=0.274$). |
-| 7 | `rej2022evolve` | How Do Requirements Evolve During Elicitation? An Empirical Study | Rej et al. (2022) | Requirements Engineering Journal, Springer | Core | RQ6.1 | Làm rõ vai trò prototyping/interactive session trong việc validate và tiến hóa requirement khi đang elicit (42% modification). |
+| 7 | `rej2022evolve` | How Do Requirements Evolve During Elicitation? An Empirical Study Combining Interviews and App Store Analysis | Ferrari, Spoletini & Debnath (2022) | Requirements Engineering Journal, Springer | Core | RQ6.1 | Làm rõ vai trò prototyping/interactive session trong việc validate và tiến hóa requirement khi đang elicit (42% modification/missing found). |
 | 8 | `jserd2019protopersona` | Proto-persona & UX requirement elicitation for non-technical stakeholders | Soares et al. (2019) | JSERD | Background | RQ6.3 | Liên quan RQ6.3 về khía cạnh trải nghiệm người dùng (UX) và stakeholder phi kỹ thuật. |
 | 9 | `antonelli2022iterative` | An Iterative and Collaborative Approach to Specify Scenarios using Natural Language | Antonelli et al. (2022) | WER (Workshop on RE, LatAm) | Core | RQ6.1 | Công cụ prototype hỗ trợ verify/refine kịch bản (scenario) lặp đi lặp lại bằng ngôn ngữ tự nhiên. |
 | 10 | `bano2023videos` | Can Videos be Used to Communicate Non-functional Requirements? An Early Empirical Investigation | Bano, Zowghi & Ferrari (2023) | IEEE RE Conference (RE@Next) | Core | RQ6.3 | Prototype dạng video đối với NFR (yêu cầu phi chức năng) - bằng chứng thực nghiệm bối cảnh hóa. |
@@ -90,4 +90,21 @@
   - Làm rõ và cụ thể hóa xuất sắc các yêu cầu Usability / GUI (vốn là điểm mù của tài liệu văn bản và phỏng vấn chay).
   - Giải quyết triệt để các lỗi thiếu sót giao diện: thiếu dấu hoa thị `*` cho trường bắt buộc (mandatory fields), thiếu hộp thoại cảnh báo lỗi (modal error dialogs), thiếu danh sách chọn (dropdown) chống lỗi nhập liệu, và thiếu hướng dẫn tooltip/help-icon (`?`).
 * **Hạn chế & Ghi chú nghiên cứu**: Mẫu thực nghiệm gồm sinh viên đại học và học viên thạc sĩ; hiệu suất thời gian có power thấp (0.230) và phụ thuộc vào bài toán. Prototype có cấu trúc giúp giải quyết điểm mù Usability nhưng đòi hỏi kỹ năng dẫn dắt logic của phân tích viên.
+
+### Nghiên cứu 5: Ferrari, Spoletini & Debnath (2022) - Requirements Evolution & App Store Prototyping
+* **Tác giả & Năm**: Alessio Ferrari, Paola Spoletini, and Sourav Debnath (2022).
+* **Nguồn**: *Requirements Engineering Journal* (Springer), Vol. 27, Issue 4, pp. 489–519.
+* **File PDF**: [`papers_pdf/07_rej2022evolve_Requirements_Evolution.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/07_rej2022evolve_Requirements_Evolution.pdf).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Nghiên cứu thực nghiệm 2 giai đoạn trên 30 nhà phân tích yêu cầu (analysts) với bài toán Quản lý trại hè dã ngoại (Summer Camp Management System). 
+  - *Phase I (Phỏng vấn lời nói)*: 30 analyst phỏng vấn khách hàng qua 2 vòng và viết 50-60 User Stories ban đầu.
+  - *Phase II (Tương tác sản phẩm/mẫu tham chiếu)*: Analyst tải về và trực tiếp trải nghiệm 5 ứng dụng tương tự trên Google Play/App Store (đóng vai trò reference prototypes), đọc review người dùng và bổ sung 20 User Stories.
+* **RQ6.2 (Bằng chứng đối đầu & Phát hiện yêu cầu bị thiếu)**:
+  - *Tỷ lệ bảo tồn ý tưởng gốc (Conservation Rate)*: Sau phỏng vấn, chỉ có **30% đến 38%** ý tưởng ban đầu của khách hàng được giữ nguyên; hơn 60% còn lại bị biến đổi hoặc thêm mới (trong đó có tới **21% chủ đề hoàn toàn mới** do analyst tự sáng tạo).
+  - *Khai quật yêu cầu bị thiếu (Missing Requirements)*: Khi được tương tác với sản phẩm/mẫu trực quan thực tế, analyst phát hiện và bổ sung thêm tới **42% yêu cầu mới** mà cả khách hàng lẫn analyst trong phòng họp trước đó hoàn toàn không hề nghĩ tới.
+* **RQ6.3 (Đột phá Usability và NFRs)**:
+  - Phỏng vấn chay chỉ tập trung vào chức năng nghiệp vụ nội bộ của khách hàng.
+  - Khi tương tác trên giao diện sản phẩm thực tế, mức độ chú ý dành cho **Usability (Tính khả dụng) TĂNG VỌT THÊM 45%**.
+  - Kéo theo sự xuất hiện của hàng loạt NFRs cốt lõi: Bảo mật (*Security*), Quyền riêng tư (*Privacy*), và Cổng thanh toán (*Online Payment*).
+* **Hạn chế & Ghi chú nghiên cứu**: Giai đoạn 2 chỉ cho phép thêm mới (extension) mà chưa đo lường thao tác chỉnh sửa/xóa (edit/deletion); đối tượng thực nghiệm là sinh viên ngành kỹ thuật phần mềm đóng vai analyst với một khách hàng giả định.
+
 
