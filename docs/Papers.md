@@ -148,7 +148,18 @@
   - *Tính khả dụng trong bối cảnh thực (Usability in Context)*: Nhìn thấy người dùng thao tác trong môi trường đời thực (ồn ào, di chuyển, một tay).
 * **Hạn chế & Ghi chú nghiên cứu**: Nghiên cứu thực nghiệm giai đoạn đầu với cỡ mẫu 5 video; video có nguy cơ thiên vị quảng bá (marketing bias) và khó đo lường thông số định lượng chi tiết hơn văn bản kỹ thuật.
 
-
-
-
-
+### Nghiên cứu 9: Gupta et al. (2022) - Strategic Prototyping Adoption in Startups
+* **Tác giả & Năm**: Varun Gupta, Elizabeth Bjarnason, and Chetna Gupta (2022).
+* **Nguồn**: *IT Professional (IEEE Computer Society)*, Vol. 24, No. 5, pp. 36–43.
+* **DOI / Link**: [`https://doi.org/10.1109/MITP.2022.3188562`](https://doi.org/10.1109/MITP.2022.3188562).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Mở rộng mô hình PAM (Prototyping Anchor Model) vào bối cảnh các công ty khởi nghiệp công nghệ (startups). Xây dựng khung quy trình tiếp nhận công nghệ tạo mẫu gồm 3 hoạt động cốt lõi: (1) Nhận diện các yếu tố tác động (chi phí, đường cong học hỏi, mức độ cộng tác, dải độ trung thực); (2) Thu thập thông tin và đánh giá công cụ tạo mẫu đối chiếu giữa nhu cầu kiểm chứng ngắn hạn và khả năng mở rộng lâu dài; (3) Ra quyết định chiến lược thay vì chọn công cụ cảm tính theo trào lưu hoặc chọn đồ miễn phí nhưng kém linh hoạt.
+* **RQ6.2 (Bằng chứng đối đầu & Ứng phó yêu cầu biến động / pivoting)**:
+  - Startups hoạt động dưới sự bất định tột độ của thị trường và nguy cơ cạn kiệt vốn; tài liệu đặc tả văn bản truyền thống hoàn toàn bất khả thi vì yêu cầu thay đổi liên tục (*requirements volatility & pivoting*).
+  - Prototyping là vũ khí sinh tử giúp startup chạy các vòng lặp kiểm chứng nhanh (Build-Measure-Learn loops) để thẩm định giả định kinh doanh trước khi đổ tiền code thật.
+  - Tuy nhiên, nghiên cứu cảnh báo 2 rủi ro kỹ thuật nghiêm trọng:
+    + *Đóng băng ý tưởng quá sớm (Premature Idea Cementing)*: Khi nhóm startup vội vã code mẫu bằng mã nguồn thật, họ ngại đập bỏ khi nhận phản hồi tiêu cực, dẫn đến bế tắc khi cần pivot.
+    + *Nợ kỹ thuật mẫu (Prototype Debt)*: Do áp lực thời gian ra mắt (speed-to-market), startup thường bê nguyên code prototype chắp vá làm sản phẩm thương mại thật, gây sụp đổ kiến trúc ngầm.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**:
+  - *Làm rõ xuất sắc*: Giả định mô hình kinh doanh & Đề xuất giá trị (Business Assumptions & Value Proposition), Luồng thao tác tối thiểu của khách hàng (Customer Minimum Viable Flows), và Bằng chứng khả thi công nghệ sơ bộ (Technical PoC).
+  - *Điểm mù nghiêm trọng*: Toàn bộ nhóm Yêu cầu Phi chức năng (NFRs như Security, Scalability, Robustness) bị gạt phăng sang một bên do áp lực sống còn trước mắt.
+* **Hạn chế & Ghi chú nghiên cứu**: Khung nghiên cứu mang tính định tính và định hướng chiến lược; cần mở rộng kiểm chứng thực nghiệm định lượng về tỷ lệ sống sót hoặc chỉ số ROI của các startup công nghệ áp dụng khung này so với nhóm chọn công cụ tạo mẫu tùy tiện.
