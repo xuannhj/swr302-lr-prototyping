@@ -134,6 +134,21 @@
 * **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Làm rõ và chuẩn hóa nhóm Yêu cầu Chức năng (Functional Logic), Quy tắc nghiệp vụ (Business Rules) và Kịch bản ca sử dụng (Use Case Scenarios). Đánh giá thang đo SUS (System Usability Scale) đạt 70.53 điểm (mức Chấp nhận tốt - Acceptable).
 * **Hạn chế & Ghi chú nghiên cứu**: Công cụ phần mềm hỗ trợ là prototype thử nghiệm học thuật; cần mở rộng thử nghiệm trên các hệ thống doanh nghiệp quy mô công nghiệp lớn.
 
+### Nghiên cứu 8: Kopczyńska & Shi (2023) - Video Prototyping for Non-Functional Requirements
+* **Tác giả & Năm**: Sylwia Kopczyńska and Jianwei Shi (2023).
+* **Nguồn**: *IEEE 31st International Requirements Engineering Conference (RE@Next 2023)*, pp. 112–117.
+* **DOI / Link**: [`https://doi.org/10.1109/REW57880.2023.00028`](https://doi.org/10.1109/REW57880.2023.00028).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Khảo sát việc sử dụng video tầm nhìn sản phẩm (Vision Videos / Video Prototyping) như một phương thức tạo mẫu đa phương tiện (multimedia prototype) trước giai đoạn code. Phân tích thực nghiệm nội dung trên 5 video phần mềm thực tế để bóc tách các kỹ thuật truyền tải thuộc tính chất lượng (phản ứng người dùng, thuyết minh lồng tiếng, và phụ đề thông số kỹ thuật).
+* **RQ6.2 (Bằng chứng khắc phục điểm mù NFR)**:
+  - Bản vẽ giấy tĩnh và văn bản chữ trừu tượng thường thất bại hoàn toàn trong việc truyền đạt các ràng buộc phi chức năng (người dùng bị cuốn vào nút bấm mà quên tốc độ/bảo mật).
+  - Video cung cấp bối cảnh đa giác quan (hình ảnh + âm thanh + hành vi thời gian thực), giúp các bên liên quan dễ dàng đồng cảm và nhận diện các yêu cầu chất lượng ẩn.
+* **RQ6.3 (Đặc thù loại yêu cầu NFRs làm rõ tốt nhất)**:
+  - *Hiệu năng & Thời gian đáp ứng (Time behavior / Performance)*: Cảm nhận trực tiếp độ trễ và thời gian xử lý qua video.
+  - *Tính tương tác liên thông (Interoperability)*: Thể hiện sự đồng bộ dữ liệu tức thời giữa các thiết bị khác nhau.
+  - *Tính khả dụng trong bối cảnh thực (Usability in Context)*: Nhìn thấy người dùng thao tác trong môi trường đời thực (ồn ào, di chuyển, một tay).
+* **Hạn chế & Ghi chú nghiên cứu**: Nghiên cứu thực nghiệm giai đoạn đầu với cỡ mẫu 5 video; video có nguy cơ thiên vị quảng bá (marketing bias) và khó đo lường thông số định lượng chi tiết hơn văn bản kỹ thuật.
+
+
 
 
 
