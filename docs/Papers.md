@@ -17,7 +17,7 @@
 | 5 | `abad2018loud` | Loud and Interactive Paper Prototyping in Requirements Elicitation: What is it Good for? | Abad et al. (2018) | IEEE EmpiRE Workshop | Background / Core | RQ6.3 | Đột phá NFRs: Loud Paper Prototyping (LPP) kết hợp Wizard-of-Oz & Think-Aloud ($p=0.001$). |
 | 6 | `uv2023empirical` | An empirical experiment of a usability requirements elicitation method to design GUIs based on interviews | Ormeño, Panach & Pastor (2023) | Information and Software Technology, Elsevier | Core | RQ6.3 | Đo lường loại requirement (usability/UI) được làm rõ qua GUI mock-up ($p=0.000$, $\eta^2=0.274$). |
 | 7 | `rej2022evolve` | How Do Requirements Evolve During Elicitation? An Empirical Study Combining Interviews and App Store Analysis | Ferrari, Spoletini & Debnath (2022) | Requirements Engineering Journal, Springer | Core | RQ6.1 | Làm rõ vai trò prototyping/interactive session trong việc validate và tiến hóa requirement khi đang elicit (42% modification/missing found). |
-| 8 | `jserd2019protopersona` | Proto-persona & UX requirement elicitation for non-technical stakeholders | Soares et al. (2019) | JSERD | Background | RQ6.3 | Liên quan RQ6.3 về khía cạnh trải nghiệm người dùng (UX) và stakeholder phi kỹ thuật. |
+| 8 | `jserd2019protopersona` | On the contributions of non-technical stakeholders to describing UX requirements by using proto-persona+ | Pinheiro, Lopes, Conte & Zaina (2019) | JSERD | Background / Core | RQ6.3 | Khơi gợi yêu cầu UX & đối tượng đặc biệt (khiếm thị, ADHD) từ stakeholder phi kỹ thuật qua Proto-persona+ và Paper Prototyping. |
 | 9 | `antonelli2022iterative` | An Iterative and Collaborative Approach to Specify Scenarios using Natural Language | Antonelli et al. (2022) | WER (Workshop on RE, LatAm) | Core | RQ6.1 | Công cụ prototype hỗ trợ verify/refine kịch bản (scenario) lặp đi lặp lại bằng ngôn ngữ tự nhiên. |
 | 10 | `bano2023videos` | Can Videos be Used to Communicate Non-functional Requirements? An Early Empirical Investigation | Bano, Zowghi & Ferrari (2023) | IEEE RE Conference (RE@Next) | Core | RQ6.3 | Prototype dạng video đối với NFR (yêu cầu phi chức năng) - bằng chứng thực nghiệm bối cảnh hóa. |
 | 11 | `gupta2022strategic` | Strategic prototyping technology adoption in startups: framework, challenges, and opportunities | Gupta, Bjarnason & Gupta (2022) | IEEE IT Professional | Core | RQ6.1 | Mở rộng mô hình PAM sang bối cảnh công nghệ cao và các công ty khởi nghiệp (startups). |
@@ -106,5 +106,21 @@
   - Khi tương tác trên giao diện sản phẩm thực tế, mức độ chú ý dành cho **Usability (Tính khả dụng) TĂNG VỌT THÊM 45%**.
   - Kéo theo sự xuất hiện của hàng loạt NFRs cốt lõi: Bảo mật (*Security*), Quyền riêng tư (*Privacy*), và Cổng thanh toán (*Online Payment*).
 * **Hạn chế & Ghi chú nghiên cứu**: Giai đoạn 2 chỉ cho phép thêm mới (extension) mà chưa đo lường thao tác chỉnh sửa/xóa (edit/deletion); đối tượng thực nghiệm là sinh viên ngành kỹ thuật phần mềm đóng vai analyst với một khách hàng giả định.
+
+### Nghiên cứu 6: Pinheiro et al. (2019) - Proto-persona+ & UX Requirements Elicitation
+* **Tác giả & Năm**: Eduardo Pinheiro, Larissa Lopes, Tayana Conte, and Luciana Zaina (2019).
+* **Nguồn**: *Journal of Software Engineering Research and Development (JSERD)*, Vol. 7, No. 8.
+* **File PDF**: [`papers_pdf/08_jserd2019protopersona_UX_Requirements.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/08_jserd2019protopersona_UX_Requirements.pdf).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Nghiên cứu thực nghiệm 2 vòng:
+  - *Vòng 1*: So sánh 8 chuyên gia phi kỹ thuật (nhà sư phạm/giáo viên) và 5 kỹ sư phần mềm cùng xây dựng hồ sơ người dùng `proto-persona+` (4 góc phần tư: nhân khẩu học, mục tiêu, sở thích, khó khăn) kết hợp câu hỏi gợi ý và phác thảo giao diện trên giấy (Paper Sketches / Storyboards) cho hệ thống e-learning di động.
+  - *Vòng 2*: 36 lập trình viên (18 cặp) sử dụng các hồ sơ `proto-persona+` này để xây dựng Storyboard và Low-fidelity Prototypes.
+* **RQ6.2 (Bằng chứng đối đầu & Thu thập yêu cầu bị che khuất)**:
+  - Tài liệu đặc tả bằng văn bản truyền thống thường bị kỹ sư áp đặt góc nhìn công nghệ khô khan.
+  - Sự kết hợp giữa `proto-persona+` và phác thảo trực quan đóng vai trò cầu nối nhận thức (boundary object), giúp lập trình viên hiểu sâu sắc bối cảnh người dùng và hiện thực hóa thành các tính năng giao diện chuẩn xác.
+* **RQ6.3 (Đột phá nhóm yêu cầu UX & Accessibility)**:
+  - Kỹ sư phần mềm chỉ tập trung vào việc tránh lỗi khi bấm nút (*easiness of use, avoiding frustration*).
+  - Nhóm phi kỹ thuật (các cô giáo) mang lại đóng góp đột phá về **UX cảm xúc (Enjoyment, Motivation)**: học tập phải vui vẻ (*learning must be fun*), và đặc biệt phát hiện ra các yêu cầu về **khả năng tiếp cận cho người dùng có nhu cầu đặc biệt (khiếm thị, hội chứng giảm chú ý ADHD)** mà kỹ sư hoàn toàn bỏ sót.
+* **Hạn chế & Ghi chú nghiên cứu**: Cỡ mẫu Vòng 1 còn khiêm tốn (13 người); tập trung vào ứng dụng giáo dục di động; phân tích định lượng chủ yếu minh họa cho khung mã hóa định tính (open coding).
+
 
 
