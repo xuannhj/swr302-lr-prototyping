@@ -49,13 +49,18 @@
 * **Nguồn**: *Information and Software Technology* (Elsevier), Vol. 126.
 * **File PDF**: [`papers_pdf/04_rueda2020requirements_Family_Experiments.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/04_rueda2020requirements_Family_Experiments.pdf).
 * **RQ6.1 & Quy trình thực nghiệm**: Family of experiments gồm 4 replications (167 sinh viên, 30 nhóm) so sánh 3 phương pháp: Paper Prototyping, JAD, và Phỏng vấn phi cấu trúc qua 3 hệ thống (Hotel, Flight-sale, Cruiser management). Dùng phác thảo giấy (paper mock-ups) làm vật trung gian phỏng vấn.
-* **RQ6.2 (Số liệu thực nghiệm)**:
-  - *Tổng số lượng yêu cầu (Gross Volume)*: Paper Prototyping dẫn đầu với sự khác biệt có ý nghĩa thống kê ($p = 0.02$, effect size $\eta^2 = 0.08$).
+* **RQ6.2 (Số liệu thực nghiệm & Phép kiểm Kruskal-Wallis)**:
+  - *Phép kiểm thống kê*: Toàn bộ so sánh giữa 3 phương pháp sử dụng phép kiểm **Kruskal-Wallis** cho các mẫu độc lập.
+  - *Tổng số lượng yêu cầu (Gross Volume)*: Paper Prototyping dẫn đầu với sự khác biệt có ý nghĩa thống kê ($p = 0.02$, effect size $\eta^2 = 0.08$). Kích thích trực quan giúp lôi ra các yêu cầu bị thiếu (missing requirements).
+  - *Yêu cầu bị trùng lặp (Overlapping / Redundancy)*: Có ý nghĩa thống kê ($p = 0.03$, effect size $\eta^2 = 0.29$). JAD ít trùng lặp nhất nhờ có thư ký (scribe) ghi chép, phỏng vấn chay bị trùng nhiều nhất.
   - *Độ đầy đủ (Completeness - proxy cho missing)*: Không có khác biệt có ý nghĩa thống kê so với JAD ($p = 0.17$).
-  - *Độ chính xác (Correctness - proxy cho unclear)*: Không có khác biệt có ý nghĩa thống kê so với JAD ($p = 0.59$).
-  - *Thời gian chuẩn bị*: Vẽ giấy tốn trung bình 145 phút, thấp hơn JAD nhưng tổng hợp tài liệu lâu hơn phỏng vấn chay.
+  - *Độ chính xác (Correctness / Quality - proxy cho unclear)*: Không có khác biệt có ý nghĩa thống kê so với JAD ($p = 0.59$).
+  - *Thời gian chuẩn bị*: Vẽ giấy tốn trung bình 145 phút (median), thấp hơn JAD nhưng tổng hợp tài liệu lâu hơn phỏng vấn chay.
 * **RQ6.3 (Phân loại yêu cầu)**: Hiệu quả vượt trội ở Functional Requirements và bố cục màn hình/giao diện (UI layout). Lép vế hoàn toàn ở Non-Functional Requirements (NFRs) (kết quả thấp nhất, trong khi JAD khơi gợi NFRs tốt nhất).
-* **Hạn chế**: Đối tượng là sinh viên đại học; 30 đơn vị phân tích (cần 102 nhóm để đạt statistical power tối ưu); chỉ đo lường trên tài liệu đặc tả sau phỏng vấn.
+* **Hạn chế & Ghi chú nghiên cứu**:
+  - *Ảo giác thị giác (Visual bias)*: Người tham gia bị cuốn vào nút bấm và màu sắc, bỏ quên logic ngầm và NFRs.
+  - *Lực lượng thống kê thấp (Low Statistical Power)*: Độ đầy đủ và độ chính xác không đạt ý nghĩa thống kê ($p=0.17$ và $0.59$) do cỡ mẫu chỉ có 30 nhóm (cần tới 102 nhóm để đạt statistical power tối ưu nhằm phát hiện sự khác biệt).
+  - Đối tượng là sinh viên đại học (cần mở rộng sang kỹ sư công nghiệp).
 
 ### Nghiên cứu 3: Abad et al. (2018) - Loud Paper Prototyping (LPP)
 * **Tác giả & Năm**: Zahra Shakeri Hossein Abad et al. (2018).
