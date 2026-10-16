@@ -163,3 +163,19 @@
   - *Làm rõ xuất sắc*: Giả định mô hình kinh doanh & Đề xuất giá trị (Business Assumptions & Value Proposition), Luồng thao tác tối thiểu của khách hàng (Customer Minimum Viable Flows), và Bằng chứng khả thi công nghệ sơ bộ (Technical PoC).
   - *Điểm mù nghiêm trọng*: Toàn bộ nhóm Yêu cầu Phi chức năng (NFRs như Security, Scalability, Robustness) bị gạt phăng sang một bên do áp lực sống còn trước mắt.
 * **Hạn chế & Ghi chú nghiên cứu**: Khung nghiên cứu mang tính định tính và định hướng chiến lược; cần mở rộng kiểm chứng thực nghiệm định lượng về tỷ lệ sống sót hoặc chỉ số ROI của các startup công nghệ áp dụng khung này so với nhóm chọn công cụ tạo mẫu tùy tiện.
+
+### Nghiên cứu 10: Keshk et al. (2022) - Enriched User Stories & Prototyping in Agile
+* **Tác giả & Năm**: Nader Keshk, Mohammad El-Ramly, and Akram Salah (2022).
+* **Nguồn**: *Proceedings of the Federated Africa and Middle East Conference on Software Engineering (FAMECSE '22)*, ACM, pp. 59–63.
+* **File PDF**: [`papers_pdf/12_acm2022proposal_Agile_Enriched_User_Stories.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/12_acm2022proposal_Agile_Enriched_User_Stories.pdf).
+* **DOI / Link**: [`https://doi.org/10.1145/3531056.3542773`](https://doi.org/10.1145/3531056.3542773).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Đề xuất mô hình lai 8 bước nâng cao (Hybrid Agile RE Process) tích hợp Prototyping độ trung thực cao (High-fidelity Mockups) và Câu chuyện người dùng mở rộng (Enriched User Stories).
+  - *Nguyên tắc vận hành then chốt*: Đội ngũ Product Owner (PO) và UI/UX Designer làm việc song song nhưng **bắt buộc phải đi trước đội ngũ Lập trình viên ít nhất 1 Sprint** (*precede the development team by at least one sprint*).
+  - *Quy trình 8 bước*: (1) Thu thập yêu cầu mức cao & vẽ Business Process Model (flowchart luồng dữ liệu & nghiệp vụ); (2) Chọn tính năng ưu tiên không bị phụ thuộc kiến trúc; (3) Tạo High-fidelity Mockup bằng công cụ chuyên dụng (Adobe XD / Figma); (4) Thẩm định (validate) prototype với khách hàng; (5) Thẩm định tính khả thi kỹ thuật với Dev; (6) Viết Enriched User Story; (7) Khách hàng review & phê duyệt lần 2; (8) Đưa User Story hoàn thiện vào Backlog sẵn sàng cho Sprint lập trình.
+* **RQ6.2 (Bằng chứng đối đầu & Cắt giảm Rework trong Agile)**:
+  - User Stories dạng văn bản truyền thống ("As a... I want... so that...") quá ngắn gọn và nông cạn, dẫn đến hiểu lầm nghiêm trọng giữa khách hàng và lập trình viên. Khách hàng chỉ phát hiện sai sót khi nhận bàn giao cuối Sprint, gây bùng nổ khối lượng làm lại (*rework*).
+  - Tích hợp High-fidelity Mockup trực quan kết hợp Enriched User Story giúp làm rõ toàn bộ cách thức màn hình hiển thị, các bảng cơ sở dữ liệu bị tác động, giúp **giảm 30–40% khối lượng làm lại (rework)** mà vẫn giữ trọn vẹn tinh thần linh hoạt của Agile.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**:
+  - *Cấu trúc Enriched User Story*: Bổ sung từ điển dữ liệu (*Data Dictionary*), kịch bản chi tiết (*Scenarios*), điều kiện trước/sau (*Pre/Post-conditions*), và đính kèm trực tiếp Prototype.
+  - *Bắt trọn NFRs trong Agile*: Đưa các ràng buộc phi chức năng (bảo mật, hiệu năng, kiểm tra dữ liệu) thành các **Tiêu chí chấp nhận nâng cao (*Enhanced Acceptance Criteria*)** gắn chặt vào từng thẻ User Story, giải quyết dứt điểm điểm mù bỏ quên NFRs trong Agile.
+* **Hạn chế & Ghi chú nghiên cứu**: Đề xuất quy trình dựa trên kinh nghiệm thực tiễn và tổng hợp 17 thách thức ARE; nhóm tác giả đang tiến hành đánh giá thực nghiệm trên dự án quy mô lớn và khảo sát chuyên gia công nghiệp.
