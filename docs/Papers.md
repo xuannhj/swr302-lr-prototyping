@@ -122,5 +122,18 @@
   - Nhóm phi kỹ thuật (các cô giáo) mang lại đóng góp đột phá về **UX cảm xúc (Enjoyment, Motivation)**: học tập phải vui vẻ (*learning must be fun*), và đặc biệt phát hiện ra các yêu cầu về **khả năng tiếp cận cho người dùng có nhu cầu đặc biệt (khiếm thị, hội chứng giảm chú ý ADHD)** mà kỹ sư hoàn toàn bỏ sót.
 * **Hạn chế & Ghi chú nghiên cứu**: Cỡ mẫu Vòng 1 còn khiêm tốn (13 người); tập trung vào ứng dụng giáo dục di động; phân tích định lượng chủ yếu minh họa cho khung mã hóa định tính (open coding).
 
+### Nghiên cứu 7: Antonelli et al. (2022) - Iterative Natural Language Scenarios & Prototyping
+* **Tác giả & Năm**: Leandro Antonelli, Juliana Delle Ville, Felipe Dioguardi, Alejandro Fernandez et al. (2022).
+* **Nguồn**: *Proceedings of the 25th Workshop on Requirements Engineering (WER 2022)*.
+* **File PDF**: [`papers_pdf/09_antonelli2022iterative_Natural_Language_Scenarios.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/09_antonelli2022iterative_Natural_Language_Scenarios.pdf).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Đề xuất phương pháp tiếp cận lặp và cộng tác (Iterative & Collaborative) kết hợp giữa kịch bản ngôn ngữ tự nhiên (Scenarios) và công cụ prototype tương tác được hỗ trợ bởi NLP và Knowledge Graph. Khách hàng và kỹ sư cùng rà soát kịch bản đối chiếu trực tiếp trên màn hình prototype qua 4 bước tăng dần (tiêu đề, bối cảnh, mục tiêu $\rightarrow$ hành động $\rightarrow$ tác nhân/tài nguyên $\rightarrow$ kịch bản ngoại lệ).
+* **RQ6.2 (Bằng chứng loại bỏ mơ hồ & phát hiện yêu cầu thiếu)**:
+  - Loại bỏ xung đột cách hiểu (conflicting interpretations) vốn là điểm yếu cố hữu của đặc tả văn bản thuần túy.
+  - Vạch trần 4 bẫy ngôn từ gây mơ hồ: phó từ không đo lường được (adverbs), câu điều kiện thiếu Else (incomplete conditions), lựa chọn Or chưa phân nhánh (alternatives), và các động từ khuyết thiếu ước chừng (speculative modal verbs: *could, might, should*).
+  - Tương tác với prototype giúp phát hiện ngay các luồng rẽ nhánh bị bỏ sót (missing alternative/exceptional flows) khi thao tác thực tế bị bế tắc.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Làm rõ và chuẩn hóa nhóm Yêu cầu Chức năng (Functional Logic), Quy tắc nghiệp vụ (Business Rules) và Kịch bản ca sử dụng (Use Case Scenarios). Đánh giá thang đo SUS (System Usability Scale) đạt 70.53 điểm (mức Chấp nhận tốt - Acceptable).
+* **Hạn chế & Ghi chú nghiên cứu**: Công cụ phần mềm hỗ trợ là prototype thử nghiệm học thuật; cần mở rộng thử nghiệm trên các hệ thống doanh nghiệp quy mô công nghiệp lớn.
+
+
 
 
