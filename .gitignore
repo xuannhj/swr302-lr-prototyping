@@ -21,3 +21,6 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# Local Handover & Scratch notes
+docs/HANDOVER_CONTEXT_CHECKPOINT.md
