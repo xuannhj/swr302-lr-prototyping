@@ -10,10 +10,10 @@
 
 | STT | Vấn đề phản biện từ Mentor | Trạng thái | Chương / Phần xử lý tương ứng |
 | :---: | :--- | :---: | :--- |
-| **FB-1** | **Mở rộng kho tài liệu nghiên cứu (10 - 18 bài)**: Tránh dựa dẫm vào quá ít bài báo; cần đủ dung lượng đại diện cho SLR. | `[x] Đã xử lý` | `docs/Papers.md`, `ref.bib` (17 bài: 10 Core + 7 Seminal) |
-| **FB-2** | **Bổ sung chỉ số đo lường độ mơ hồ ngôn ngữ (Semantic Ambiguity Metrics)**: Đo lường khách quan "Unclear Requirements" thay vì chỉ đếm số lượng cảm tính. | `[x] Đã cấu trúc` | `sections/02_methodology.tex`, `sections/05_discussion_and_gaps.tex` (Taxonomy Cascon 2025, Berry 2003, Spoletini Metrics) |
-| **FB-3** | **Phân tích sâu chi phí vận hành & rủi ro cam kết ý tưởng sớm (Premature Idea Cementing)** của High-fidelity Prototypes. | `[x] Đã cấu trúc` | `sections/03_thematic_review.tex`, `sections/05_discussion_and_gaps.tex` (Mô hình PAM Bjarnason 2023, Gupta 2022) |
-| **FB-4** | **Cơ chế tích hợp Paper Prototyping (Low-fi) với Agile, User Stories & Backlog Grooming** nhằm giảm thiểu rework trong Sprint. | `[x] Đã cấu trúc` | `sections/03_thematic_review.tex`, `sections/05_discussion_and_gaps.tex` (Mô hình Lucassen/ACM 2022, Soares/JSERD 2019) |
+| **FB-1** | **Mở rộng kho tài liệu nghiên cứu (10 - 18 bài)**: Tránh dựa dẫm vào quá ít bài báo; cần đủ dung lượng đại diện cho SLR. | `[x] Đã hoàn thành` | `docs/Papers.md`, `ref.bib` (17 bài: 10 Core + 7 Seminal) |
+| **FB-2** | **Bổ sung chỉ số đo lường độ mơ hồ ngôn ngữ (Semantic Ambiguity Metrics)**: Đo lường khách quan "Unclear Requirements" thay vì chỉ đếm số lượng cảm tính. | `[x] Đã hoàn thành` | `sections/02_methodology.tex`, `sections/03_thematic_review.tex` (Taxonomy Cascon 2025, RoBERTa F1=78.84%, Spoletini Metrics) |
+| **FB-3** | **Phân tích sâu chi phí vận hành & rủi ro cam kết ý tưởng sớm (Premature Idea Cementing)** của High-fidelity Prototypes. | `[x] Đã hoàn thành` | `sections/03_thematic_review.tex` (Mô hình PAM Bjarnason 2023, Gupta 2022 IEEE) |
+| **FB-4** | **Cơ chế tích hợp Paper Prototyping (Low-fi) với Agile, User Stories & Backlog Grooming** nhằm giảm thiểu rework trong Sprint. | `[x] Đã hoàn thành` | `sections/03_thematic_review.tex` (Keshk/ACM 2022, Soares/JSERD 2019, giảm 30-40% rework) |
 | **FB-5** | **Bổ sung thực nghiệm minh chứng tính khả thi giải quyết Research Gaps**: Tránh để gaps mang tính lý thuyết suông; đề xuất thiết kế thực nghiệm khả thi. | `[x] Đã cấu trúc` | `sections/05_discussion_and_gaps.tex`, `sections/06_conclusion.tex` (Khung thực nghiệm quasi-experiment, metrics đối chứng) |
 
 ---
