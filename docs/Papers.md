@@ -76,3 +76,18 @@
   - Kết hợp Think-aloud giúp paper prototype bắt trọn NFRs về mặt Usability, Navigation và Learnability ($p = 0.001$ so với họp thông thường).
   - LPP vượt trội hơn SPP có ý nghĩa thống kê ở việc điều chỉnh Functional Requirements ($p = 0.01$).
 * **Hạn chế**: Việc vừa nghĩ vừa nói làm chậm tốc độ người dùng, làm sai lệch thước đo thời gian học hỏi (learnability metrics); tiềm ẩn rủi ro thiên vị do người điều phối (facilitator bias).
+
+### Nghiên cứu 4: Ormeño et al. (2023) - UREM (GUI Mockup & Usability Decision Tree)
+* **Tác giả & Năm**: E. Ormeño, J. I. Panach, and O. Pastor (2023).
+* **Nguồn**: *Information and Software Technology* (Elsevier), Vol. 157, 107147.
+* **File PDF**: [`papers_pdf/06_uv2023empirical_GUI_Usability_Elicitation (1).pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/06_uv2023empirical_GUI_Usability_Elicitation%20(1).pdf).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Đánh giá phương pháp UREM (Usability Requirements Elicitation Method) kết hợp Low-fidelity GUI Paper Mockup và Cây quyết định (Decision Tree dựa trên hướng dẫn công thái học usability). Thiết kế thực nghiệm trong nhóm (Within-subjects design) gồm 48 người (24 cặp gồm 1 phân tích viên và 1 khách hàng) qua 2 giai đoạn (Phase 1 & Phase 2) trên 2 ứng dụng di động: Mobile Health (mHealth) và Mobile Banking (mBanking).
+* **RQ6.2 (Bằng chứng đối đầu với phỏng vấn phi cấu trúc)**:
+  - *Hiệu quả khơi gợi Usability (Effectiveness)*: UREM vượt trội có ý nghĩa thống kê cao ($p = 0.000$, effect size $\eta^2 = 0.274$, Statistical Power = 0.978), khơi gợi nhiều hơn 28.5% yêu cầu tính khả dụng so với phỏng vấn phi cấu trúc thông thường.
+  - *Mức độ tuân thủ nguyên tắc (Guideline Adherence)*: Vượt trội áp đảo ($p = 0.000$, effect size $\eta^2 = 0.571$, Statistical Power = 1.000).
+  - *Thời gian thực hiện (Efficiency)*: Không có khác biệt thống kê ($p = 0.220$), cho thấy UREM đạt chất lượng yêu cầu cao hơn hẳn mà không làm lãng phí thêm thời gian phỏng vấn.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**:
+  - Làm rõ và cụ thể hóa xuất sắc các yêu cầu Usability / GUI (vốn là điểm mù của tài liệu văn bản và phỏng vấn chay).
+  - Giải quyết triệt để các lỗi thiếu sót giao diện: thiếu dấu hoa thị `*` cho trường bắt buộc (mandatory fields), thiếu hộp thoại cảnh báo lỗi (modal error dialogs), thiếu danh sách chọn (dropdown) chống lỗi nhập liệu, và thiếu hướng dẫn tooltip/help-icon (`?`).
+* **Hạn chế & Ghi chú nghiên cứu**: Mẫu thực nghiệm gồm sinh viên đại học và học viên thạc sĩ; hiệu suất thời gian có power thấp (0.230) và phụ thuộc vào bài toán. Prototype có cấu trúc giúp giải quyết điểm mù Usability nhưng đòi hỏi kỹ năng dẫn dắt logic của phân tích viên.
+
