@@ -210,3 +210,50 @@
   - Khẳng định tính vững chắc của Prototyping: Prototype đóng vai trò "Vật trung gian bình đẳng" (Equalizing Boundary Object), xóa nhòa mọi rào cản về phong cách giao tiếp và thiên vị nhận thức vô thức, đảm bảo độ chính xác yêu cầu khách quan cho toàn bộ nhóm phát triển.
 * **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Làm rõ và đồng nhất hóa xuất sắc các Yêu cầu Giao diện (GUIs / Interface Components) và Luồng chức năng tương tác người dùng.
 * **Hạn chế & Ghi chú nghiên cứu**: Sử dụng video khách hàng mô phỏng; đối tượng là sinh viên đại học (cần mở rộng sang kỹ sư chuyên nghiệp trong công nghiệp).
+
+### Nghiên cứu 13: Ferrari, Spoletini & Gnesi (2016) - Ambiguity and Tacit Knowledge in Requirements Elicitation
+* **Tác giả & Năm**: Alessio Ferrari, Paola Spoletini, and Stefania Gnesi (2016).
+* **Nguồn**: *Requirements Engineering Journal* (Springer), Vol. 21, Issue 3, pp. 333–355.
+* **DOI / Link**: [`https://doi.org/10.1007/s00766-016-0249-3`](https://doi.org/10.1007/s00766-016-0249-3).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Nghiên cứu thực nghiệm trên 34 cuộc phỏng vấn giữa khách hàng và nhà phân tích yêu cầu (customer-analyst interviews). Làm rõ bản chất của giao tiếp yêu cầu bằng lời nói và định nghĩa lại sự mơ hồ: Mơ hồ không chỉ là khiếm khuyết (defect) mà là một dấu hiệu kích hoạt (cue / trigger) để khám phá Tri thức ẩn (Tacit Knowledge) — những quy tắc nghiệp vụ mà khách hàng nắm rõ nhưng không nói ra vì mặc định coi là điều hiển nhiên.
+* **RQ6.2 (Bằng chứng đối đầu & Khắc phục "Ảo giác đồng thuận")**:
+  - Mô hình hóa 4 hiện tượng mơ hồ nhận thức: (1) *Unclarity* (mơ hồ/thiếu dữ kiện); (2) *Multiple Understanding* (nhiều cách hiểu khả dĩ); (3) *Incorrect Disambiguation* (nhà phân tích tự cho rằng mình đã hiểu đúng và suy diễn sai lệch mà không xác nhận lại với khách hàng); (4) *Correct Disambiguation* (giải mã chính xác).
+  - Khẳng định nguy cơ chí mạng của đặc tả văn bản và phỏng vấn chay: *Incorrect Disambiguation* tạo ra "ảo giác đồng thuận" (illusion of shared understanding), là nguồn gốc trực tiếp gây thiếu sót và sai lệch yêu cầu khi bàn giao phần mềm.
+  - *Cơ chế Prototyping*: Nguyên mẫu trực quan biến tri thức ẩn và các giả định ngầm thành các màn hình và luồng tương tác cụ thể, lập tức vạch trần các suy diễn sai lệch (*Incorrect Disambiguation*) ngay từ cái nhìn đầu tiên của khách hàng.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Khơi gợi xuất sắc Tri thức ẩn và Ngữ cảnh thực dụng (Pragmatic Context) của Yêu cầu Chức năng (Functional Logic) và Quy tắc nghiệp vụ (Business Rules).
+* **Hạn chế & Ghi chú nghiên cứu**: Tập trung vào phiên phỏng vấn đối thoại bằng lời; chưa tích hợp công cụ đo lường mức độ giảm mơ hồ khi có sự hiện diện đồng thời của mẫu thử tương tác (interactive prototypes).
+
+### Nghiên cứu 14: Spoletini, Ferrari & Gnesi (2018) - Interview Review & Latent Ambiguity Detection
+* **Tác giả & Năm**: Paola Spoletini, Alessio Ferrari, and Stefania Gnesi (2018).
+* **Nguồn**: *Requirements Engineering: Foundation for Software Quality (REFSQ 2018)*, LNCS vol. 10753, Springer, pp. 243–259.
+* **DOI / Link**: [`https://doi.org/10.1007/978-3-319-77243-1_15`](https://doi.org/10.1007/978-3-319-77243-1_15).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Đề xuất và kiểm chứng quy trình Kiểm duyệt phỏng vấn có cấu trúc (Structured Interview Review Protocol). Các cuộc phỏng vấn thu thập yêu cầu được ghi âm và sau đó được phân tích viên chính (primary interviewer) cùng một người kiểm duyệt độc lập (independent secondary reviewer) rà soát lại để phát hiện các mơ hồ tiềm ẩn (latent ambiguities) bị bỏ sót trong thời gian thực.
+* **RQ6.2 (Bằng chứng đối đầu & Khắc phục điểm mù nhận thức)**:
+  - *Tỷ lệ phát hiện mơ hồ*: Kiểm duyệt hồi cứu phát hiện số lượng mơ hồ vượt trội so với phát hiện trong thời gian thực, do phỏng vấn trực tiếp gây quá tải nhận thức cho kỹ sư yêu cầu.
+  - *Góc nhìn bổ trợ (Complementary Perspectives)*: Tập hợp mơ hồ do phân tích viên chính và người kiểm duyệt độc lập phát hiện **khác biệt nhau có ý nghĩa thống kê** — chứng minh mỗi cá nhân luôn tồn tại điểm mù nhận thức chủ quan.
+  - *Khoảng cách diễn giải ($\Delta_{\text{interp}}$)*: Tài liệu văn bản và lời nói luôn chứa độ lệch diễn giải cao. Mẫu thử Prototype cung cấp một mỏ neo nhận thức độc lập (objective cognitive anchor), chuẩn hóa cách hiểu và triệt tiêu độ lệch diễn giải giữa các bên liên quan.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Bóc tách các mơ hồ tiềm ẩn về Luồng quy trình (Process Flows), Ràng buộc hệ thống (System Constraints), và Thuật ngữ chuyên ngành (Domain Terminology).
+* **Hạn chế & Ghi chú nghiên cứu**: Quy trình nghe lại băng ghi âm tốn nhiều thời gian và nỗ lực thủ công; nghiên cứu mở ra nhu cầu cần các công cụ tạo mẫu trực quan hóa để tăng tốc độ đạt được sự đồng thuận.
+
+### Nghiên cứu 15: Brill, Schneider & Knauss (2010) - Videos vs. Use Cases Under Time Pressure
+* **Tác giả & Năm**: Oliver Brill, Kurt Schneider, and Eric Knauss (2010).
+* **Nguồn**: *Requirements Engineering: Foundation for Software Quality (REFSQ 2010)*, LNCS vol. 6182, Springer, pp. 30–44.
+* **DOI / Link**: [`https://doi.org/10.1007/978-3-642-14192-8_5`](https://doi.org/10.1007/978-3-642-14192-8_5).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Nghiên cứu thực nghiệm có đối chứng so sánh giữa Yêu cầu dựa trên Video (Video Prototyping / Scenario Videos) và Ca sử dụng dạng văn bản truyền thống (Textual Use Cases) dưới áp lực thời gian (Time Pressure). Đánh giá cả nỗ lực tạo video lẫn hiệu quả truyền đạt yêu cầu đến các bên liên quan.
+* **RQ6.2 (Bằng chứng đối đầu & Khai quật yêu cầu bị thiếu)**:
+  - *Năng suất thu thập yêu cầu*: Dưới cùng áp lực thời gian nghiêm ngặt, nhóm sử dụng Video Prototyping thu thập và làm rõ được **số lượng yêu cầu nhiều hơn đáng kể (greater volume of captured requirements)** so với nhóm dùng Use Case dạng văn bản.
+  - *Giảm tải nhận thức*: Video đóng vai trò một prototype động (dynamic prototype) trực quan, truyền tải trọn vẹn bối cảnh sử dụng chỉ trong vài phút, giúp người xem không bị quá tải hay mệt mỏi nhận thức như khi đọc tài liệu văn bản dài.
+  - *Tính khả thi*: Nghiên cứu chứng minh ngay cả những người không chuyên chỉ mất khoảng 30 phút để tạo ra một video mô phỏng kịch bản yêu cầu hoàn chỉnh.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Làm rõ xuất sắc Bối cảnh tương tác người dùng (User Interaction Context), Luồng thao tác tác nghiệp thực tế (Operational Flows), và Tính khả dụng trong thực tế (Usability in Practice).
+* **Hạn chế & Ghi chú nghiên cứu**: Video có thể thiếu các thông số định lượng kỹ thuật chi tiết (như thời gian đáp ứng chính xác đến mili-giây hay mức tiêu thụ tài nguyên hệ thống); cần kết hợp với bảng phụ lục kỹ thuật cho các ràng buộc hệ thống sâu.
+
+### Nghiên cứu 16: Hickey & Dean (1998) - Participative Prototype Evaluation Methodology
+* **Tác giả & Năm**: Ann M. Hickey and Douglas L. Dean (1998).
+* **Nguồn**: *Proceedings of the Americas Conference on Information Systems (AMCIS 1998)*, pp. 112–114.
+* **Link**: [`https://aisel.aisnet.org/amcis1998/41`](https://aisel.aisnet.org/amcis1998/41).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Nghiên cứu kinh điển đề xuất Phương pháp luận Đánh giá Prototype có sự tham gia (Participative Prototype Evaluation Methodology) kết hợp Hệ thống Hỗ trợ Nhóm điện tử (Group Support Systems - GSS / GroupSystems). Thiết lập cấu trúc quy trình gồm các pha đánh giá cụ thể theo từng nhiệm vụ (task-based evaluation) để thu thập phản hồi có cấu trúc từ các nhóm người dùng lớn và không đồng nhất (large, heterogeneous groups).
+* **RQ6.2 (Bằng chứng đối đầu & Ngăn ngừa sa đà chi tiết bề mặt)**:
+  - Khắc phục khiếm khuyết lớn nhất của Prototyping truyền thống: việc đưa bản mẫu cho người dùng đánh giá tự do không kịch bản thường dẫn đến tranh cãi hỗn loạn về màu sắc, vị trí nút bấm (*superficial UI arguments*), hoặc bị lấn át bởi các thành viên có tiếng nói to nhất trong phòng (*loud voices*).
+  - Nhờ cơ chế nhập ý kiến song song và ẩn danh của GSS, phương pháp luận này giúp duy trì sự tập trung tối đa của các bên liên quan vào các **Yêu cầu Chức năng nghiệp vụ cốt lõi**, đảm bảo mọi stakeholder đều đóng góp ý kiến bình đẳng và phát hiện toàn diện các luồng nghiệp vụ bị bỏ sót (*missing requirements*).
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Cân bằng hoàn hảo giữa Yêu cầu Chức năng cốt lõi (Core Functional Requirements) và Trải nghiệm tương tác người dùng (Interaction Experience), ngăn chặn triệt để hiện tượng phân tâm vì thẩm mỹ cá nhân.
+* **Hạn chế & Ghi chú nghiên cứu**: Hệ thống GSS cuối thập niên 1990 vận hành trên mạng LAN trường học/doanh nghiệp còn cồng kềnh; ngày nay mô hình này đã được hiện đại hóa trên nền tảng Web thông qua các công cụ cộng tác trực tuyến hiện đại (như Miro, Figma, FigJam).
