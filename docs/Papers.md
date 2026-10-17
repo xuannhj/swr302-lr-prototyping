@@ -197,3 +197,16 @@
   4. *Tính mơ hồ / ước chừng (Vagueness)*: Dùng các từ ngữ định tính không đo lường được (fast, user-friendly, appropriate, secure).
   - *Cơ chế Prototype triệt tiêu mơ hồ*: Prototype hiển thị màn hình cụ thể triệt tiêu hoàn toàn Anaphoric ambiguity (người dùng bấm nút thật chứ không phải "nó"); Prototype gắn ràng buộc số liệu cụ thể triệt tiêu Vagueness; và kịch bản phân nhánh IF-ELSE trực quan triệt tiêu Scope & Structural ambiguity!
 * **Hạn chế & Ghi chú nghiên cứu**: Tập trung vào văn bản đặc tả tiếng Anh; độ chính xác ở nhóm mơ hồ Anaphoric cần mở rộng ngữ cảnh văn bản dài; nghiên cứu mở ra hướng tích hợp bộ phát hiện mơ hồ vào các công cụ tạo mẫu tương tác.
+
+### Nghiên cứu 12: Díaz et al. (2021) - Gender Influence & Equalizing Role of GUI Prototyping
+* **Tác giả & Năm**: Eduardo Díaz, José Ignacio Panach, Silvia Rueda, Marcela Ruiz, and Oscar Pastor (2021).
+* **Nguồn**: *Science of Computer Programming* (Elsevier), Vol. 204, 102595.
+* **File PDF**: [`papers_pdf/13_diaz2021gender_Elicitation_Gender_Influence.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/13_diaz2021gender_Elicitation_Gender_Influence.pdf).
+* **DOI / Link**: [`https://doi.org/10.1016/j.scico.2020.102595`](https://doi.org/10.1016/j.scico.2020.102595).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: Thực nghiệm có đối chứng trên 59 sinh viên kỹ nghệ phần mềm đóng vai kỹ sư yêu cầu qua 2 khóa học (2018/2019 và 2019/2020). Người tham gia xem video khách hàng (cả nam và nữ) diễn đạt yêu cầu cho 2 bài toán phần mềm, sau đó thể hiện lại bằng 2 hình thức: Mô hình quy trình nghiệp vụ trừu tượng (BPMN) và Mẫu thử giao diện trực quan (GUIs Mockup). Sử dụng mô hình kiểm định Mixed Model test để đánh giá ảnh hưởng của giới tính đến nỗ lực thời gian và độ chính xác yêu cầu.
+* **RQ6.2 (Bằng chứng đối đầu & Khử biến nhiễu nhận thức)**:
+  - *Mô hình BPMN trừu tượng*: Bị chi phối rõ rệt bởi giới tính: Nữ kỹ sư dành nhiều thời gian hơn nam có ý nghĩa thống kê ($p = 0.018, d = 0.37$), và giới tính của khách hàng làm ảnh hưởng đến độ chính xác của sơ đồ BPMN ($p = 0.048$).
+  - *Mẫu thử giao diện (GUIs Prototype)*: **HOÀN TOÀN KHÔNG CÓ SỰ KHÁC BIỆT CÓ Ý NGHĨA THỐNG KÊ GIỮA CÁC GIỚI TÍNH ($p = 0.132$)!**
+  - Khẳng định tính vững chắc của Prototyping: Prototype đóng vai trò "Vật trung gian bình đẳng" (Equalizing Boundary Object), xóa nhòa mọi rào cản về phong cách giao tiếp và thiên vị nhận thức vô thức, đảm bảo độ chính xác yêu cầu khách quan cho toàn bộ nhóm phát triển.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Làm rõ và đồng nhất hóa xuất sắc các Yêu cầu Giao diện (GUIs / Interface Components) và Luồng chức năng tương tác người dùng.
+* **Hạn chế & Ghi chú nghiên cứu**: Sử dụng video khách hàng mô phỏng; đối tượng là sinh viên đại học (cần mở rộng sang kỹ sư chuyên nghiệp trong công nghiệp).
