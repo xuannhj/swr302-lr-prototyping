@@ -85,14 +85,13 @@ To enforce analytical rigor, every primary study analyzed in this review is exam
     \item \textbf{Taxonomical Classification (The ``What''):} How are the prototypes categorized across fidelity levels, media formats, and requirement types under models such as the PAM framework \cite{bjarnason2023empirically}?
 \end{enumerate}
 
-\subsection{Paper Structure}
 The remainder of this paper is structured across seven formal sections: Section~\ref{sec:methodology} delineates the review methodology, database search protocol, and inclusion criteria. Section~\ref{sec:thematic} presents a thematic review addressing RQ6.1 and RQ6.3. Section~\ref{sec:comparative} conducts a comparative analysis addressing RQ6.2. Section~\ref{sec:gaps} analyzes critical research gaps. Section~\ref{sec:directions} outlines proposed research directions. Finally, Section~\ref{sec:conclusion} concludes the paper.
 
 % ==================== sections/02_methodology.tex ====================
 \section{Review Methodology}
 \label{sec:methodology}
 
-This Systematic Literature Review is conducted in strict adherence to the evidence-based software engineering guidelines formulated by Kitchenham and Charters \cite{kitchenham2007guidelines} and informed by PRISMA reporting principles. The methodological protocol encompasses search strategy definition, study selection via explicit inclusion and exclusion criteria, quality appraisal, and structured data extraction.
+This Systematic Literature Review is conducted in strict adherence to evidence-based software engineering guidelines and informed by PRISMA reporting principles. The methodological protocol encompasses search strategy definition, study selection via explicit inclusion and exclusion criteria, quality appraisal, and structured data extraction.
 
 \subsection{Search Strategy and Electronic Databases}
 We queried four leading electronic bibliographic databases indexing premier software engineering literature:
@@ -304,7 +303,7 @@ This section critically analyzes major research gaps emerging from the synthesiz
 \subsection{Categorizing and Resolving Semantic Ambiguity}
 A recurring limitation of earlier empirical studies is their reliance on informal, subjective impressions of ``clarity'' or simple raw counts of elicited sentences. To establish scientific rigor, requirements ambiguity must be evaluated against formal linguistic classifications.
 
-Drawing upon linguistic foundations in Requirements Engineering \cite{berry2003from, cascon2025ambiguity}, requirements ambiguity is categorized into four distinct classes:
+Drawing upon linguistic foundations in Requirements Engineering \cite{cascon2025ambiguity}, requirements ambiguity is categorized into four distinct classes:
 \begin{enumerate}
     \item \textbf{Lexical / Semantic Ambiguity:} Words or domain terms possessing multiple meanings within the problem domain (e.g., conflicting interpretations of ``active user'' or ``transaction status'').
     \item \textbf{Syntactic / Structural Ambiguity:} Ambiguous grammatical structures, such as dangling prepositions or unclear logical combinations of ``AND/OR'' conditionals.
@@ -328,7 +327,7 @@ A practical challenge in agile software development is that standard user storie
 To bridge this gap without compromising agility, recent empirical evidence supports coupling prototypes with user stories into \textit{Enriched User Stories} \cite{acm2022proposal}. In this workflow, the Product Owner and UI/UX designer work one sprint ahead of developers during backlog grooming. By attaching low-fidelity wireframes and visual acceptance criteria directly to user stories, teams clarify data fields and edge cases before coding begins, effectively reducing downstream sprint rework by 30\%--40\% \cite{acm2022proposal}.
 
 \subsection{Threats to Validity}
-Following evidence-based guidelines \cite{kitchenham2007guidelines}, we evaluate four validity threats:
+Following evidence-based software engineering guidelines, we evaluate four validity threats:
 \begin{itemize}
     \item \textbf{Construct Validity:} Several studies treat gross requirement volume as a proxy for elicitation success. However, volume alone does not ensure completeness of non-visual backend logic. We mitigated this by synthesizing multi-dimensional metrics (completeness, correctness, typology).
     \item \textbf{Internal Validity:} In interactive settings (e.g., Wizard-of-Oz or Think-Aloud \cite{abad2018loud}), facilitator behavior and verbalization overhead may influence participant pacing and task execution.
