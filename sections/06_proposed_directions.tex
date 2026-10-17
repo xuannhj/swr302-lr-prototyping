@@ -1,0 +1,18 @@
+\section{Proposed Research Directions}
+\label{sec:directions}
+
+Based on the research gaps identified in Section~\ref{sec:gaps}, we propose three practical research directions tailored to software engineering practice and academic capstone contexts:
+
+\subsection{Empirical Evaluation of Enriched User Stories in Capstone Projects}
+While Keshk et al. \cite{acm2022proposal} proposed coupling low-fidelity mockups with user stories, empirical data tracking rework across successive sprints in student capstone environments remains limited. Future research should evaluate two parallel cohorts of student development teams building software projects:
+\begin{itemize}
+    \item \textbf{Control Cohort:} Utilizing traditional textual user stories with standard acceptance criteria.
+    \item \textbf{Experimental Cohort:} Utilizing Enriched User Stories with attached wireframe sketches and visual acceptance criteria.
+\end{itemize}
+Key dependent variables to track include: (1) sprint velocity, (2) the number of user story clarification requests during development, and (3) post-sprint defect rework effort.
+
+\subsection{Lightweight Ambiguity Checklists for Backlog Grooming}
+Natural language processing tools for ambiguity detection (e.g., Cascon et al. \cite{cascon2025ambiguity}) provide sophisticated classification but may be difficult for agile practitioners to integrate directly into daily meetings. A promising research direction is the development and validation of a lightweight, manual checklist derived from the four ambiguity categories (Structural, Scope, Anaphoric, Vagueness). Development teams can rapidly cross-check user stories against interactive prototype screens during backlog grooming to ensure that pronouns point to concrete buttons and scope boundaries are explicitly defined before sprint planning.
+
+\subsection{Augmenting Wireframes with Think-Aloud Protocols for NFR Elicitation}
+Because static wireframes routinely suffer from a non-functional requirement deficit \cite{rueda2020requirements}, future studies should operationalize simplified versions of Loud Paper Prototyping \cite{abad2018loud} within agile discovery sessions. By prompting stakeholders to verbalize their expectations regarding response latency, security concerns, and error recovery while walking through interactive clickable wireframes, teams can capture critical quality constraints early without incurring the cost of high-fidelity prototypes.
