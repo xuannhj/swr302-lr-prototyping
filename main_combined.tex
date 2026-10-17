@@ -88,8 +88,6 @@ To enforce analytical rigor, every primary study analyzed in this review is exam
 \subsection{Paper Structure}
 The remainder of this paper is structured across seven formal sections: Section~\ref{sec:methodology} delineates the review methodology, database search protocol, and inclusion criteria. Section~\ref{sec:thematic} presents a thematic review addressing RQ6.1 and RQ6.3. Section~\ref{sec:comparative} conducts a comparative analysis addressing RQ6.2. Section~\ref{sec:gaps} analyzes critical research gaps. Section~\ref{sec:directions} outlines proposed research directions. Finally, Section~\ref{sec:conclusion} concludes the paper.
 
-
-
 % ==================== sections/02_methodology.tex ====================
 \section{Review Methodology}
 \label{sec:methodology}
@@ -179,8 +177,6 @@ Data extraction was executed using a standardized protocol structured across fiv
     \item \textit{Tripartite Analytical Mapping:} Explicit evidence mapped to the Rationale (\textit{Why}: cognitive and linguistic barriers), Operational Protocol (\textit{How}: interaction workflows), and Taxonomical Dimensions (\textit{Classification}: fidelity and scope).
 \end{enumerate}
 
-
-
 % ==================== sections/03_thematic_review.tex ====================
 \section{Thematic Review}
 \label{sec:thematic}
@@ -197,7 +193,7 @@ To systematically conceptualize how prototypes are deployed in software engineer
     \item \textbf{Exploration Strategy:} Single-track linear prototyping versus parallel multi-alternative exploration.
 \end{enumerate}
 
-Empirical evidence from Bjarnason et al. \cite{bjarnason2023empirically} emphasizes that prototypes act as indispensable cognitive anchors in projects operating under minimal documentation. In a striking empirical case (Company J), developers demonstrated how informal prototype evaluations—specifically ``corridor testing'' where colleagues and passersby were recruited to interact with early interfaces—instantly revealed that the team had \textit{``missed several things,''} exposing severe functional omissions and misaligned business logic that written specifications had completely obscured. Gupta et al. \cite{gupta2022strategic} corroborated this trajectory in software startups, demonstrating that teams strategically shift prototypes from low-fidelity boundary objects during exploratory problem framing to high-fidelity interactive models for feature refinement.
+Empirical evidence from Bjarnason et al. \cite{bjarnason2023empirically} emphasizes that prototypes act as indispensable cognitive anchors in projects operating under minimal documentation. In a striking empirical case (Company J), developers demonstrated how informal prototype evaluations, specifically ``corridor testing'' where colleagues and passersby were recruited to interact with early interfaces, instantly revealed that the team had \textit{``missed several things,''} exposing severe functional omissions and misaligned business logic that written specifications had completely obscured. Gupta et al. \cite{gupta2022strategic} corroborated this trajectory in software startups, demonstrating that teams strategically shift prototypes from low-fidelity boundary objects during exploratory problem framing to high-fidelity interactive models for feature refinement.
 
 \subsection{Prototyping in Elicitation versus Validation}
 The synthesized literature reveals a fundamental dichotomy in the operational role of prototypes across the RE lifecycle:
@@ -232,7 +228,7 @@ A recurring theme in requirements engineering is that different requirement cate
 The literature demonstrates universal consensus that prototyping excels at capturing functional requirements. Visual representations allow users to trace step-by-step transaction flows, instantly identifying missing validation checks, unhandled edge cases, and omitted workflow steps that textual documentation failed to anticipate \cite{rueda2020requirements}. This visual anchor mechanism explains why Ferrari et al. \cite{rej2022evolve} observed that 42\% of additional functional requirements were uncovered only when analysts and stakeholders interacted with concrete application prototypes.
 
 \subsubsection{Usability and User Interface Requirements}
-Orme{\~n}o, Panach, and Pastor \cite{uv2023empirical} conducted an empirical within-subjects experiment with two replications (48 participants across 24 dyads) explicitly evaluating the Usability Requirements Elicitation Method (UREM), which couples interactive paper GUI prototyping with a structured, guideline-driven decision tree. Using General Linear Model (GLM) multivariate analysis, the authors proved that guiding the paper mockup walkthrough with formal usability guidelines resulted in a statistically significant increase in the effectiveness of surfacing usability requirements ($p = 0.000$, partial $\eta^2 = 0.274$, statistical power $= 0.978$) and guideline adherence ($p = 0.000$, partial $\eta^2 = 0.571$, statistical power $= 1.0$). Crucially, this intervention resolved interface omission defects—such as mandatory field notifications, input constraints, and modal error dialogs—without imposing a penalty on analyst operational efficiency ($p = 0.220$). This empirical finding converges with observations by Ferrari, Spoletini, and Debnath \cite{rej2022evolve}, who noted that while abstract interview dialogues remain largely preoccupied with high-level customer business logic, tactile engagement with concrete interface prototypes produces a 45\% surge in stakeholder attention toward usability affordances and interface ergonomics. Concurrently, Soares et al. \cite{jserd2019protopersona} demonstrated that combining proto-personas with UI sketches empowered non-technical stakeholders to articulate subtle UX needs that conventional text specifications routinely obscure.
+Orme{\~n}o, Panach, and Pastor \cite{uv2023empirical} conducted an empirical within-subjects experiment with two replications (48 participants across 24 dyads) explicitly evaluating the Usability Requirements Elicitation Method (UREM), which couples interactive paper GUI prototyping with a structured, guideline-driven decision tree. Using General Linear Model (GLM) multivariate analysis, the authors proved that guiding the paper mockup walkthrough with formal usability guidelines resulted in a statistically significant increase in the effectiveness of surfacing usability requirements ($p = 0.000$, partial $\eta^2 = 0.274$, statistical power $= 0.978$) and guideline adherence ($p = 0.000$, partial $\eta^2 = 0.571$, statistical power $= 1.0$). Crucially, this intervention resolved interface omission defects, such as mandatory field notifications, input constraints, and modal error dialogs, without imposing a penalty on analyst operational efficiency ($p = 0.220$). This empirical finding converges with observations by Ferrari, Spoletini, and Debnath \cite{rej2022evolve}, who noted that while abstract interview dialogues remain largely preoccupied with high-level customer business logic, tactile engagement with concrete interface prototypes produces a 45\% surge in stakeholder attention toward usability affordances and interface ergonomics. Concurrently, Soares et al. \cite{jserd2019protopersona} demonstrated that combining proto-personas with UI sketches empowered non-technical stakeholders to articulate subtle UX needs that conventional text specifications routinely obscure.
 
 \subsubsection{Non-Functional Requirements (NFR) and the Blind-Spot Breakthrough}
 Historically, low-fidelity paper prototyping suffered from an acute vulnerability: an inability to elicit Non-Functional Requirements (e.g., performance, reliability, security, learnability) \cite{rueda2020requirements, davis2018maturity}. Because paper cannot compute or execute background latency, stakeholders naturally focus on visible buttons and ignore systemic quality constraints.
@@ -242,7 +238,6 @@ Two groundbreaking methodological interventions successfully overcome this tradi
     \item \textbf{Loud Paper Prototyping (LPP):} Investigating 50 mobile engineering teams (183 participants) across three years, Abad et al. \cite{abad2018loud} demonstrated that augmenting paper prototypes with a simulated Wizard-of-Oz engine and a concurrent think-aloud protocol resolves this empirical blind spot. Non-parametric Kruskal-Wallis evaluations revealed that LPP significantly outperformed traditional face-to-face requirements meetings (NPP) in surfacing UI specifications ($p = 0.0001$), requirement additions ($p = 0.0001$), requirement modifications ($p = 0.01$), and critically in eliciting usability, navigation, and learnability NFRs ($p = 0.001$). Furthermore, LPP significantly surpassed Silent Paper Prototyping (SPP) in clarifying and modifying functional workflows ($p = 0.01$). Open-coding qualitative synthesis corroborated that 50\% of teams explicitly captured NFRs (with 36\% surfacing usability friction, 46\% clarifying UI layouts, and 10\% uncovering missing navigation paths), while 20\% detected previously omitted system states (e.g., absence of a mandatory ``Back'' button to parent menus, or unhandled mobile ``survival/offline'' modes).
     \item \textbf{Video-based Prototyping:} Bano, Zowghi, and Ferrari \cite{bano2023videos} and Brill, Schneider, and Knauss \cite{brill2010videos} demonstrated that rich multimedia prototypes (video scenarios) effectively contextualize NFRs. Video demonstrations portray realistic environmental noise, temporal pressure, and human fatigue, enabling stakeholders to recognize latency, throughput, and safety requirements that static text cannot express.
 \end{enumerate}
-
 
 % ==================== sections/04_comparative_analysis.tex ====================
 \section{Comparative Analysis and Synthesis}
@@ -300,8 +295,6 @@ Table~\ref{tab:comparative_matrix} presents a comparative synthesis of the prima
 \subsection{Key Empirical Synthesis}
 The empirical evidence decisively indicates that prototyping is superior to textual specifications and unstructured interviews for discovering missing functional requirements and resolving ambiguous interface behaviors. However, the data disproves the naive assumption that prototyping is an all-purpose silver bullet: without augmentation (e.g., Think-Aloud protocols or structured checklists), passive visual prototypes leave non-functional requirements and non-visual data integrity rules vulnerable to omission.
 
-
-
 % ==================== sections/05_research_gaps.tex ====================
 \section{Research Gaps}
 \label{sec:gaps}
@@ -351,8 +344,6 @@ Our systematic review identifies three primary gaps in the current body of liter
     \item \textbf{Gap 3 (Academic vs. Industrial Contextual Divide):} Rigorous controlled experiments are primarily conducted within university cohorts, whereas industrial investigations rely heavily on qualitative interviews.
 \end{enumerate}
 
-
-
 % ==================== sections/06_proposed_directions.tex ====================
 \section{Proposed Research Directions}
 \label{sec:directions}
@@ -373,8 +364,6 @@ Natural language processing tools for ambiguity detection (e.g., Cascon et al. \
 \subsection{Augmenting Wireframes with Think-Aloud Protocols for NFR Elicitation}
 Because static wireframes routinely suffer from a non-functional requirement deficit \cite{rueda2020requirements}, future studies should operationalize simplified versions of Loud Paper Prototyping \cite{abad2018loud} within agile discovery sessions. By prompting stakeholders to verbalize their expectations regarding response latency, security concerns, and error recovery while walking through interactive clickable wireframes, teams can capture critical quality constraints early without incurring the cost of high-fidelity prototypes.
 
-
-
 % ==================== sections/07_conclusion.tex ====================
 \section{Conclusion}
 \label{sec:conclusion}
@@ -389,9 +378,9 @@ This Systematic Literature Review synthesized 18 peer-reviewed foundational and 
 
 In conclusion, prototyping is an essential, evidence-backed strategy for reducing requirements omissions and linguistic ambiguities. To maximize its benefits while mitigating risks, development teams should deploy low-fidelity sketches during exploratory problem framing, utilize Enriched User Stories with visual acceptance criteria during agile backlog grooming to curtail rework, and transition to high-fidelity interactive mockups only during confirmatory validation prior to release.
 
-
-
+{\small
 \bibliographystyle{IEEEtran}
 \bibliography{ref}
+}
 
 \end{document}
