@@ -51,39 +51,28 @@ Requirements Engineering, Prototyping, Missing Requirements, Unclear Requirement
 
 Requirements Engineering (RE) serves as the foundational cornerstone of the software development lifecycle. Flaws and omissions introduced during early requirements activities propagate exponentially downstream, resulting in severe budgetary overruns, architectural rework, and project abandonment \cite{pohl2016requirements, davis2018maturity}. Despite decades of methodological evolution, eliciting complete requirements and specifying them unambiguously remains one of the most stubborn challenges in software engineering practice.
 
-\subsection{Problem Statement and Cognitive Barriers}
+\subsection{Problem statement and cognitive barriers}
 A primary root cause of requirements defects resides in human cognitive and communication limitations. In software engineering, natural language specifications are inherently prone to incompleteness and ambiguity due to cognitive-linguistic transformational effects, such as nominalization, universal quantifiers, and incompletely specified conditions~\cite{pohl2016requirements}. Furthermore, foundational RE frameworks, including the International Requirements Engineering Board (IREB) Certified Professional for Requirements Engineering (CPRE) curriculum \cite{pohl2016requirements}, emphasize that requirements elicitation is an act of mutual knowledge construction between heterogeneous stakeholders. Domain experts, end users, and engineers inhabit disparate conceptual worlds characterized by distinct professional vocabularies, mental models, and unstated assumptions. Stakeholders routinely take implicit background knowledge for granted, omitting critical domain logic from textual Software Requirements Specifications (SRS).
 
 According to IREB Principle 4 (\textit{Adequate Change of Documentation Type}), prototyping mitigates these linguistic vulnerabilities by transforming abstract textual descriptions into concrete behavioral artifacts \cite{pohl2016requirements}. This transformation allows stakeholders to interact directly with the system, surfacing tacit assumptions and uncovering both subconscious baseline expectations (dissatisfiers) and unconscious value-adding needs (delighters) mapped across the Kano model. Furthermore, lengthy textual documents often cultivate an ``illusion of completeness,'' wherein passive approval of textual specifications masks critical omissions, lexical ambiguities, and divergent interpretations \cite{ferrari2016ambiguity, cascon2025ambiguity}.
 
-\subsection{The Prototyping Paradigm}
+\subsection{The prototyping paradigm}
 Prototyping offers a tangible, experiential mechanism to bridge this cognitive gap. By transforming abstract textual representations into concrete visual and interactive artifacts, prototyping establishes a shared mental model (\textit{shared cognitive artifact}) across technical and non-technical stakeholders \cite{bjarnason2023empirically}. Prototyping facilitates participative evaluation \cite{hickey1998prototyping}, stimulates conversational exploration, and grounds abstract requirements in contextual workflows.
 
 Nevertheless, empirical questions persist regarding whether prototyping universally outperforms conventional elicitation and specification techniques, or whether its efficacy depends upon fidelity, interaction modalities, and specific requirement classifications.
 
-\subsection{Terminology and Conceptual Foundations}
-To establish conceptual clarity throughout this review, we formalize the operational definitions of core constructs following standard RE terminology:
-\begin{itemize}
-    \item \textbf{Missing Requirements:} Functional rules, exceptional flows, boundary constraints, or system quality attributes that are necessary for fulfilling stakeholder goals but remain entirely omitted from the specification due to tacit knowledge lock-in or inadequate elicitation prompts.
-    \item \textbf{Unclear Requirements:} Requirement statements containing linguistic ambiguities (lexical, syntactic, scope) or non-verifiable subjective adjectives (vagueness), allowing multiple conflicting behavioral interpretations among stakeholders and developers \cite{cascon2025ambiguity}.
-    \item \textbf{Prototyping Modality and Fidelity:} The medium and level of realism embodied in a prototype, spanning Low-Fidelity (Lo-Fi: paper cutouts, sketches, wireframes emphasizing functional flow without visual polish) and High-Fidelity (Hi-Fi: clickable Figma mockups, executable front-ends incorporating interactive behavior and realistic data).
-    \item \textbf{Prototyping Assessment Model (PAM):} The empirical multi-dimensional taxonomy proposed by Bjarnason et al. \cite{bjarnason2023empirically}, classifying prototyping interventions across five interdependent facets: \textit{Purpose}, \textit{Scope}, \textit{Media}, \textit{Exploration Strategy}, and \textit{Use}.
-\end{itemize}
+\subsection{Terminology and conceptual foundations}
+To establish conceptual clarity throughout this review, core constructs are operationalized following standard RE terminology. \textit{Missing requirements} denote functional rules, exceptional flows, boundary constraints, or system quality attributes that are necessary for fulfilling stakeholder goals but remain entirely omitted from specifications due to tacit knowledge lock-in or inadequate elicitation prompts. \textit{Unclear requirements} refer to requirement statements containing linguistic ambiguities (lexical, syntactic, scope) or non-verifiable subjective adjectives (vagueness), allowing multiple conflicting behavioral interpretations among stakeholders and developers \cite{cascon2025ambiguity}. \textit{Prototyping modality and fidelity} encompass the medium and level of realism embodied in a prototype, spanning Low-Fidelity (Lo-Fi: paper cutouts, sketches, wireframes emphasizing functional flow without visual polish) and High-Fidelity (Hi-Fi: clickable Figma mockups, executable front-ends incorporating interactive behavior and realistic data). Finally, the \textit{Prototyping Assessment Model (PAM)} proposed by Bjarnason et al. \cite{bjarnason2023empirically} serves as the primary multi-dimensional taxonomy, classifying prototyping interventions across five interdependent facets: purpose, scope, media, exploration strategy, and use.
 
-\subsection{Research Questions}
+\subsection{Research questions}
 To systematically investigate this topic, this review is structured around three core Research Questions:
 \begin{itemize}
-    \item \textbf{RQ6.1:} How are prototypes used to support requirements elicitation and validation?
-    \item \textbf{RQ6.2:} Does using a prototype help stakeholders identify missing or unclear requirements better than using textual specifications alone?
-    \item \textbf{RQ6.3:} What types of requirements can be clarified more effectively through prototyping?
+    \item \textit{RQ6.1:} How are prototypes used to support requirements elicitation and validation?
+    \item \textit{RQ6.2:} Does using a prototype help stakeholders identify missing or unclear requirements better than using textual specifications alone?
+    \item \textit{RQ6.3:} What types of requirements can be clarified more effectively through prototyping?
 \end{itemize}
 
-To enforce analytical rigor, every primary study analyzed in this review is examined through a structured tripartite framework:
-\begin{enumerate}
-    \item \textbf{Rationale (The ``Why''):} What cognitive barriers, tacit knowledge gaps, or textual specification failures necessitate prototyping?
-    \item \textbf{Operational Protocol (The ``How''):} What empirical elicitation workflows, interaction protocols (e.g., Think-Aloud, Wizard-of-Oz), and validation sessions are executed?
-    \item \textbf{Taxonomical Classification (The ``What''):} How are the prototypes categorized across fidelity levels, media formats, and requirement types under models such as the PAM framework \cite{bjarnason2023empirically}?
-\end{enumerate}
+To enforce analytical rigor, primary studies are evaluated across three structured dimensions: (1) \textit{Rationale (The ``Why'')}, examining what cognitive barriers, tacit knowledge gaps, or textual specification failures necessitate prototyping; (2) \textit{Operational Protocol (The ``How'')}, detailing what empirical elicitation workflows, interaction protocols (e.g., Think-Aloud, Wizard-of-Oz), and validation sessions are executed; and (3) \textit{Taxonomical Classification (The ``What'')}, determining how prototypes are categorized across fidelity levels, media formats, and requirement types under models such as the PAM framework \cite{bjarnason2023empirically}.
 
 The remainder of this paper is structured across seven formal sections: Section~\ref{sec:methodology} delineates the review methodology, database search protocol, and inclusion criteria. Section~\ref{sec:thematic} presents a thematic review addressing RQ6.1 and RQ6.3. Section~\ref{sec:comparative} conducts a comparative analysis addressing RQ6.2. Section~\ref{sec:gaps} analyzes critical research gaps. Section~\ref{sec:directions} outlines proposed research directions. Finally, Section~\ref{sec:conclusion} concludes the paper.
 
@@ -93,24 +82,12 @@ The remainder of this paper is structured across seven formal sections: Section~
 
 This Systematic Literature Review is conducted in strict adherence to evidence-based software engineering guidelines and informed by PRISMA reporting principles. The methodological protocol encompasses search strategy definition, study selection via explicit inclusion and exclusion criteria, quality appraisal, and structured data extraction.
 
-\subsection{Search Strategy and Electronic Databases}
-We queried four leading electronic bibliographic databases indexing premier software engineering literature:
-\begin{itemize}
-    \item \textbf{IEEE Xplore Digital Library}
-    \item \textbf{ACM Digital Library}
-    \item \textbf{ScienceDirect (Elsevier)}
-    \item \textbf{SpringerLink}
-\end{itemize}
-To capture seminal and emerging literature that might be indexed outside these primary databases, supplementary backward and forward snowballing was conducted on key surveys and conference proceedings (e.g., IEEE RE, REFSQ, WER).
+\subsection{Search strategy and electronic databases}
+We queried four leading electronic bibliographic databases indexing premier software engineering literature: IEEE Xplore Digital Library, ACM Digital Library, ScienceDirect (Elsevier), and SpringerLink. To capture seminal and emerging literature that might be indexed outside these primary databases, supplementary backward and forward snowballing was conducted on key surveys and conference proceedings (e.g., IEEE RE, REFSQ, WER).
 
-The search string was structured across three conceptual facets connected with Boolean operators:
-\begin{itemize}
-    \item \textbf{Facet 1 (Intervention):} \texttt{("prototyping" OR "prototype" OR "mock-up" OR "wireframe" OR "paper prototype" OR "interactive prototype")}
-    \item \textbf{Facet 2 (RE Phase):} \texttt{("requirements elicitation" OR "requirements validation" OR "requirements discovery" OR "requirements engineering")}
-    \item \textbf{Facet 3 (Phenomenon / Defect):} \texttt{("missing requirements" OR "unclear requirements" OR "ambiguity" OR "completeness" OR "tacit knowledge" OR "specification defect")}
-\end{itemize}
+The search string was structured across three conceptual facets connected with Boolean operators: (1) \textit{Facet 1 (Intervention)}, covering terms such as \texttt{"prototyping"}, \texttt{"prototype"}, \texttt{"mock-up"}, \texttt{"wireframe"}, \texttt{"paper prototype"}, and \texttt{"interactive prototype"}; (2) \textit{Facet 2 (RE Phase)}, targeting \texttt{"requirements elicitation"}, \texttt{"requirements validation"}, \texttt{"requirements discovery"}, and \texttt{"requirements engineering"}; and (3) \textit{Facet 3 (Phenomenon / Defect)}, encompassing \texttt{"missing requirements"}, \texttt{"unclear requirements"}, \texttt{"ambiguity"}, \texttt{"completeness"}, \texttt{"tacit knowledge"}, and \texttt{"specification defect"}.
 
-\subsection{Inclusion and Exclusion Criteria}
+\subsection{Inclusion and exclusion criteria}
 To guarantee methodological rigor and eliminate non-empirical or out-of-scope publications, studies were evaluated against the criteria detailed in Table~\ref{tab:inclusion_exclusion}.
 
 \begin{table}[htbp]
@@ -134,7 +111,7 @@ To guarantee methodological rigor and eliminate non-empirical or out-of-scope pu
 \end{tabularx}
 \end{table}
 
-\subsection{Study Selection Protocol and Selection Funnel}
+\subsection{Study selection protocol and selection funnel}
 The selection process was conducted through a multi-stage screening funnel to ensure reproducibility. Table~\ref{tab:selection_funnel} outlines the numerical progression across the screening phases.
 
 \begin{table}[htbp]
@@ -158,50 +135,32 @@ The selection process was conducted through a multi-stage screening funnel to en
 \end{tabularx}
 \end{table}
 
-The resulting corpus of 18 studies is partitioned into two mutually reinforcing tiers:
-\begin{enumerate}
-    \item \textbf{10 Core Primary Studies (2020--2025):} Top-tier empirical investigations providing direct quantitative and qualitative measurements addressing RQ6.1, RQ6.2, and RQ6.3 \cite{bjarnason2023empirically, rueda2020requirements, uv2023empirical, rej2022evolve, antonelli2022iterative, bano2023videos, gupta2022strategic, acm2022proposal, diaz2021gender, cascon2025ambiguity}.
-    \item \textbf{8 Foundational and Seminal Studies:} Groundwork literature establishing theoretical baselines for IREB standards, participative prototyping, elicitation maturity, interview ambiguity, and video scenarios \cite{pohl2016requirements, hickey1998prototyping, abad2018loud, jserd2019protopersona, davis2018maturity, ferrari2016ambiguity, spoletini2018interview, brill2010videos}.
-\end{enumerate}
+The resulting corpus of 18 studies is partitioned into two mutually reinforcing tiers: (1) \textit{10 Core Primary Studies (2020--2025)}, comprising top-tier empirical investigations providing direct quantitative and qualitative measurements addressing RQ6.1, RQ6.2, and RQ6.3 \cite{bjarnason2023empirically, rueda2020requirements, uv2023empirical, rej2022evolve, antonelli2022iterative, bano2023videos, gupta2022strategic, acm2022proposal, diaz2021gender, cascon2025ambiguity}; and (2) \textit{8 Foundational and Seminal Studies}, establishing groundwork theoretical baselines for IREB standards, participative prototyping, elicitation maturity, interview ambiguity, and video scenarios \cite{pohl2016requirements, hickey1998prototyping, abad2018loud, jserd2019protopersona, davis2018maturity, ferrari2016ambiguity, spoletini2018interview, brill2010videos}.
 
-\subsection{Quality Appraisal and Data Extraction Protocol}
+\subsection{Quality appraisal and data extraction protocol}
 Each eligible full-text article was assessed across four Quality Appraisal (QA) benchmarks: (QA1) Explicit formulation of research objectives; (QA2) Rigor and transparency of experimental/case design; (QA3) Objective measurement of requirement defect discovery or clarity; and (QA4) Validity threat discussion.
 
-Data extraction was executed using a standardized protocol structured across five operational dimensions:
-\begin{enumerate}
-    \item \textit{Bibliographic Profile:} Authors, publication year, venue, and empirical design (controlled experiment, case study, mapping study).
-    \item \textit{PAM Model Classification:} Categorization along the five PAM dimensions (Purpose, Scope, Media, Exploration Strategy, Use) \cite{bjarnason2023empirically}.
-    \item \textit{Empirical Findings on Missing/Unclear Requirements:} Statistical values ($p$-values, effect sizes $\eta^2$), percentage of requirement modifications, and observed defect categories.
-    \item \textit{Requirement Typology Susceptibility:} Functional (FR), Non-Functional (NFR), and Usability/GUI requirements.
-    \item \textit{Tripartite Analytical Mapping:} Explicit evidence mapped to the Rationale (\textit{Why}: cognitive and linguistic barriers), Operational Protocol (\textit{How}: interaction workflows), and Taxonomical Dimensions (\textit{Classification}: fidelity and scope).
-\end{enumerate}
+Data extraction was executed using a standardized protocol structured across five operational dimensions: (1) \textit{Bibliographic Profile}, recording authors, publication year, venue, and empirical design; (2) \textit{PAM Model Classification}, categorizing studies along the five dimensions (Purpose, Scope, Media, Exploration Strategy, Use) \cite{bjarnason2023empirically}; (3) \textit{Empirical Findings on Missing/Unclear Requirements}, extracting statistical indicators ($p$-values, effect sizes $\eta^2$), requirement modification percentages, and observed defect types; (4) \textit{Requirement Typology Susceptibility}, analyzing Functional (FR), Non-Functional (NFR), and Usability/GUI requirements; and (5) \textit{Tripartite Analytical Mapping}, synthesizing evidence across Rationale (\textit{Why}: cognitive and linguistic barriers), Operational Protocol (\textit{How}: interaction workflows), and Taxonomical Dimensions (\textit{Classification}: fidelity and scope).
 
 % ==================== sections/03_thematic_review.tex ====================
 \section{Thematic Review}
 \label{sec:thematic}
 
-This section synthesizes findings addressing \textbf{RQ6.1} (Operationalization of prototypes across elicitation and validation under the PAM framework) and \textbf{RQ6.3} (Clarification efficacy categorized across requirement typologies).
+This section synthesizes findings addressing \textit{RQ6.1} (Operationalization of prototypes across elicitation and validation under the PAM framework) and \textit{RQ6.3} (Clarification efficacy categorized across requirement typologies).
 
-\subsection{Prototyping Operationalization and the PAM Framework (RQ6.1)}
-To systematically conceptualize how prototypes are deployed in software engineering practice, Bjarnason, Lang, and Mj{\"o}berg \cite{bjarnason2023empirically} proposed the Prototyping Assessment Model (PAM), derived from a mapping study and an empirical multi-case investigation of 43 prototyping instances across 11 software organizations. The PAM taxonomy deconstructs prototyping into five core dimensions:
-\begin{enumerate}
-    \item \textbf{Purpose (The ``Why''):} Solution space exploration, inter-stakeholder alignment, concept verification, and testing problem-solution / product-market fit.
-    \item \textbf{Scope (The ``What''):} Breadth (horizontal coverage across application workflows) versus Depth (vertical feature refinement, visual fidelity, interaction mechanics, and data realism).
-    \item \textbf{Media (The Artifact):} Spanning a continuous spectrum from low-fidelity paper sketches, storyboards, and interactive wireframes to high-fidelity clickable UI mockups and executable source code.
-    \item \textbf{Use (The ``How''):} Target evaluators (internal developers, external end users, or family/friends/foes), evaluation formats (hands-on direct manipulation versus guided demonstrations), and testing contexts (scenario-driven walkthroughs versus unconstrained open testing).
-    \item \textbf{Exploration Strategy:} Single-track linear prototyping versus parallel multi-alternative exploration.
-\end{enumerate}
+\subsection{Prototyping operationalization and the PAM framework (RQ6.1)}
+To systematically conceptualize how prototypes are deployed in software engineering practice, Bjarnason, Lang, and Mj{\"o}berg \cite{bjarnason2023empirically} proposed the Prototyping Assessment Model (PAM), derived from a mapping study and an empirical multi-case investigation of 43 prototyping instances across 11 software organizations. The PAM taxonomy deconstructs prototyping into five core dimensions: (1) \textit{Purpose (The ``Why'')}, addressing solution space exploration, inter-stakeholder alignment, concept verification, and testing problem-solution or product-market fit; (2) \textit{Scope (The ``What'')}, balancing horizontal breadth across application workflows against vertical depth in feature refinement, interaction mechanics, and data realism; (3) \textit{Media (The Artifact)}, spanning a continuum from low-fidelity paper sketches and interactive wireframes to high-fidelity clickable mockups and executable source code; (4) \textit{Use (The ``How'')}, detailing target evaluators (developers, external users), evaluation formats (hands-on manipulation versus guided demonstrations), and testing contexts; and (5) \textit{Exploration Strategy}, contrasting single-track linear prototyping with parallel multi-alternative exploration.
 
 Empirical evidence from Bjarnason et al. \cite{bjarnason2023empirically} emphasizes that prototypes act as indispensable cognitive anchors in projects operating under minimal documentation. In a striking empirical case (Company J), developers demonstrated how informal prototype evaluations, specifically ``corridor testing'' where colleagues and passersby were recruited to interact with early interfaces, instantly revealed that the team had \textit{``missed several things,''} exposing severe functional omissions and misaligned business logic that written specifications had completely obscured. Gupta et al. \cite{gupta2022strategic} corroborated this trajectory in software startups, demonstrating that teams strategically shift prototypes from low-fidelity boundary objects during exploratory problem framing to high-fidelity interactive models for feature refinement.
 
-\subsection{Prototyping in Elicitation versus Validation}
+\subsection{Prototyping in elicitation versus validation}
 The synthesized literature reveals a fundamental dichotomy in the operational role of prototypes across the RE lifecycle:
-\begin{itemize}
-    \item \textbf{Elicitation Mode (Unconscious to Conscious Discovery):} In early elicitation, prototypes function as exploratory catalysts. Non-technical stakeholders frequently suffer from tacit knowledge lock-in \cite{ferrari2016ambiguity}; when presented with tactile mockups, unarticulated business rules and omitted workflow paths surface spontaneously as users navigate through concrete screens \cite{hickey1998prototyping}.
-    \item \textbf{Validation Mode (Hypothesis Verification and Evolution):} In validation, prototypes serve as unambiguous verification artifacts. Rather than passively reading abstract behavioral sentences in an SRS, stakeholders evaluate concrete state transitions. Ferrari, Spoletini, and Debnath \cite{rej2022evolve} empirically analyzed requirements evolution across interactive elicitation and app-store prototype exploration, establishing that requirements are co-created rather than merely retrieved: only 30\%--38\% of documented user stories preserved initial customer formulations, while hands-on interaction with concrete reference prototypes stimulated the discovery of 42\% additional missing requirements and precipitated a 45\% increase in attention toward usability and quality constraints. Antonelli et al. \cite{antonelli2022iterative} corroborated that iterative scenario walkthroughs utilizing prototype mockups significantly eliminated conflicting interpretations of textual use case scenarios.
-\end{itemize}
 
-\subsection{Efficacy Across Requirement Typologies (RQ6.3)}
+In \textit{elicitation mode (unconscious to conscious discovery)}, prototypes function as exploratory catalysts. Non-technical stakeholders frequently suffer from tacit knowledge lock-in \cite{ferrari2016ambiguity}; when presented with tactile mockups, unarticulated business rules and omitted workflow paths surface spontaneously as users navigate through concrete screens \cite{hickey1998prototyping}.
+
+In \textit{validation mode (hypothesis verification and evolution)}, prototypes serve as unambiguous verification artifacts. Rather than passively reading abstract behavioral sentences in an SRS, stakeholders evaluate concrete state transitions. Ferrari, Spoletini, and Debnath \cite{rej2022evolve} empirically analyzed requirements evolution across interactive elicitation and app-store prototype exploration, establishing that requirements are co-created rather than merely retrieved: only 30\%--38\% of documented user stories preserved initial customer formulations, while hands-on interaction with concrete reference prototypes stimulated the discovery of 42\% additional missing requirements and precipitated a 45\% increase in attention toward usability and quality constraints. Antonelli et al. \cite{antonelli2022iterative} corroborated that iterative scenario walkthroughs utilizing prototype mockups significantly eliminated conflicting interpretations of textual use case scenarios.
+
+\subsection{Efficacy across requirement typologies (RQ6.3)}
 A recurring theme in requirements engineering is that different requirement categories exhibit radically disparate susceptibility to prototyping interventions. Table~\ref{tab:req_typology} synthesizes the empirical evidence across requirement categories.
 
 \begin{table*}[t]
@@ -223,51 +182,43 @@ A recurring theme in requirements engineering is that different requirement cate
 \end{tabularx}
 \end{table*}
 
-\subsubsection{Functional Requirements (FR)}
+\subsubsection{Functional requirements (FR)}
 The literature demonstrates universal consensus that prototyping excels at capturing functional requirements. Visual representations allow users to trace step-by-step transaction flows, instantly identifying missing validation checks, unhandled edge cases, and omitted workflow steps that textual documentation failed to anticipate \cite{rueda2020requirements}. This visual anchor mechanism explains why Ferrari et al. \cite{rej2022evolve} observed that 42\% of additional functional requirements were uncovered only when analysts and stakeholders interacted with concrete application prototypes.
 
-\subsubsection{Usability and User Interface Requirements}
+\subsubsection{Usability and user interface requirements}
 Orme{\~n}o, Panach, and Pastor \cite{uv2023empirical} conducted an empirical within-subjects experiment with two replications (48 participants across 24 dyads) explicitly evaluating the Usability Requirements Elicitation Method (UREM), which couples interactive paper GUI prototyping with a structured, guideline-driven decision tree. Using General Linear Model (GLM) multivariate analysis, the authors proved that guiding the paper mockup walkthrough with formal usability guidelines resulted in a statistically significant increase in the effectiveness of surfacing usability requirements ($p = 0.000$, partial $\eta^2 = 0.274$, statistical power $= 0.978$) and guideline adherence ($p = 0.000$, partial $\eta^2 = 0.571$, statistical power $= 1.0$). Crucially, this intervention resolved interface omission defects, such as mandatory field notifications, input constraints, and modal error dialogs, without imposing a penalty on analyst operational efficiency ($p = 0.220$). This empirical finding converges with observations by Ferrari, Spoletini, and Debnath \cite{rej2022evolve}, who noted that while abstract interview dialogues remain largely preoccupied with high-level customer business logic, tactile engagement with concrete interface prototypes produces a 45\% surge in stakeholder attention toward usability affordances and interface ergonomics. Concurrently, Soares et al. \cite{jserd2019protopersona} demonstrated that combining proto-personas with UI sketches empowered non-technical stakeholders to articulate subtle UX needs that conventional text specifications routinely obscure.
 
-\subsubsection{Non-Functional Requirements (NFR) and the Blind-Spot Breakthrough}
+\subsubsection{Non-functional requirements (NFR) and the blind-spot breakthrough}
 Historically, low-fidelity paper prototyping suffered from an acute vulnerability: an inability to elicit Non-Functional Requirements (e.g., performance, reliability, security, learnability) \cite{rueda2020requirements, davis2018maturity}. Because paper cannot compute or execute background latency, stakeholders naturally focus on visible buttons and ignore systemic quality constraints.
 
-Two groundbreaking methodological interventions successfully overcome this traditional blind spot:
-\begin{enumerate}
-    \item \textbf{Loud Paper Prototyping (LPP):} Investigating 50 mobile engineering teams (183 participants) across three years, Abad et al. \cite{abad2018loud} demonstrated that augmenting paper prototypes with a simulated Wizard-of-Oz engine and a concurrent think-aloud protocol resolves this empirical blind spot. Non-parametric Kruskal-Wallis evaluations revealed that LPP significantly outperformed traditional face-to-face requirements meetings (NPP) in surfacing UI specifications ($p = 0.0001$), requirement additions ($p = 0.0001$), requirement modifications ($p = 0.01$), and critically in eliciting usability, navigation, and learnability NFRs ($p = 0.001$). Furthermore, LPP significantly surpassed Silent Paper Prototyping (SPP) in clarifying and modifying functional workflows ($p = 0.01$). Open-coding qualitative synthesis corroborated that 50\% of teams explicitly captured NFRs (with 36\% surfacing usability friction, 46\% clarifying UI layouts, and 10\% uncovering missing navigation paths), while 20\% detected previously omitted system states (e.g., absence of a mandatory ``Back'' button to parent menus, or unhandled mobile ``survival/offline'' modes).
-    \item \textbf{Video-based Prototyping:} Bano, Zowghi, and Ferrari \cite{bano2023videos} and Brill, Schneider, and Knauss \cite{brill2010videos} demonstrated that rich multimedia prototypes (video scenarios) effectively contextualize NFRs. Video demonstrations portray realistic environmental noise, temporal pressure, and human fatigue, enabling stakeholders to recognize latency, throughput, and safety requirements that static text cannot express.
-\end{enumerate}
+Two groundbreaking methodological interventions successfully overcome this traditional blind spot. First, \textit{Loud Paper Prototyping (LPP)} augments paper prototypes with a simulated Wizard-of-Oz engine and a concurrent think-aloud protocol. Investigating 50 mobile engineering teams (183 participants) across three years, Abad et al. \cite{abad2018loud} demonstrated that LPP significantly outperformed traditional face-to-face requirements meetings (NPP) in surfacing UI specifications ($p = 0.0001$), requirement additions ($p = 0.0001$), requirement modifications ($p = 0.01$), and critically in eliciting usability, navigation, and learnability NFRs ($p = 0.001$). Furthermore, LPP significantly surpassed Silent Paper Prototyping (SPP) in clarifying and modifying functional workflows ($p = 0.01$). Open-coding qualitative synthesis corroborated that 50\% of teams explicitly captured NFRs (with 36\% surfacing usability friction, 46\% clarifying UI layouts, and 10\% uncovering missing navigation paths), while 20\% detected previously omitted system states (e.g., absence of a mandatory ``Back'' button to parent menus, or unhandled mobile offline modes).
+
+Second, \textit{video-based prototyping} effectively contextualizes systemic quality attributes. Bano, Zowghi, and Ferrari \cite{bano2023videos} and Brill, Schneider, and Knauss \cite{brill2010videos} demonstrated that rich multimedia prototypes portray realistic environmental noise, temporal pressure, and human fatigue, enabling stakeholders to recognize latency, throughput, and safety requirements that static text cannot express.
 
 % ==================== sections/04_comparative_analysis.tex ====================
 \section{Comparative Analysis and Synthesis}
 \label{sec:comparative}
 
-This section delivers an empirical comparative evaluation addressing \textbf{RQ6.2} (Does using a prototype help stakeholders identify missing or unclear requirements better than using textual specifications alone, JAD, and unstructured interviews?).
+This section delivers an empirical comparative evaluation addressing \textit{RQ6.2} (Does using a prototype help stakeholders identify missing or unclear requirements better than using textual specifications alone, JAD, and unstructured interviews?).
 
-\subsection{The Anchor Empirical Benchmark: Rueda et al. (2020)}
+\subsection{The anchor empirical benchmark: Rueda et al. (2020)}
 The most rigorous empirical benchmark directly comparing prototyping against established elicitation methodologies is the family of experiments conducted by Rueda, Panach, and Distante \cite{rueda2020requirements}. Spanning four controlled replications across three academic years with 167 software engineering participants grouped into 30 development teams, the study systematically evaluated three treatments across three distinct domain systems: a Hotel Management System, a Flight-sale Booking System, and a Cruiser Management System.
 
-The three investigated elicitation treatments comprised:
-\begin{enumerate}
-    \item \textbf{Unstructured Interview (UI):} Traditional open dialogue without visual artifacts or structured facilitation.
-    \item \textbf{Joint Application Design (JAD):} Highly structured group elicitation workshops mediated by a trained facilitator with formal agendas and designated scribes.
-    \item \textbf{Paper Prototyping (PP):} Collaborative exploration utilizing interactive paper interface mockups manipulated by stakeholders during the interview.
-\end{enumerate}
+The three investigated elicitation treatments comprised: (1) \textit{Unstructured Interviews (UI)}, characterized by traditional open dialogue without visual artifacts or structured facilitation; (2) \textit{Joint Application Design (JAD)}, involving highly structured group elicitation workshops mediated by a trained facilitator with formal agendas and designated scribes; and (3) \textit{Paper Prototyping (PP)}, featuring collaborative exploration utilizing interactive paper interface mockups manipulated by stakeholders during the interview.
 
-\subsection{Statistical Findings on Missing and Unclear Requirements}
+\subsection{Statistical findings on missing and unclear requirements}
 The empirical measurements from Rueda et al. \cite{rueda2020requirements} provide decisive insights into requirements quality metrics:
-\begin{itemize}
-    \item \textbf{Total Elicitation Volume (Discovery of Missing Requirements):} Paper Prototyping achieved the highest gross volume of requirements captured among all three methods, demonstrating a statistically significant superiority over JAD and Unstructured Interviews ($p = 0.02$, effect size $\eta^2 = 0.08$). Tangible manipulation of interface mockups served as an active cognitive prompt, stimulating stakeholders to volunteer unprompted functional desires and uncovering latent business needs that remained dormant in purely verbal interviews.
-    \item \textbf{Specification Completeness ($p = 0.17$) and Correctness ($p = 0.59$):} Despite the substantial increase in gross requirement volume, Paper Prototyping demonstrated \textit{no statistically significant advantage} over JAD in specification completeness ($p = 0.17$) or correctness ($p = 0.59$). The empirical explanation lies in selective visual bias: stakeholders thoroughly explored visual pathways and layout elements but frequently overlooked non-visual algorithmic constraints, background batch calculations, and database transaction integrity.
-    \item \textbf{The Non-Functional Requirement (NFR) Deficit:} Passive paper prototyping proved to be the least effective method for capturing Non-Functional Requirements, where structured debate in JAD substantially outperformed prototyping. Visual mockups absorbed participant attention into display aesthetics, causing stakeholders to neglect systemic quality constraints (e.g., performance, security, and persistence).
-    \item \textbf{Requirement Redundancy and Overlapping ($p = 0.03, \eta^2 = 0.29$):} JAD achieved the lowest redundancy due to the presence of a dedicated scribe, whereas Unstructured Interviews generated the highest proportion of overlapping notes and conversational noise.
-    \item \textbf{Preparation Cost and Time Efficiency ($p = 0.05, \eta^2 = 0.22$):} Preparing low-fidelity paper mockups required a median of 145 minutes of upfront drawing, which was lower than JAD preparation but higher than unstructured interviews. While Unstructured Interviews concluded fastest, they yielded the poorest functional coverage.
-\end{itemize}
 
-\subsection{Methodological Validation and Confounding Variables}
+In terms of \textit{total elicitation volume (discovery of missing requirements)}, Paper Prototyping achieved the highest gross volume of requirements captured among all three methods, demonstrating a statistically significant superiority over JAD and Unstructured Interviews ($p = 0.02$, effect size $\eta^2 = 0.08$). Tangible manipulation of interface mockups served as an active cognitive prompt, stimulating stakeholders to volunteer unprompted functional desires and uncovering latent business needs that remained dormant in purely verbal interviews.
+
+Regarding \textit{specification completeness ($p = 0.17$) and correctness ($p = 0.59$)}, however, Paper Prototyping demonstrated no statistically significant advantage over JAD. The empirical explanation lies in selective visual bias: stakeholders thoroughly explored visual pathways and layout elements but frequently overlooked non-visual algorithmic constraints, background batch calculations, and database transaction integrity. Consequently, passive paper prototyping exhibited an acute \textit{non-functional requirement deficit}, proving least effective for capturing quality attributes, where structured debate in JAD substantially outperformed prototyping. Visual mockups absorbed participant attention into display aesthetics, causing stakeholders to neglect systemic quality constraints (e.g., performance, security, and persistence).
+
+Finally, regarding \textit{redundancy and efficiency}, JAD achieved the lowest requirement redundancy ($p = 0.03, \eta^2 = 0.29$) due to dedicated scribes, whereas Unstructured Interviews generated the highest proportion of overlapping notes and conversational noise. Preparing low-fidelity paper mockups required a median of 145 minutes of upfront drawing ($p = 0.05, \eta^2 = 0.22$), which was lower than JAD preparation but higher than unstructured interviews. While Unstructured Interviews concluded fastest, they yielded the poorest functional coverage.
+
+\subsection{Methodological validation and confounding variables}
 In a subsequent replication, D{\'\i}az et al. \cite{diaz2021gender} expanded the experimental framework across multiple cohorts to investigate whether participant gender or interpersonal dynamics influenced elicitation outcomes across methods. Their findings demonstrated that Paper Prototyping established an egalitarian collaborative platform: unlike unstructured interviews, where vocal participants often monopolized conversational turn-taking, visual and tangible mockups democratized participation, ensuring that contributions remained invariant to gender distribution.
 
-\subsection{Head-to-Head Comparative Synthesis}
+\subsection{Head-to-head comparative synthesis}
 Table~\ref{tab:comparative_matrix} presents a comparative synthesis of the primary elicitation and specification techniques based on the aggregated literature corpus.
 
 \begin{table*}[t]
@@ -291,7 +242,7 @@ Table~\ref{tab:comparative_matrix} presents a comparative synthesis of the prima
 \end{tabularx}
 \end{table*}
 
-\subsection{Key Empirical Synthesis}
+\subsection{Key empirical synthesis}
 The empirical evidence decisively indicates that prototyping is superior to textual specifications and unstructured interviews for discovering missing functional requirements and resolving ambiguous interface behaviors. However, the data disproves the naive assumption that prototyping is an all-purpose silver bullet: without augmentation (e.g., Think-Aloud protocols or structured checklists), passive visual prototypes leave non-functional requirements and non-visual data integrity rules vulnerable to omission.
 
 % ==================== sections/05_research_gaps.tex ====================
@@ -300,48 +251,36 @@ The empirical evidence decisively indicates that prototyping is superior to text
 
 This section critically analyzes major research gaps emerging from the synthesized literature, resolving key concerns regarding semantic ambiguity metrics, premature idea cementing in high-fidelity prototypes, Agile sprint integration, and threats to validity.
 
-\subsection{Categorizing and Resolving Semantic Ambiguity}
+\subsection{Categorizing and resolving semantic ambiguity}
 A recurring limitation of earlier empirical studies is their reliance on informal, subjective impressions of ``clarity'' or simple raw counts of elicited sentences. To establish scientific rigor, requirements ambiguity must be evaluated against formal linguistic classifications.
 
-Drawing upon linguistic foundations in Requirements Engineering \cite{cascon2025ambiguity}, requirements ambiguity is categorized into four distinct classes:
-\begin{enumerate}
-    \item \textbf{Lexical / Semantic Ambiguity:} Words or domain terms possessing multiple meanings within the problem domain (e.g., conflicting interpretations of ``active user'' or ``transaction status'').
-    \item \textbf{Syntactic / Structural Ambiguity:} Ambiguous grammatical structures, such as dangling prepositions or unclear logical combinations of ``AND/OR'' conditionals.
-    \item \textbf{Scope Ambiguity:} Ambiguity arising when quantifiers (e.g., ``all'', ``each'', ``only'') leave operational boundaries indeterminate across system states.
-    \item \textbf{Vagueness and Incompleteness:} Statements incorporating non-quantifiable subjective adjectives (e.g., ``user-friendly'', ``efficient'', ``appropriate response time'') that lack verifiable acceptance criteria.
-\end{enumerate}
+Drawing upon linguistic foundations in Requirements Engineering \cite{cascon2025ambiguity}, requirements ambiguity is categorized into four distinct classes: (1) \textit{lexical and semantic ambiguity}, where words or domain terms possess multiple meanings within the problem domain (e.g., conflicting interpretations of ``active user'' or ``transaction status''); (2) \textit{syntactic and structural ambiguity}, involving ambiguous grammatical structures such as dangling prepositions or unclear logical combinations of conditionals; (3) \textit{scope ambiguity}, arising when quantifiers (e.g., ``all'', ``each'', ``only'') leave operational boundaries indeterminate across system states; and (4) \textit{vagueness and incompleteness}, characterized by subjective, non-quantifiable adjectives (e.g., ``user-friendly'', ``appropriate response time'') that lack verifiable acceptance criteria.
 
 Prototyping serves as an experiential filter across these linguistic categories: interactive visual mockups collapse pronoun and scope ambiguities by grounding interactions in concrete UI elements, while explicit screen layouts eliminate vagueness by forcing concrete inputs and measurable validation rules \cite{ferrari2016ambiguity, cascon2025ambiguity}. Furthermore, as emphasized by Spoletini et al. \cite{spoletini2018interview}, prototypes provide an objective reference anchor that reconciles divergent interpretations between analysts and stakeholders.
 
-\subsection{Cost-Benefit Dynamics and High-Fidelity Risks}
-While high-fidelity (Hi-Fi) interactive prototypes (e.g., clickable Figma screens, interactive front-ends) provide realistic user experience simulations, their premature adoption introduces significant organizational and cognitive risks:
-\begin{itemize}
-    \item \textbf{Premature Idea Cementing:} When stakeholders and sponsors observe a polished, pixel-perfect interface early in the project, they anchor prematurely on the design \cite{bjarnason2023empirically, gupta2022strategic}. Stakeholders often become reluctant to propose structural changes or challenge core business logic, mistakenly assuming the system architecture is finalized.
-    \item \textbf{Premature Release Pressure:} Management may perceive visual completion as engineering readiness, exerting pressure on development teams to deliver prematurely or to reuse fragile prototype code in production.
-    \item \textbf{Cost-Fidelity Trade-offs:} Low-fidelity (Lo-Fi) paper prototypes require only a fraction of the preparation time (median of 145 minutes \cite{rueda2020requirements}) and encourage stakeholders to critique and discard tentative concepts easily. Therefore, a prudent software engineering guideline is: \textit{deploy Low-Fidelity prototypes during exploratory elicitation and problem framing, transitioning to High-Fidelity prototypes only during confirmatory validation before development}.
-\end{itemize}
+\subsection{Cost-benefit dynamics and high-fidelity risks}
+While high-fidelity (Hi-Fi) interactive prototypes (e.g., clickable Figma screens, interactive front-ends) provide realistic user experience simulations, their premature adoption introduces significant organizational and cognitive risks.
 
-\subsection{Agile Integration: Mitigating Late-Stage Rework}
+A principal cognitive barrier is \textit{premature idea cementing}. When stakeholders and sponsors observe a polished, pixel-perfect interface early in the project, they anchor prematurely on the visual presentation \cite{bjarnason2023empirically, gupta2022strategic}. Consequently, stakeholders often become reluctant to propose structural alterations or challenge core business logic, mistakenly assuming the underlying architecture is finalized.
+
+In parallel, high-fidelity prototypes induce \textit{premature release pressure}. Management may perceive surface visual completion as engineering readiness, exerting pressure on development teams to deliver prematurely or to reuse fragile prototype mockups in production environments.
+
+From an operational cost perspective, low-fidelity paper prototypes require only a modest upfront investment (median preparation of 145 minutes \cite{rueda2020requirements}) and encourage stakeholders to critique and discard tentative concepts easily. Therefore, a prudent software engineering guideline is: \textit{deploy low-fidelity prototypes during exploratory elicitation and problem framing, transitioning to high-fidelity prototypes only during confirmatory validation before development}.
+
+\subsection{Agile integration: mitigating late-stage rework}
 A practical challenge in agile software development is that standard user stories (\textit{As a [Role], I want [Action], So that [Benefit]}) are often too concise, leaving critical UI layouts, data fields, and non-functional constraints unarticulated. This disconnect leads to substantial rework during sprint demonstrations.
 
 To bridge this gap without compromising agility, recent empirical evidence supports coupling prototypes with user stories into \textit{Enriched User Stories} \cite{acm2022proposal}. In this workflow, the Product Owner and UI/UX designer work one sprint ahead of developers during backlog grooming. By attaching low-fidelity wireframes and visual acceptance criteria directly to user stories, teams clarify data fields and edge cases before coding begins, effectively reducing downstream sprint rework by 30\%--40\% \cite{acm2022proposal}.
 
-\subsection{Threats to Validity}
+\subsection{Threats to validity}
 Following evidence-based software engineering guidelines, we evaluate four validity threats:
-\begin{itemize}
-    \item \textbf{Construct Validity:} Several studies treat gross requirement volume as a proxy for elicitation success. However, volume alone does not ensure completeness of non-visual backend logic. We mitigated this by synthesizing multi-dimensional metrics (completeness, correctness, typology).
-    \item \textbf{Internal Validity:} In interactive settings (e.g., Wizard-of-Oz or Think-Aloud \cite{abad2018loud}), facilitator behavior and verbalization overhead may influence participant pacing and task execution.
-    \item \textbf{External Validity:} Primary controlled experiments (e.g., \cite{rueda2020requirements, diaz2021gender, uv2023empirical}) were conducted with student cohorts and academic domains. While offering high experimental control, findings should be corroborated in large-scale industry environments.
-    \item \textbf{Conclusion Validity:} Controlled experiments with modest cohorts (e.g., 30 teams in Rueda et al. \cite{rueda2020requirements}) exhibit limited power for detecting subtle completeness differences, requiring cautious interpretation of non-significant $p$-values.
-\end{itemize}
 
-\subsection{Identified Research Gaps}
-Our review identifies three primary gaps in the current literature:
-\begin{enumerate}
-    \item \textbf{Gap 1 (Lack of Standardized Ambiguity Metric Applications):} Most comparative trials evaluate gross requirement volume rather than directly quantifying ambiguity reduction across linguistic categories (lexical, syntactic, scope, vagueness).
-    \item \textbf{Gap 2 (Absence of Empirical Longitudinal Rework Data):} While industrial frameworks indicate rework reductions from visual artifacts, longitudinal tracking of defect propagation across agile sprint deliveries remains scarce.
-    \item \textbf{Gap 3 (Academic vs. Industrial Contextual Divide):} Rigorous controlled experiments are primarily conducted in university cohorts, whereas industrial investigations rely heavily on qualitative interviews.
-\end{enumerate}
+Regarding \textit{construct validity}, several studies treat gross requirement volume as a proxy for elicitation success. However, volume alone does not ensure completeness of non-visual backend logic; we mitigated this by synthesizing multi-dimensional metrics (completeness, correctness, typology). In terms of \textit{internal validity}, facilitator behavior and think-aloud overhead in interactive settings \cite{abad2018loud} may influence participant pacing and task execution.
+
+For \textit{external validity}, primary controlled experiments \cite{rueda2020requirements, diaz2021gender, uv2023empirical} were conducted predominantly with student cohorts and academic domains; while offering high experimental control, findings should be corroborated across enterprise environments. Finally, regarding \textit{conclusion validity}, controlled experiments with modest sample sizes (e.g., 30 teams in Rueda et al. \cite{rueda2020requirements}) exhibit limited statistical power for detecting subtle completeness differences, requiring cautious interpretation of non-significant $p$-values.
+
+\subsection{Identified research gaps}
+Three primary gaps emerge from the synthesized literature. \textit{Gap 1 (Lack of Standardized Ambiguity Metric Applications):} Most comparative trials evaluate gross requirement volume rather than directly quantifying ambiguity reduction across linguistic categories (lexical, syntactic, scope, vagueness). \textit{Gap 2 (Absence of Empirical Longitudinal Rework Data):} While industrial frameworks indicate rework reductions from visual artifacts, longitudinal tracking of defect propagation across agile sprint deliveries remains scarce. \textit{Gap 3 (Academic vs. Industrial Contextual Divide):} Rigorous controlled experiments are primarily conducted in university cohorts, whereas industrial investigations rely heavily on qualitative interviews.
 
 % ==================== sections/06_proposed_directions.tex ====================
 \section{Proposed Research Directions}
@@ -349,13 +288,13 @@ Our review identifies three primary gaps in the current literature:
 
 Based on the research gaps identified in Section~\ref{sec:gaps}, we propose three practical research directions tailored to software engineering practice and academic capstone contexts:
 
-\subsection{Empirical Evaluation of Enriched User Stories in Capstone Projects}
+\subsection{Empirical evaluation of enriched user stories in capstone projects}
 While Keshk et al. \cite{acm2022proposal} proposed coupling low-fidelity mockups with user stories, empirical data tracking rework across successive sprints in student capstone environments remains limited. Future research should evaluate two parallel cohorts of student development teams building software projects: a control cohort utilizing traditional textual user stories with standard acceptance criteria, and an experimental cohort utilizing Enriched User Stories with attached wireframe sketches and visual acceptance criteria. Key dependent variables to track include: (1) sprint velocity, (2) user story clarification requests during development, and (3) post-sprint defect rework effort.
 
-\subsection{Lightweight Ambiguity Checklists for Backlog Grooming}
+\subsection{Lightweight ambiguity checklists for backlog grooming}
 Natural language processing tools for ambiguity detection (e.g., Cascon et al. \cite{cascon2025ambiguity}) provide sophisticated classification but may be difficult for agile practitioners to integrate directly into daily meetings. A promising research direction is the development and validation of a lightweight, manual checklist derived from the four ambiguity categories (Structural, Scope, Anaphoric, Vagueness). Development teams can rapidly cross-check user stories against interactive prototype screens during backlog grooming to ensure that pronouns point to concrete buttons and scope boundaries are explicitly defined before sprint planning.
 
-\subsection{Augmenting Wireframes with Think-Aloud Protocols for NFR Elicitation}
+\subsection{Augmenting wireframes with think-aloud protocols for NFR elicitation}
 Because static wireframes routinely suffer from a non-functional requirement deficit \cite{rueda2020requirements}, future studies should operationalize simplified versions of Loud Paper Prototyping \cite{abad2018loud} within agile discovery sessions. By prompting stakeholders to verbalize expectations regarding latency, security, and error recovery during wireframe walkthroughs, teams can capture critical quality constraints early without incurring high-fidelity prototype overhead.
 
 % ==================== sections/07_conclusion.tex ====================
@@ -364,11 +303,11 @@ Because static wireframes routinely suffer from a non-functional requirement def
 
 This Systematic Literature Review synthesized 18 peer-reviewed foundational and empirical studies investigating the effect of prototyping on identifying missing and unclear requirements in software engineering. Structured around the IREB framework and tripartite analytical dimensions, our findings address the three core research questions:
 
-\begin{enumerate}
-    \item \textbf{Prototyping Modalities and Process (RQ6.1):} Under the PAM framework, prototypes function as cognitive boundary objects across the RE lifecycle. During elicitation, exploratory probes surface tacit knowledge; during validation, interactive simulations catalyze requirement evolution and uncover up to 42\% additional missing requirements.
-    \item \textbf{Efficacy vs. Textual Specifications Alone (RQ6.2):} Prototyping significantly outperforms textual specifications alone and unstructured interviews in gross functional requirement discovery volume ($p = 0.02$) and provides a gender-egalitarian medium ($p = 0.132$). However, passive prototypes do not guarantee specification completeness ($p = 0.17$) or correctness ($p = 0.59$) for non-visual backend logic.
-    \item \textbf{Susceptibility by Requirement Typology (RQ6.3):} Prototypes excel in clarifying functional workflows and usability/GUI requirements ($p = 0.000$). Traditional non-functional requirement (NFR) deficits are overcome via augmented modalities, including think-aloud paper prototyping ($p = 0.001$) and video scenarios.
-\end{enumerate}
+First, regarding \textit{prototyping modalities and process (RQ6.1)}, prototypes operationalized under the PAM framework function as boundary objects across the RE lifecycle: exploratory probes surface tacit knowledge during elicitation, while interactive simulations catalyze requirement evolution and uncover up to 42\% additional missing requirements during validation.
+
+Second, regarding \textit{efficacy compared to textual specifications alone (RQ6.2)}, prototyping significantly outperforms textual specifications and unstructured interviews in gross functional requirement discovery volume ($p = 0.02$) and provides a gender-egalitarian medium ($p = 0.132$). However, passive prototypes do not guarantee specification completeness ($p = 0.17$) or correctness ($p = 0.59$) for non-visual backend logic.
+
+Third, regarding \textit{susceptibility by requirement typology (RQ6.3)}, prototypes excel in clarifying functional workflows and usability/GUI requirements ($p = 0.000$). Traditional non-functional requirement deficits are overcome via augmented modalities, including think-aloud paper prototyping ($p = 0.001$) and contextual video scenarios.
 
 In conclusion, prototyping is an essential, evidence-backed strategy for reducing omissions and linguistic ambiguities. To maximize efficacy while mitigating risks, teams should deploy low-fidelity sketches during exploratory framing, adopt Enriched User Stories with visual acceptance criteria during backlog grooming, and transition to high-fidelity mockups only during confirmatory pre-release validation.
 

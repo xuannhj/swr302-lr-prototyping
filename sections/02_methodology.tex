@@ -3,24 +3,12 @@
 
 This Systematic Literature Review is conducted in strict adherence to evidence-based software engineering guidelines and informed by PRISMA reporting principles. The methodological protocol encompasses search strategy definition, study selection via explicit inclusion and exclusion criteria, quality appraisal, and structured data extraction.
 
-\subsection{Search Strategy and Electronic Databases}
-We queried four leading electronic bibliographic databases indexing premier software engineering literature:
-\begin{itemize}
-    \item \textbf{IEEE Xplore Digital Library}
-    \item \textbf{ACM Digital Library}
-    \item \textbf{ScienceDirect (Elsevier)}
-    \item \textbf{SpringerLink}
-\end{itemize}
-To capture seminal and emerging literature that might be indexed outside these primary databases, supplementary backward and forward snowballing was conducted on key surveys and conference proceedings (e.g., IEEE RE, REFSQ, WER).
+\subsection{Search strategy and electronic databases}
+We queried four leading electronic bibliographic databases indexing premier software engineering literature: IEEE Xplore Digital Library, ACM Digital Library, ScienceDirect (Elsevier), and SpringerLink. To capture seminal and emerging literature that might be indexed outside these primary databases, supplementary backward and forward snowballing was conducted on key surveys and conference proceedings (e.g., IEEE RE, REFSQ, WER).
 
-The search string was structured across three conceptual facets connected with Boolean operators:
-\begin{itemize}
-    \item \textbf{Facet 1 (Intervention):} \texttt{("prototyping" OR "prototype" OR "mock-up" OR "wireframe" OR "paper prototype" OR "interactive prototype")}
-    \item \textbf{Facet 2 (RE Phase):} \texttt{("requirements elicitation" OR "requirements validation" OR "requirements discovery" OR "requirements engineering")}
-    \item \textbf{Facet 3 (Phenomenon / Defect):} \texttt{("missing requirements" OR "unclear requirements" OR "ambiguity" OR "completeness" OR "tacit knowledge" OR "specification defect")}
-\end{itemize}
+The search string was structured across three conceptual facets connected with Boolean operators: (1) \textit{Facet 1 (Intervention)}, covering terms such as \texttt{"prototyping"}, \texttt{"prototype"}, \texttt{"mock-up"}, \texttt{"wireframe"}, \texttt{"paper prototype"}, and \texttt{"interactive prototype"}; (2) \textit{Facet 2 (RE Phase)}, targeting \texttt{"requirements elicitation"}, \texttt{"requirements validation"}, \texttt{"requirements discovery"}, and \texttt{"requirements engineering"}; and (3) \textit{Facet 3 (Phenomenon / Defect)}, encompassing \texttt{"missing requirements"}, \texttt{"unclear requirements"}, \texttt{"ambiguity"}, \texttt{"completeness"}, \texttt{"tacit knowledge"}, and \texttt{"specification defect"}.
 
-\subsection{Inclusion and Exclusion Criteria}
+\subsection{Inclusion and exclusion criteria}
 To guarantee methodological rigor and eliminate non-empirical or out-of-scope publications, studies were evaluated against the criteria detailed in Table~\ref{tab:inclusion_exclusion}.
 
 \begin{table}[htbp]
@@ -44,7 +32,7 @@ To guarantee methodological rigor and eliminate non-empirical or out-of-scope pu
 \end{tabularx}
 \end{table}
 
-\subsection{Study Selection Protocol and Selection Funnel}
+\subsection{Study selection protocol and selection funnel}
 The selection process was conducted through a multi-stage screening funnel to ensure reproducibility. Table~\ref{tab:selection_funnel} outlines the numerical progression across the screening phases.
 
 \begin{table}[htbp]
@@ -68,20 +56,9 @@ The selection process was conducted through a multi-stage screening funnel to en
 \end{tabularx}
 \end{table}
 
-The resulting corpus of 18 studies is partitioned into two mutually reinforcing tiers:
-\begin{enumerate}
-    \item \textbf{10 Core Primary Studies (2020--2025):} Top-tier empirical investigations providing direct quantitative and qualitative measurements addressing RQ6.1, RQ6.2, and RQ6.3 \cite{bjarnason2023empirically, rueda2020requirements, uv2023empirical, rej2022evolve, antonelli2022iterative, bano2023videos, gupta2022strategic, acm2022proposal, diaz2021gender, cascon2025ambiguity}.
-    \item \textbf{8 Foundational and Seminal Studies:} Groundwork literature establishing theoretical baselines for IREB standards, participative prototyping, elicitation maturity, interview ambiguity, and video scenarios \cite{pohl2016requirements, hickey1998prototyping, abad2018loud, jserd2019protopersona, davis2018maturity, ferrari2016ambiguity, spoletini2018interview, brill2010videos}.
-\end{enumerate}
+The resulting corpus of 18 studies is partitioned into two mutually reinforcing tiers: (1) \textit{10 Core Primary Studies (2020--2025)}, comprising top-tier empirical investigations providing direct quantitative and qualitative measurements addressing RQ6.1, RQ6.2, and RQ6.3 \cite{bjarnason2023empirically, rueda2020requirements, uv2023empirical, rej2022evolve, antonelli2022iterative, bano2023videos, gupta2022strategic, acm2022proposal, diaz2021gender, cascon2025ambiguity}; and (2) \textit{8 Foundational and Seminal Studies}, establishing groundwork theoretical baselines for IREB standards, participative prototyping, elicitation maturity, interview ambiguity, and video scenarios \cite{pohl2016requirements, hickey1998prototyping, abad2018loud, jserd2019protopersona, davis2018maturity, ferrari2016ambiguity, spoletini2018interview, brill2010videos}.
 
-\subsection{Quality Appraisal and Data Extraction Protocol}
+\subsection{Quality appraisal and data extraction protocol}
 Each eligible full-text article was assessed across four Quality Appraisal (QA) benchmarks: (QA1) Explicit formulation of research objectives; (QA2) Rigor and transparency of experimental/case design; (QA3) Objective measurement of requirement defect discovery or clarity; and (QA4) Validity threat discussion.
 
-Data extraction was executed using a standardized protocol structured across five operational dimensions:
-\begin{enumerate}
-    \item \textit{Bibliographic Profile:} Authors, publication year, venue, and empirical design (controlled experiment, case study, mapping study).
-    \item \textit{PAM Model Classification:} Categorization along the five PAM dimensions (Purpose, Scope, Media, Exploration Strategy, Use) \cite{bjarnason2023empirically}.
-    \item \textit{Empirical Findings on Missing/Unclear Requirements:} Statistical values ($p$-values, effect sizes $\eta^2$), percentage of requirement modifications, and observed defect categories.
-    \item \textit{Requirement Typology Susceptibility:} Functional (FR), Non-Functional (NFR), and Usability/GUI requirements.
-    \item \textit{Tripartite Analytical Mapping:} Explicit evidence mapped to the Rationale (\textit{Why}: cognitive and linguistic barriers), Operational Protocol (\textit{How}: interaction workflows), and Taxonomical Dimensions (\textit{Classification}: fidelity and scope).
-\end{enumerate}
+Data extraction was executed using a standardized protocol structured across five operational dimensions: (1) \textit{Bibliographic Profile}, recording authors, publication year, venue, and empirical design; (2) \textit{PAM Model Classification}, categorizing studies along the five dimensions (Purpose, Scope, Media, Exploration Strategy, Use) \cite{bjarnason2023empirically}; (3) \textit{Empirical Findings on Missing/Unclear Requirements}, extracting statistical indicators ($p$-values, effect sizes $\eta^2$), requirement modification percentages, and observed defect types; (4) \textit{Requirement Typology Susceptibility}, analyzing Functional (FR), Non-Functional (NFR), and Usability/GUI requirements; and (5) \textit{Tripartite Analytical Mapping}, synthesizing evidence across Rationale (\textit{Why}: cognitive and linguistic barriers), Operational Protocol (\textit{How}: interaction workflows), and Taxonomical Dimensions (\textit{Classification}: fidelity and scope).
