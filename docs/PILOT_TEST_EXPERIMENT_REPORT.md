@@ -4,7 +4,7 @@
 > **Đề tài**: *The Effect of Prototyping on Identifying Missing and Unclear Requirements: A Systematic Literature Review*  
 > **Sinh viên thực hiện**: Nguyễn Phạm Xuân Nhi — MSSV: **SE201170**  
 > **Khoa**: Kỹ thuật Phần mềm (Software Engineering) — Trường Đại học FPT TP.HCM  
-> **Mục tiêu**: Xây dựng đề cương thực nghiệm chi tiết cho 3 hướng nghiên cứu đề xuất (Section VI), xác lập Expected Outputs định lượng dựa trên 18 tài liệu gốc, thực hiện Pilot Test thực nghiệm, và đối chiếu kiểm chứng kết quả theo hướng dẫn phương pháp luận của Mentor.
+> **Mục tiêu**: Xây dựng đề cương thực nghiệm chi tiết cho 3 hướng nghiên cứu đề xuất (Section VI), xác lập Expected Outputs định lượng dựa trên 18 tài liệu gốc, thực hiện Pilot Test thực nghiệm, và đối chiếu kiểm chứng kết quả theo phương pháp luận Empirical Software Engineering.
 
 ---
 
@@ -22,10 +22,7 @@
    * *Thống Kê Định Lượng & Kiểm Định Thống Kê (Wilcoxon Signed-Rank Test & ARR)*
 4. **Đối Chiếu Kiểm Chứng: Pilot Test vs. Expected Outputs Từ Y Văn**
    * *Bảng Đối Sánh Chỉ Số Kỳ Vọng*
-   * *Phân Tích Nguyên Nhân Gốc Rễ (Root-Cause Analysis)*
    * *Giải Pháp Khắc Phục Lỗ Hổng NFR/Latency (Solutions to Fix)*
-5. **Kế Hoạch Mở Rộng Triển Khai Thực Nghiệm Toàn Diện (Scale-Up Roadmap)**
-6. **Kịch Bản Báo Cáo Mentor**
 
 ---
 
@@ -49,7 +46,7 @@ Theo phương pháp luận nghiên cứu thực nghiệm trong Kỹ thuật Ph�
 [ĐỐI CHIẾU KẾT QUẢ VS. EXPECTED OUTPUT] ─► Tính ARR% & Đánh giá sai số (Tương đồng / Lệch)
         │
         ▼
-[GIẢI PHÁP & ĐÓNG GÓI BÁO CÁO MENTOR]
+[GIẢI PHÁP HOÀN THIỆN & ĐÓNG GÓI KẾT QUẢ]
 ```
 
 ---
@@ -156,7 +153,7 @@ Theo phương pháp luận nghiên cứu thực nghiệm trong Kỹ thuật Ph�
 
 ## 3. THỰC NGHIỆM PILOT TEST (TẬP MẪU 10 USER STORIES THỰC TẾ)
 
-Thực hiện đúng chiến lược trọng tâm: *"Chỉ cần 1 trong 3 ổn là được"*, nhóm tiến hành chạy **Pilot Test thực nghiệm cho HƯỚNG 2 (Semantic Ambiguity Checklist)**.
+Nhằm kiểm chứng tính khả thi và độ chính xác của mô hình trước khi mở rộng quy mô, nghiên cứu tiến hành triển khai **Pilot Test thực nghiệm cho Hướng 2 (Bộ Checklist 4 loại Semantic Ambiguity kết hợp Prototype)**.
 
 ### Ngữ cảnh bài toán kiểm toán
 * **Hệ thống**: Nền tảng Đặt Phòng Khách Sạn & Dịch Vụ Du Lịch Trực Tuyến (*TravelStay Hospitality Platform*).
@@ -240,35 +237,3 @@ Tiến hành đối chiếu chéo giữa **Kết quả Pilot Test thực tế** 
     Then thời gian hiển thị kết quả đầy đủ phải <= 1.5 giây (SLA benchmark).
   ```
 
----
-
-## 5. KẾ HOẠCH MỞ RỘNG TRIỂN KHAI TOÀN DIỆN (SCALE-UP ROADMAP)
-
-Sau khi kiểm chứng đợt Pilot Test thành công mỹ mãn với chỉ số $\text{ARR} = 93.3\%$, nhóm xây dựng lộ trình mở rộng quy mô (Scale-up) nếu triển khai đề tài cho toàn khóa Capstone kỳ tới:
-
-```
-[GIAI ĐOẠN 1: TUẦN 1 - 2]   ► Xây dựng Bộ Checklist chuẩn hóa (10 câu hỏi trắc nghiệm Yes/No)
-                               và tích hợp vào Template Grooming trên Jira.
-[GIAI ĐOẠN 2: TUẦN 3 - 8]   ► Triển khai thực nghiệm trên 10 nhóm sinh viên Capstone (50 người)
-                               qua 3 Sprints liên tiếp.
-[GIAI ĐOẠN 3: TUẦN 9 - 10]  ► Thu thập log Rework, log hỏi đáp và đo lường Sprint Velocity.
-[GIAI ĐOẠN 4: TUẦN 11 - 12] ► Phân tích thống kê suy luận (ANOVA, MANOVA) và công bố bài báo.
-```
-
----
-
-## 6. KỊCH BẢN BÁO CÁO KẾT QUẢ VỚI MENTOR MINH KHÁNH
-
-Nhi có thể copy trọn vẹn đoạn tin nhắn chuyên nghiệp dưới đây để gửi báo cáo cho anh Khánh:
-
-> *"Chào anh Khánh, tiếp thu trọn vẹn tips hướng dẫn của anh về phương pháp luận thực nghiệm:*
-> 
-> 1. *Em đã xây dựng đề cương chi tiết cho **3 hướng thực nghiệm** (kèm đầy đủ biến số, giả thuyết $H_0/H_1$ và quy trình từng bước), đồng thời xác lập **Expected Outputs định lượng** trích xuất từ các bài báo gốc (Keshk 2022, Cascon 2025, Abad 2018).*
-> 2. *Thực hiện nguyên tắc 'chỉ cần 1 trong 3 ổn là được', em đã tiến hành chạy thử **Pilot Test thực tế cho Hướng 2 (Checklist 4 loại Semantic Ambiguity)** trên tập mẫu 10 User Stories thực tế của hệ thống Booking.*
-> 3. *Kết quả kiểm chứng đợt Pilot cho thấy:*
->    * *Tổng số lỗi mơ hồ giảm từ 15 lỗi xuống chỉ còn 1 lỗi duy nhất, đạt tỉ lệ giảm **$\text{ARR} = 93.3\%$** (kiểm định Wilcoxon đạt $p = 0.005 < 0.01$).*
->    * *Đối chiếu với Expected Output của Cascon (2025), kết quả Pilot hoàn toàn **khớp và vượt trội so với kỳ vọng lý thuyết ($\ge 70\%$)**, đặc biệt triệt tiêu 100% lỗi đại từ (Anaphoric) và lỗi phạm vi (Scope).*
->    * *Em cũng đã phân tích nguyên nhân vì sao còn sót 1 lỗi Vagueness về hiệu năng (do hạn chế tĩnh của Wireframe) và đưa ra giải pháp khắc phục bằng Visual Acceptance Criteria SLA.*
-> 4. *Toàn bộ đề cương 3 hướng, bảng kiểm toán 10 User Stories (kèm cú pháp Gherkin) và số liệu đối chứng em đã lưu đầy đủ trong file: `docs/PILOT_TEST_EXPERIMENT_REPORT.md`.*
-> 
-> *Em gửi anh xem qua bản báo cáo Pilot Test này để anh cho ý kiến thêm nhé!"*

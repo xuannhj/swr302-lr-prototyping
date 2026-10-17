@@ -1,4 +1,4 @@
-# Danh Mục 18 Tài Liệu Nghiên Cứu & Bảng Trích Xuất Dữ Liệu (SWR302 - RP6)
+# Danh Mục 26 Tài Liệu Nghiên Cứu & Bảng Trích Xuất Dữ Liệu (SWR302 - RP6)
 
 > **Đề tài**: *The Effect of Prototyping on Identifying Missing and Unclear Requirements*  
 > **Sinh viên thực hiện**: Nguyễn Phạm Xuân Nhi (SE201170) — SWR302 (Software Requirements)  
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Bảng Phân Loại & Danh Mục 18 Tài Liệu Nghiên Cứu (Corpus Mapping)
+## 1. Bảng Phân Loại & Danh Mục 26 Tài Liệu Nghiên Cứu (Corpus Mapping)
 
 | TT | Mã Citation Key | Tên bài báo / Tài liệu | Tác giả & Năm | Nguồn / Venue | Nhóm | RQ liên quan | Trọng tâm học thuật & Vai trò |
 | :---: | :--- | :--- | :--- | :--- | :---: | :---: | :--- |
@@ -28,6 +28,14 @@
 | 16 | `ferrari2016ambiguity` | Ambiguity and tacit knowledge in requirements elicitation interviews | Ferrari, Spoletini & Gnesi (2016) | Requirements Engineering Journal | Background | RQ6.3 | Định nghĩa ambiguity gốc và tri thức ẩn (tacit knowledge) trong phỏng vấn kỹ thuật yêu cầu. |
 | 17 | `spoletini2018interview` | Interview Review: An Empirical Study on Detecting Ambiguities... | Spoletini et al. (2018) | REFSQ | Background | RQ6.3 | Phương pháp thực nghiệm đo lường sai lệch diễn giải ($\Delta_{\text{interp}}$) giữa analyst và reviewer. |
 | 18 | `brill2010videos` | Videos vs. Use Cases: Can Videos Capture More Requirements Under Time Pressure? | Brill, Schneider & Knauss (2010) | REFSQ | Background | RQ6.2 | Bằng chứng thực nghiệm gốc: video (prototype trực quan) phát hiện nhiều yêu cầu hơn use case dạng văn bản. |
+| 19 | `hoffmann2011automotive` | Towards automotive service engineering: a design framework and a process model... | Hoffmann & Leimeister (2011) | IJEB (Inderscience) | Extended (Mentor) | RQ6.3 | Đột phá NFR trong hệ thống nhúng / ô tô qua In-situ Prototyping (Audi A6); bắt trọn rủi ro an toàn và xao nhãng tài xế. |
+| 20 | `lending2022rubric` | A Rubric to Evaluate and Enhance Requirements Elicitation Interviewing Skills | Lending et al. (2022) | JISE (AIS eLibrary) | Extended (Mentor) | RQ6.1 / RQ6.2 | Thước đo Rubric chuẩn hóa đo lường năng lực khơi gợi yêu cầu của sinh viên đại học (cơ sở phương pháp luận cho Hướng 1). |
+| 21 | `kolthoff2024interlinking` | Interlinking User Stories and GUI Prototyping: A Semi-Automatic LLM-Based Approach | Kolthoff et al. (2024) | IEEE RE 2024 | Extended (Core) | RQ6.2 | Ứng dụng LLM liên kết tự động User Story với GUI Prototype để triệt tiêu hiểu lầm ngữ nghĩa giữa PO và Dev. |
+| 22 | `kolthoff2024selfelicitation`| Self-Elicitation of Requirements with Automated GUI Prototyping | Kolthoff, Schneider et al. (2024) | ACM/IEEE ASE 2024 | Extended (Core) | RQ6.1 | Công cụ SERGUI kích thích stakeholder tự khơi gợi yêu cầu bị thiếu (Missing Requirements / Tacit Knowledge) qua GUI mẫu. |
+| 23 | `wei2023boosting` | Boosting GUI Prototyping with Diffusion Models | Wei et al. (2023) | IEEE RE 2023 | Extended (Core) | RQ6.2 | Ứng dụng Diffusion Model tạo nhanh GUI Mock-up từ text đặc tả, xóa bỏ rào cản chi phí và thời gian làm prototype trong Agile. |
+| 24 | `lim2008anatomy` | The Anatomy of Prototypes: Prototypes as Filters, Prototypes as Manifestations | Lim, Stolterman & Tenenberg (2008) | ACM TOCHI | Background | RQ6.1 | Bài báo kinh điển định nghĩa Prototype là Bộ lọc (Filters) loại bỏ giả định sai và phơi bày yêu cầu bị bỏ sót. |
+| 25 | `inayat2015systematic` | A systematic literature review on agile requirements engineering practices and challenges | Inayat et al. (2015) | Computers in Human Behavior | Background | RQ6.1 | SLR tổng hợp thực hành Agile RE, chứng minh Prototyping đứng đầu về giảm rework và làm rõ User Stories. |
+| 26 | `berry2003contract` | From Contract Drafting to Software Specification: Linguistic Sources of Ambiguity | Berry, Kamsties & Krieger (2003) | SE Reference Report | Background | RQ6.2 | Cội nguồn lý thuyết ngôn ngữ học định nghĩa 4 loại mơ hồ (Structural, Scope, Anaphoric, Vagueness) làm nền tảng cho Checklist. |
 
 ---
 
@@ -257,3 +265,37 @@
   - Nhờ cơ chế nhập ý kiến song song và ẩn danh của GSS, phương pháp luận này giúp duy trì sự tập trung tối đa của các bên liên quan vào các **Yêu cầu Chức năng nghiệp vụ cốt lõi**, đảm bảo mọi stakeholder đều đóng góp ý kiến bình đẳng và phát hiện toàn diện các luồng nghiệp vụ bị bỏ sót (*missing requirements*).
 * **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Cân bằng hoàn hảo giữa Yêu cầu Chức năng cốt lõi (Core Functional Requirements) và Trải nghiệm tương tác người dùng (Interaction Experience), ngăn chặn triệt để hiện tượng phân tâm vì thẩm mỹ cá nhân.
 * **Hạn chế & Ghi chú nghiên cứu**: Hệ thống GSS cuối thập niên 1990 vận hành trên mạng LAN trường học/doanh nghiệp còn cồng kềnh; ngày nay mô hình này đã được hiện đại hóa trên nền tảng Web thông qua các công cụ cộng tác trực tuyến hiện đại (như Miro, Figma, FigJam).
+
+---
+
+## 3. Thuyết Minh Ngắn Gọn Lý Do Bổ Sung 8 Papers Mới (Papers 19 - 26)
+
+### Nhóm 1: 2 Bài Báo Do Mentor Minh Khánh Trực Tiếp Đề Cử
+* **Paper 19 (`hoffmann2011automotive` - IJEB 2011)**:
+  * *Tên bài*: *Towards automotive service engineering: a design framework and a process model for developing mobile services in automobiles*
+  * *Lý do thêm vào*: Mở rộng miền nghiên cứu từ Web/App sang **Hệ thống nhúng & Ô tô (Cyber-Physical Systems)**; chứng minh việc thử nghiệm In-situ Prototyping trong xe thật (Audi A6) giúp khơi gợi và giải quyết điểm mù NFR (an toàn, xao nhãng tài xế, độ trễ viễn thông DAB). Đóng góp vào Section III-C và Section V.
+* **Paper 20 (`lending2022rubric` - JISE 2022)**:
+  * *Tên bài*: *A Rubric to Evaluate and Enhance Requirements Elicitation Interviewing Skills*
+  * *Lý do thêm vào*: Cung cấp **Bộ Rubric chuẩn hóa** đã kiểm chứng thực nghiệm trên sinh viên đại học để đo lường năng lực khơi gợi yêu cầu. Giải quyết lỗ hổng thiếu thước đo khoa học (Gap 2) và làm căn cứ đánh giá cho Hướng 1 trên sinh viên Capstone (Section VI-A).
+
+### Nhóm 2: 3 Bài Báo Mới Nhất (2023 - 2024) Từ IEEE RE & ACM ASE
+* **Paper 21 (`kolthoff2024interlinking` - IEEE RE 2024)**:
+  * *Tên bài*: *Interlinking User Stories and GUI Prototyping: A Semi-Automatic LLM-Based Approach*
+  * *Lý do thêm vào*: Công bố mới nhất tại hội nghị số 1 thế giới về RE (Reykjavik 2024). Ứng dụng LLM liên kết trực tiếp User Story với GUI Prototype để bẻ gãy hiểu lầm ngữ nghĩa giữa PO và Dev. Đóng góp vào Section III-B và Hướng 1.
+* **Paper 22 (`kolthoff2024selfelicitation` - ACM/IEEE ASE 2024)**:
+  * *Tên bài*: *Self-Elicitation of Requirements with Automated GUI Prototyping*
+  * *Lý do thêm vào*: Đồng tác giả GS. Kurt Schneider (chuyên gia RE). Đưa ra công cụ SERGUI chứng minh GUI Prototype tự động kích thích stakeholder **tự khơi gợi yêu cầu bị thiếu (Missing Requirements / Tacit Knowledge)**. Đóng góp vào Section III-A.
+* **Paper 23 (`wei2023boosting` - IEEE RE 2023)**:
+  * *Tên bài*: *Boosting GUI Prototyping with Diffusion Models* (DOI: `10.1109/RE57278.2023.00035`)
+  * *Lý do thêm vào*: Ứng dụng Diffusion Model (UI-Diffuser) sinh nhanh GUI Mock-up từ câu chữ đặc tả, xóa bỏ rào cản chi phí và thời gian tạo prototype trong các Sprint Agile. Đóng góp vào Section IV.
+
+### Nhóm 3: 3 Bài Báo Kinh Điển Nền Tảng (Backward Snowballing)
+* **Paper 24 (`lim2008anatomy` - ACM TOCHI 2008)**:
+  * *Tên bài*: *The Anatomy of Prototypes: Prototypes as Filters, Prototypes as Manifestations of Design Ideas*
+  * *Lý do thêm vào*: Bài báo kinh điển nhất về lý thuyết Prototype, định nghĩa Prototype là **Bộ lọc (Filters)** loại bỏ giả định sai và phơi bày yêu cầu bị bỏ sót (nền tảng của Bjarnason 2023). Đóng góp vào Section I và Section III-A.
+* **Paper 25 (`inayat2015systematic` - Elsevier CHB 2015)**:
+  * *Tên bài*: *A systematic literature review on agile requirements engineering practices and challenges*
+  * *Lý do thêm vào*: SLR uy tín về Agile RE, chứng minh Prototyping đứng đầu về giảm rework và làm rõ User Stories. Đóng góp vào Section I và Section IV.
+* **Paper 26 (`berry2003contract` - SE Reference 2003)**:
+  * *Tên bài*: *From Contract Drafting to Software Specification: Linguistic Sources of Ambiguity*
+  * *Lý do thêm vào*: Cội nguồn ngôn ngữ học định nghĩa 4 loại mơ hồ (Structural, Scope, Anaphoric, Vagueness), là nền tảng trực tiếp để Cascon 2025 và nhóm xây dựng Bộ Checklist. Đóng góp vào Section III-B và Hướng 2.
