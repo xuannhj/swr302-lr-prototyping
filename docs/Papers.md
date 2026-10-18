@@ -266,6 +266,28 @@
 * **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Cân bằng hoàn hảo giữa Yêu cầu Chức năng cốt lõi (Core Functional Requirements) và Trải nghiệm tương tác người dùng (Interaction Experience), ngăn chặn triệt để hiện tượng phân tâm vì thẩm mỹ cá nhân.
 * **Hạn chế & Ghi chú nghiên cứu**: Hệ thống GSS cuối thập niên 1990 vận hành trên mạng LAN trường học/doanh nghiệp còn cồng kềnh; ngày nay mô hình này đã được hiện đại hóa trên nền tảng Web thông qua các công cụ cộng tác trực tuyến hiện đại (như Miro, Figma, FigJam).
 
+### Nghiên cứu 19: Hoffmann & Leimeister (2011) - In-situ Prototyping trong Hệ Thống Ô Tô (Audi A6)
+* **Tác giả & Năm**: Holger Hoffmann and Jan Marco Leimeister (2011).
+* **Nguồn**: *International Journal of Electronic Business (IJEB)*, Inderscience, Vol. 9, No. 4, pp. 320–349.
+* **DOI / Link**: [`https://doi.org/10.1504/IJEB.2011.043254`](https://doi.org/10.1504/IJEB.2011.043254).
+* **Dự án & Bối cảnh**: Dự án đại công nghiệp MACS (Mobile Automotive Cooperative Services) hợp tác cùng tập đoàn ô tô **Audi AG**. Thiết lập dịch vụ tin tức âm thanh/hình ảnh tương tác *MACS MyNews* trong buồng lái xe **Audi A6** cho tài xế.
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**: 
+  - Đề xuất phương pháp **In-situ Prototyping (Tạo mẫu tại hiện trường / trong bối cảnh thực)**.
+  - Tích hợp nguyên mẫu phần mềm trực tiếp vào bảng điều khiển buồng lái xe Audi A6 (hệ thống màn hình trung tâm MMI, nút xoay điều khiển gần cần số, phím bấm tích hợp trên vô-lăng, và hệ thống loa âm thanh xe hơi).
+  - Người tham gia đóng vai trò tài xế trực tiếp trải nghiệm và tương tác với dịch vụ khi xe đang vận hành thực tế.
+* **RQ6.2 (Bằng chứng đối đầu & Phát hiện yêu cầu bị thiếu)**:
+  - Tài liệu đặc tả văn bản (SRS) và phỏng vấn trong phòng họp khiến kỹ sư lầm tưởng menu duyệt tin tức văn bản 3 cấp là dễ dùng.
+  - Khi đưa vào buồng lái ô tô thực tế (*In-situ*), người dùng phát hiện ngay các **Yêu cầu bị bỏ sót chí mạng (Missing Requirements)**:
+    + Bỏ sót tính năng Chuyển văn bản thành giọng nói (*Text-to-Speech / Audio Readout*): Tài xế không thể rời mắt khỏi đường lái để đọc chữ quá 1.5 giây mà không gặp nguy cơ tai nạn nghiêm trọng.
+    + Bỏ sót luồng xử lý gián đoạn ưu tiên (*Interruption Handling*): Khi có cuộc gọi đến hoặc cảnh báo va chạm khẩn cấp, tin tức phải tự động tạm dừng và lưu lại điểm đọc.
+    + Cụ thể hóa yêu cầu mơ hồ: Thao tác chọn kênh tin tức chỉ được tối đa 1–2 lần bấm từ vô-lăng.
+* **RQ6.3 (Đột phá bẻ gãy điểm mù NFR Deficit)**:
+  - Cung cấp bằng chứng đối trọng đập tan luận điểm "Prototype chỉ thấy UI mà bỏ quên NFR": Prototype phòng lab thì bỏ quên NFR, nhưng **In-situ Prototyping** lại chính là công cụ mạnh mẽ nhất để bóc tách NFRs trong Hệ thống đan xen vật lý - không gian mạng (Cyber-Physical Systems):
+    + *An toàn & Quản lý xao nhãng tài xế (Safety & Driver Attention Management)*: Ràng buộc công thái học nhận thức tuân thủ quy tắc an toàn 15 giây.
+    + *Hiệu năng & Độ trễ viễn thông (Telematics Performance & Latency)*: Khi xe đi qua hầm chui hoặc vùng mất sóng 3G/DAB, hệ thống bắt buộc phải có cơ chế tải trước và lưu đệm ngoại tuyến (*Prefetching & Offline Caching*).
+    + *Công thái học âm thanh (Acoustic Noise Constraints)*: Âm lượng giọng đọc phải tự động tăng giảm theo độ ồn động cơ và tốc độ di chuyển của xe.
+* **Hạn chế & Ghi chú nghiên cứu**: Chi phí lắp đặt testbed buồng lái xe Audi A6 thực tế rất đắt đỏ; thử nghiệm in-situ đòi hỏi phải bảo đảm an toàn trên đường thử khép kín trước khi thử nghiệm ngoài đời thực.
+
 ---
 
 ## 3. Thuyết Minh Ngắn Gọn Lý Do Bổ Sung 8 Papers Mới (Papers 19 - 26)
