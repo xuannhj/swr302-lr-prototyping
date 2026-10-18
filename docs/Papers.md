@@ -336,6 +336,30 @@
   - *Lỗi False Negative*: AI bị "mù" khi nút bấm chỉ là icon hình ảnh mà thiếu nhãn chữ mô tả.
 * **Hạn chế & Ghi chú nghiên cứu**: Bộ dữ liệu lấy từ ứng dụng di động Android (Rico); hiện tại tập trung vào Functional Requirements, chưa mở rộng sang Non-Functional Requirements (NFRs).
 
+### Nghiên cứu 22: Kolthoff, Schneider et al. (2024) - Tự Khơi Gợi Yêu Cầu với GUI Prototyping Tự Động (SERGUI - ACM/IEEE ASE 2024)
+* **Tác giả & Năm**: Kristian Kolthoff, Christian Bartelt, Simone Paolo Ponzetto, và Kurt Schneider (2024).
+* **Nguồn**: *Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering (ASE '24)*, Sacramento, CA, USA, ACM.
+* **DOI / Link**: [`https://doi.org/10.1145/3691620.3695350`](https://doi.org/10.1145/3691620.3695350).
+* **Mã nguồn & Video Demo**: [`https://github.com/SERGUI-Prototyper/SERGUI-Prototyping`](https://github.com/SERGUI-Prototyper/SERGUI-Prototyping) (Video: `https://youtu.be/pzAAB9Uht80`).
+* **Vấn đề bài báo giải quyết**: Khách hàng thường không biết mình thực sự muốn gì cho đến khi nhìn thấy sản phẩm trực quan. Phỏng vấn thu thập yêu cầu truyền thống đòi hỏi kỹ sư chuyên nghiệp và tốn nhiều phiên làm việc lặp lại. SERGUI đề xuất giải pháp cho phép khách hàng **Tự khơi gợi yêu cầu (Self-Elicitation of Requirements - SER)** thông qua trợ lý AI và kho màn hình mẫu tương tác.
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**:
+  - Xây dựng hệ thống đối thoại tương tác kết nối kho dữ liệu 48.402 màn hình di động (Rico) và mô hình ngôn ngữ lớn (GPT-4) qua 4 bước:
+    + *Bước 1 (NL-based GUI Ranking)*: Khách hàng gõ câu yêu cầu sơ khai $\rightarrow$ Hệ thống dùng Sentence-BERT & S2W lọc và xếp hạng Top-$k$ màn hình mẫu trực quan.
+    + *Bước 2 (Feature Exploration)*: Khách hàng chỉ định tính năng chi tiết, hệ thống lọc tiếp các màn hình con chứa tính năng đó.
+    + *Bước 3 (LLM Feature Recommendation)*: GPT-4 phân tích ngữ cảnh để dự đoán và chủ động đề xuất **Top-30 tính năng liên quan nhất** kèm giải thích ngắn gọn và hình ảnh minh họa tương ứng.
+    + *Bước 4 (GUI Reranking)*: Khi khách hàng chọn tính năng mới, hệ thống tự động tính toán lại và đẩy các màn hình phù hợp lên đầu.
+* **RQ6.2 (Bằng chứng đối đầu & Khai quật Missing Requirements)**:
+  - Đánh giá thực nghiệm qua **72 phiên tạo mẫu** với 12 chuyên gia kỹ thuật trên 3 lĩnh vực (Mua sắm, Tin tức, Mạng xã hội):
+    + **Độ chuẩn xác khi AI gợi ý tính năng bị bỏ quên**: Đạt điểm **$MAP = 0.741$** (xấp xỉ **3 trong 4 tính năng** AI gợi ý ra đều được người dùng xác nhận là yêu cầu bị bỏ sót mà họ muốn bổ sung).
+    + Điểm **$MRR = 0.816$**: Tính năng chuẩn xác nhất xuất hiện ngay ở vị trí đầu tiên (trung bình hạng 1.22).
+    + Điểm chính xác tại Top-k ($P@k$): Dao động từ $0.691$ ($P@1$) đến $0.638$ ($P@10$).
+    + **Cải thiện thứ hạng màn hình**: Trong $68.05\%$ trường hợp, người dùng chọn được màn hình khớp hơn, tăng trung bình **$+61.89$ bậc** xếp hạng.
+  - Khẳng định: Màn hình prototype trực quan đóng vai trò **"Chất xúc tác nhận thức" (Cognitive Stimulator)**, kích thích khách hàng tự phát hiện và lôi ra toàn bộ Tri thức ẩn (*Tacit Knowledge*) và Yêu cầu bị bỏ sót (*Missing Requirements*) ngay từ đầu!
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**:
+  - Khơi gợi và làm rõ xuất sắc các Yêu cầu Chức năng nghiệp vụ (FRs) và Tính năng trải nghiệm người dùng (UX Features).
+  - Hạn chế: Tập trung vào giao diện tương tác di động; các yêu cầu phi chức năng sâu (NFRs như bảo mật mạng, kiến trúc backend) vẫn cần sự phối hợp chuyên gia.
+* **Hạn chế & Ghi chú nghiên cứu**: Thử nghiệm sơ bộ trên 12 annotator; mở ra hướng nghiên cứu người dùng quy mô lớn trong tương lai.
+
 ---
 
 ## 3. Thuyết Minh Ngắn Gọn Lý Do Bổ Sung 8 Papers Mới (Papers 19 - 26)
