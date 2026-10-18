@@ -360,6 +360,26 @@
   - Hạn chế: Tập trung vào giao diện tương tác di động; các yêu cầu phi chức năng sâu (NFRs như bảo mật mạng, kiến trúc backend) vẫn cần sự phối hợp chuyên gia.
 * **Hạn chế & Ghi chú nghiên cứu**: Thử nghiệm sơ bộ trên 12 annotator; mở ra hướng nghiên cứu người dùng quy mô lớn trong tương lai.
 
+### Nghiên cứu 23: Wei et al. (2023) - Tăng Tốc GUI Prototyping Bằng Mô Hình Khuếch Tán (UI-Diffuser - IEEE RE 2023)
+* **Tác giả & Năm**: Jialiang Wei, Anne-Lise Courbis, Thomas Lambolais, Binbin Xu, Pierre Louis Bernard, and Gérard Dray (2023).
+* **Nguồn**: *Proceedings of the 2023 IEEE 31st International Requirements Engineering Conference (RE 2023)*, pp. 275–280.
+* **DOI / Link**: [`https://doi.org/10.1109/RE57278.2023.00035`](https://doi.org/10.1109/RE57278.2023.00035).
+* **Vấn đề bài báo giải quyết**: Tạo mẫu giao diện (GUI Prototyping) là kỹ thuật trọng yếu để khơi gợi và tinh chỉnh yêu cầu nhưng cực kỳ tốn kém thời gian và chi phí (vẽ tay mất trung bình 145 phút/màn hình, vẽ Figma mất hàng giờ). Các mô hình sinh ảnh thông thường (Midjourney, Stable Diffusion gốc) thất bại khi tạo GUI vì không hiểu cấu trúc phân cấp linh kiện di động.
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**:
+  - Đề xuất kiến trúc **UI-Diffuser** gồm 2 bước độc lập:
+    + *Bước 1 (Layout Generation - LayoutDM)*: Dựa trên danh sách linh kiện yêu cầu (buttons, text inputs, images), mô hình LayoutDM (học từ kho Rico) tự động sắp xếp vị trí và ranh giới (bounding boxes) thành bản vẽ khung xương (wireframe layout) chuẩn mực.
+    + *Bước 2 (Image Synthesis - Stable Diffusion + ControlNet)*: Dùng ControlNet "khóa" các vị trí linh kiện của khung xương lại, kết hợp CLIP Text Encoder để đưa câu prompt mô tả của người dùng vào, điều khiển UNet khử nhiễu và VAE Decoder sinh ra ảnh màn hình hoàn thiện kích thước 288x512.
+  - Huấn luyện tinh chỉnh (Fine-tuning) trên kho dữ liệu Rico (66k màn hình app Android) kết hợp chú thích ngôn ngữ tự nhiên XUI trên GPU Nvidia Tesla T4.
+* **RQ6.2 (Bằng chứng đối đầu & Triệt tiêu Chi phí Thời gian trong Agile)**:
+  - **Tốc độ sinh mẫu siêu tốc**: Tạo ra các phương án màn hình hoàn chỉnh **chỉ trong vòng vài giây** (*a matter of seconds*), xóa bỏ hoàn toàn rào cản thời gian tạo mẫu (Prototyping Overhead) trong các Sprint Agile.
+  - Thử nghiệm thành công trên 6 dạng ứng dụng di động điển hình: Trang Đăng nhập (Login), Ứng dụng Hướng dẫn (Tutorial), Thư viện ảnh (Gallery), Bản đồ định vị (Maps), Trình phát đa phương tiện (Mediaplayer), và Trang Hồ sơ cá nhân (Profile).
+  - Giúp Product Owner và khách hàng có ngay hình ảnh trực quan để phát hiện thiếu sót yêu cầu và chốt phương án thiết kế ngay trong buổi họp Backlog Grooming mà không phải chờ đợi designer vẽ thủ công.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ & Bẫy phản biện cần lưu ý)**:
+  - Làm rõ xuất sắc các Yêu cầu Giao diện (GUIs), Bố cục tương tác người dùng, và Phong cách trực quan (Visual Aesthetics).
+  - *Hạn chế định dạng ảnh phẳng (Flat Image Limitation)*: Đầu ra là ảnh pixel (PNG/JPEG) chứ không phải các layer vector tương tác được trên Figma. Để tái sử dụng, cần các bước cắt linh kiện (cropping) hoặc dịch ảnh sang mã code (image-to-code).
+  - *Vai trò thực tiễn*: Phù hợp nhất làm **Chất xúc tác khơi gợi ý tưởng trực quan siêu tốc (Rapid Visual Inspiration & Brainstorming)** trong giai đoạn đầu của RE.
+* **Hạn chế & Ghi chú nghiên cứu**: Đánh giá dựa trên định tính và bản demo kỹ thuật; cần mở rộng đánh giá định lượng bằng thang đo CLIPScore và thử nghiệm người dùng quy mô lớn.
+
 ---
 
 ## 3. Thuyết Minh Ngắn Gọn Lý Do Bổ Sung 8 Papers Mới (Papers 19 - 26)
