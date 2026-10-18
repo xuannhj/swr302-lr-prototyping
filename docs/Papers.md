@@ -310,6 +310,32 @@
   - *Kỹ năng bẻ lái (The Pivot Problem)*: Prototype đóng vai trò "cái mỏ neo" nhận thức (cognitive anchor) giúp sinh viên nhanh chóng kéo khách hàng quay lại đúng trọng tâm khi cuộc trò chuyện bị phân tâm hoặc lạc đề.
 * **Hạn chế & Ghi chú nghiên cứu**: Thiết kế bán thực nghiệm (Quasi-experiment) trên sinh viên một trường đại học ở Mỹ; mở ra nhu cầu cần kiểm chứng và nhân rộng trên sinh viên đại học ở các quốc gia khác (như sinh viên Capstone tại Việt Nam).
 
+### Nghiên cứu 21: Kolthoff et al. (2024) - LLM Liên Kết Tự Động User Stories và GUI Prototyping (IEEE RE 2024)
+* **Tác giả & Năm**: Kristian Kolthoff, Felix Kretzer, Christian Bartelt, Alexander Maedche, and Simone Paolo Ponzetto (2024).
+* **Nguồn**: *Proceedings of the 2024 IEEE 32nd International Requirements Engineering Conference (RE 2024)*.
+* **Mã nguồn & Dataset**: [`https://github.com/IUS-GUI-Prototyping/IUS-GUI`](https://github.com/IUS-GUI-Prototyping/IUS-GUI) (Zenodo: 10652222).
+* **Vấn đề bài báo giải quyết**: Trong phát triển phần mềm Agile, Product Owner (PO) liên tục tinh chỉnh User Stories trong khi Designer vẽ màn hình trên Figma. Sự lệch pha giữa câu chữ đặc tả và bản vẽ khiến nhóm không nhận biết được User Story nào đã vẽ và câu nào bị bỏ quên, dẫn đến khối lượng làm lại (rework) khổng lồ cuối Sprint.
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**:
+  - Đề xuất hệ thống **IUS-GUI Pipeline** ứng dụng Mô hình Ngôn ngữ Lớn (LLM - GPT-4) hỗ trợ bán tự động gồm 4 module:
+    + *Module A (GUI Abstraction)*: Trừu tượng hóa cây phân cấp linh kiện Figma thành văn bản có cấu trúc: `"Tên hiển thị" (Loại thành phần) (Tên component)`.
+    + *Module B (User Story Detection)*: Đưa User Story và mô tả GUI vào GPT-4 để phân loại nhị phân: User Story đã được hiện thực hóa (1) hay bị bỏ quên (0).
+    + *Module C (GUI Component Matching)*: Ánh xạ chính xác từng nút bấm/ô nhập liệu (Component ID) tương ứng với câu User Story.
+    + *Module D (Component Recommendation)*: Tự động sinh mã gợi ý (HTML/CSS hoặc Figma DSL) cho các User Story chưa được vẽ.
+  - Tích hợp trực tiếp dưới dạng plugin vào công cụ thiết kế chuyên nghiệp (Figma / Adobe XD).
+* **RQ6.2 (Bằng chứng đối đầu & Phát hiện User Story bị bỏ quên)**:
+  - Xây dựng tập dữ liệu chuẩn mực (Gold Standard) gồm 60 giao diện di động (từ Rico dataset qua 10 lĩnh vực: Shopping, Fitness, Travel, Finance...) và 210 cặp US-GUI được làm sạch và dán nhãn độc lập (Cohen's Kappa $\kappa = 0.548$).
+  - **Độ chính xác phát hiện User Story bị bỏ sót**:
+    + Zero-Shot (ZS) đạt **$Accuracy = 85.2\%$**, $F_1 = 85.7\%$ (Implemented) và $F_1 = 84.7\%$ (Not-Implemented).
+    + Few-Shot (FS5) đạt **$Accuracy = 84.8\%$**, $F_1 = 85.2\%$.
+    + CoT ($t=1$) đạt **$Accuracy = 82.9\%$**, $F_1 = 81.4\%$.
+  - **Khả năng gán đúng linh kiện GUI**: Đạt $Macro\text{-}F_1 = 76.5\%$ (FS5) và $Micro\text{-}F_1 = 68.1\%$ (ZS).
+  - Khẳng định: AI có khả năng tự động rà soát Backlog và bắt trúng hơn 85% các tính năng bị bỏ sót trên prototype, triệt tiêu hiểu lầm ngữ nghĩa giữa PO và Dev.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ & Bẫy phân tích lỗi)**:
+  - Làm rõ xuất sắc Yêu cầu Chức năng (FRs) và Giao diện người dùng (GUIs).
+  - *Lỗi False Positive của AI*: Khi nút bấm có tên tương tự (ví dụ: nút "SAN FRANCISCO, Store #6498"), AI dễ nhầm là đã làm xong tính năng "cung cấp địa chỉ cửa hàng", trong khi màn hình thiếu hẳn các ô nhập tên đường, số nhà.
+  - *Lỗi False Negative*: AI bị "mù" khi nút bấm chỉ là icon hình ảnh mà thiếu nhãn chữ mô tả.
+* **Hạn chế & Ghi chú nghiên cứu**: Bộ dữ liệu lấy từ ứng dụng di động Android (Rico); hiện tại tập trung vào Functional Requirements, chưa mở rộng sang Non-Functional Requirements (NFRs).
+
 ---
 
 ## 3. Thuyết Minh Ngắn Gọn Lý Do Bổ Sung 8 Papers Mới (Papers 19 - 26)
