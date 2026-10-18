@@ -288,6 +288,28 @@
     + *Công thái học âm thanh (Acoustic Noise Constraints)*: Âm lượng giọng đọc phải tự động tăng giảm theo độ ồn động cơ và tốc độ di chuyển của xe.
 * **Hạn chế & Ghi chú nghiên cứu**: Chi phí lắp đặt testbed buồng lái xe Audi A6 thực tế rất đắt đỏ; thử nghiệm in-situ đòi hỏi phải bảo đảm an toàn trên đường thử khép kín trước khi thử nghiệm ngoài đời thực.
 
+### Nghiên cứu 20: Lending et al. (2022) - Thang Đo Rubric Chuẩn Hóa Đánh Giá Năng Lực Khơi Gợi Yêu Cầu
+* **Tác giả & Năm**: Diane Lending, Jeremy D. Ezell, Thomas W. Dillon, and Jeffrey May (2022).
+* **Nguồn**: *Journal of Information Systems Education (JISE)*, Vol. 33, No. 4, Fall 2022, pp. 371–387.
+* **Link**: [`https://jise.org/Volume33/n4/JISE2022v33n4pp371-387.html`](https://jise.org/Volume33/n4/JISE2022v33n4pp371-387.html).
+* **Vấn đề bài báo giải quyết**: Trong giáo dục công nghệ phần mềm và nghiên cứu thực nghiệm RE, chưa từng tồn tại một công cụ hay thước đo (rubric) chuẩn hóa nào để đánh giá năng lực khơi gợi yêu cầu của sinh viên. Giảng viên và nhà nghiên cứu trước đây chỉ chấm điểm cảm tính hoặc đếm số lượng câu sơ sài.
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**:
+  - Thiết kế bán thực nghiệm (Quasi-experimental design) kéo dài **3 năm** trên các nhóm sinh viên ngành Hệ thống Thông tin (CIS) tại trường James Madison University (Mỹ). 8 giảng viên độc lập được đào tạo chấm điểm qua video phỏng vấn thực tế.
+  - Xây dựng Thang đo Rubric 5 mức (1 = Beginner, 2 = Developing, 3 = Competent, 4 = Excellent, 5 = Outstanding experienced professional) trên **8 kỹ năng phỏng vấn cốt lõi**: Chào hỏi định hướng, Phân tích hiện trạng As-Is, Thiết kế tương lai To-Be, **Trực quan hóa (Visualization/Mockup)**, Đóng phỏng vấn Recap, Xây dựng quan hệ, Lắng nghe chủ động, và Phối hợp nhóm.
+  - Phân định rõ 2 chức năng của Rubric: Đánh giá quá trình học tập (*Formative Assessment* - sinh viên dùng rubric để tự định hướng và rèn luyện) và Đánh giá tổng kết (*Summative Assessment* - giảng viên chấm điểm chuẩn mực).
+* **RQ6.2 (Bằng chứng đối đầu & Đột phá kỹ năng Trực quan hóa - Visualization)**:
+  - Điểm tổng thể trước can thiệp (Year-0 Baseline) chỉ đạt **1.68 / 5.0** (mức Developing yếu kém). Sau can thiệp có rubric, điểm số nhảy vọt lên **3.07 / 5.0** (Year-1, tăng $+1.39$) và **3.10 / 5.0** (Year-2).
+  - **ĐẶC BIỆT Ở TIÊU CHÍ TRỰC QUAN HÓA / PROTOTYPING (VISUALIZATION)**:
+    + Năm cơ sở (Year-0): Điểm trung bình chỉ vỏn vẹn **1.06** (SD = 0.24) — gần như 100% sinh viên chỉ ngồi phỏng vấn chay bằng lời, không hề biết dùng hình vẽ hay wireframe để đối chất với khách hàng!
+    + Sau khi được hướng dẫn dùng Rubric & Prototype: Điểm số trực quan hóa tăng vọt lên **3.16** (Year-1, **tăng tới +2.10 điểm**) và đạt **3.31** (Year-2)!
+    + Bằng chứng khẳng định: Phỏng vấn chay bằng lời luôn dẫn đến thất bại, nhưng khi được trang bị công cụ trực quan hóa (wireframe/mockup) đi kèm tiêu chí hướng dẫn rõ ràng, năng lực khơi gợi yêu cầu của sinh viên tăng gấp 3 lần.
+* **RQ6.3 (Đặc thù kỹ năng & Hóa giải hiện tượng Lạc đề - The Pivot Problem)**:
+  - *Phân cấp độ tương tác của Prototype*:
+    + Level 2 (Developing): Mang mockup đẹp đến chiếu như bài thuyết trình "trưng bày" (presentation aid) $\rightarrow$ thụ động, không bắt được yêu cầu mới.
+    + Level 4 (Excellent): Mang bản vẽ nháp đến cùng khách hàng chỉnh sửa trực tiếp (dynamic development) $\rightarrow$ lôi ra các giả định ngầm và missing requirements.
+  - *Kỹ năng bẻ lái (The Pivot Problem)*: Prototype đóng vai trò "cái mỏ neo" nhận thức (cognitive anchor) giúp sinh viên nhanh chóng kéo khách hàng quay lại đúng trọng tâm khi cuộc trò chuyện bị phân tâm hoặc lạc đề.
+* **Hạn chế & Ghi chú nghiên cứu**: Thiết kế bán thực nghiệm (Quasi-experiment) trên sinh viên một trường đại học ở Mỹ; mở ra nhu cầu cần kiểm chứng và nhân rộng trên sinh viên đại học ở các quốc gia khác (như sinh viên Capstone tại Việt Nam).
+
 ---
 
 ## 3. Thuyết Minh Ngắn Gọn Lý Do Bổ Sung 8 Papers Mới (Papers 19 - 26)
