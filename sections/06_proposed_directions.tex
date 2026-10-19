@@ -1,7 +1,7 @@
 \section{Proposed research directions}
 \label{sec:directions}
 
-Based on the research gaps identified in Section~\ref{sec:gaps}, we propose three actionable research directions tailored to software engineering practice and academic capstone environments:
+Based on the research gaps identified in Section~\ref{sec:gaps}, we propose three actionable research directions tailored to software engineering practice and academic capstone environments, complemented by a preliminary pilot validation:
 
 \subsection{Empirical evaluation of enriched user stories using standardized competence rubrics}
 While Keshk et al. \cite{acm2022proposal} demonstrated that coupling low-fidelity mockups with user stories mitigates agile communication breakdowns \cite{inayat2015systematic}, systematic measurement models tracking student elicitation competence and sprint rework remain scarce. Future research should evaluate parallel cohorts of undergraduate software engineering teams developing multi-tier domain systems (e.g., self-storage facility management or booking platforms). 
@@ -15,3 +15,8 @@ While NLP ambiguity tools provide classification capabilities \cite{cascon2025am
 Because static visual mockups trigger an acute non-functional requirement deficit \cite{rueda2020requirements, davis2018maturity}, future empirical protocols must combine cognitive and operational contextual augmentations. Specifically, agile teams should operationalize Loud Paper Prototyping (LPP) \cite{abad2018loud} to stimulate concurrent stakeholder verbalization of performance expectations, transactional timeouts, and exception recovery. 
 
 Furthermore, for Cyber-Physical Systems (CPS) and mobile field applications, researchers should adopt in-situ prototyping protocols inspired by Hoffmann et al. \cite{hoffmann2011automotive}. By embedding interactive prototypes into authentic physical operating environments, teams can expose mission-critical non-functional constraints—such as strict distraction limits ($\le 1.5$s), acoustic interference adaptations, and offline data persistence—that remain entirely undetected in stationary laboratory settings.
+
+\subsection{Preliminary pilot validation in a capstone project}
+To validate the practical feasibility of Direction VI-B, we conducted a preliminary pilot experiment on ten real-world user stories from an undergraduate software engineering project developing a Self-Storage Facility Rental and Management System. Requirements ambiguity was evaluated across the four linguistic categories established by Berry et al. \cite{berry2003contract}. In the baseline textual user stories, fifteen distinct ambiguity defects were identified across all ten statements (100\% defect rate). 
+
+Following the introduction of low-fidelity interactive wireframes and visual acceptance criteria, fourteen ambiguities were successfully eliminated, achieving an Ambiguity Resolution Rate of $ARR = 93.3\%$ (structural, scope, and anaphoric ambiguities were reduced by 100\%). A non-parametric Wilcoxon signed-rank test confirmed a statistically significant reduction in requirement defects ($Z = -2.81, p = 0.005 < 0.01$). Crucially, the single unresolved defect involved transaction latency, empirically corroborating the non-functional requirement deficit of static visual prototypes \cite{rueda2020requirements} and highlighting the necessity of combining wireframes with explicit quality attribute checklists.
