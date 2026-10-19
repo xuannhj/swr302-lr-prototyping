@@ -78,7 +78,7 @@ Chi tiết bảng trích xuất và thuyết minh lý do xem tại [`docs/Papers
 
 Theo chỉ dẫn phương pháp luận của Mentor, đề tài không dừng lại ở tổng thuật lý thuyết mà đã tiến hành **chạy thử nghiệm Pilot Test thực tế (Hướng 2: Semantic Ambiguity Checklist x Low-Fi Prototype)** trên tập mẫu 10 User Stories thực tế:
 
-* **Bài toán thực nghiệm**: Nền tảng Đặt phòng & Dịch vụ Khách sạn (*TravelStay Hospitality Platform*).
+* **Bài toán thực nghiệm**: Hệ thống Thuê & Quản lý Cơ sở Kho Tự Quản (*Self-Storage Facility Rental and Management System - Đồ án SWP391*).
 * **Khung phân loại lỗi**: Dựa trên Taxonomy của Cascon 2025 & Berry 2003 (Structural, Scope, Anaphoric, Vagueness).
 * **Kết quả đối chứng định lượng**:
   * Ban đầu: **15 lỗi mơ hồ** trên 10 câu văn bản thô ($100\%$ câu dính lỗi).

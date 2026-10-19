@@ -435,7 +435,7 @@
   - Tài liệu văn bản thô không thể tự giải quyết được hiện tượng này. Đặt màn hình Prototype trực quan kế bên đóng vai trò "khóa cứng ngữ cảnh" (contextual grounding), neo đại từ vào nút bấm cụ thể và ranh giới rõ ràng, triệt tiêu hiểu lầm vô thức.
 * **RQ6.3 (Đặc thù loại yêu cầu & Nền tảng Pilot Test)**:
   - Là **NỀN TẢNG LÝ THUYẾT TRỰC TIẾP** cho Bộ Checklist 4 loại mơ hồ trong Thực nghiệm Pilot Test của Nhi (Section VI-B).
-  - Giải thích cơ chế vì sao Wireframe triệt tiêu được 93.3% mơ hồ ngôn từ trên 10 User Stories của hệ thống *TravelStay Platform*.
+  - Giải thích cơ chế vì sao Wireframe triệt tiêu được 93.3% mơ hồ ngôn từ trên 10 User Stories của hệ thống *Self-Storage Facility Rental and Management System*.
 * **Hạn chế & Ghi chú nghiên cứu**: Cẩm nang tập trung vào phân tích quy tắc ngôn ngữ học; ngày nay được kết hợp với AI và Wireframe để tự động hóa phát hiện và triệt tiêu mơ hồ.
 
 ---
