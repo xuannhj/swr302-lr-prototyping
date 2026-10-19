@@ -380,6 +380,64 @@
   - *Vai trò thực tiễn*: Phù hợp nhất làm **Chất xúc tác khơi gợi ý tưởng trực quan siêu tốc (Rapid Visual Inspiration & Brainstorming)** trong giai đoạn đầu của RE.
 * **Hạn chế & Ghi chú nghiên cứu**: Đánh giá dựa trên định tính và bản demo kỹ thuật; cần mở rộng đánh giá định lượng bằng thang đo CLIPScore và thử nghiệm người dùng quy mô lớn.
 
+### Nghiên cứu 24: Lim, Stolterman & Tenenberg (2008) - The Anatomy of Prototypes (ACM TOCHI)
+* **Tác giả & Năm**: Youn-Kyung Lim, Erik Stolterman, and Josh Tenenberg (2008).
+* **Nguồn**: *ACM Transactions on Computer-Human Interaction (TOCHI)*, Vol. 15, No. 2, Article 7, pp. 1–27.
+* **DOI / Link**: [`https://doi.org/10.1145/1375761.1375762`](https://doi.org/10.1145/1375761.1375762).
+* **File PDF**: [`papers_pdf/24_lim2008_anatomy_of_prototypes_filters.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/24_lim2008_anatomy_of_prototypes_filters.pdf).
+* **Vấn đề bài báo giải quyết**: Suốt nhiều thập kỷ, ngành công nghệ và thiết kế chỉ coi prototype là công cụ kiểm thử thụ động ở cuối chu trình (Usability Testing), phân loại thô sơ thành Lo-Fi vs Hi-Fi. Thiếu vắng một khung bản thể luận (Ontology) để giải thích bản chất thực sự của prototype trong việc tư duy và khám phá không gian thiết kế.
+* **RQ6.1 & Khung lý thuyết đột phá (How & Mechanism)**:
+  - Đề xuất khung giải phẫu học **The Anatomy of Prototypes** dựa trên 2 trụ cột:
+    + *Prototypes as Filters (Bộ lọc)*: Prototype là một biểu diễn chưa hoàn thiện nhằm thám hiểm không gian thiết kế. Sức mạnh cốt lõi của prototype nằm ở sự **"CHƯA HOÀN THIỆN" (Incompleteness as Strength)**. Prototype hữu ích chính ở những gì nó **CỐ TÌNH BỎ QUA** cũng nhiều như những gì nó thể hiện. 5 chiều lọc (*Filtering Dimensions*): Ngoại quan (Appearance), Dữ liệu (Data), Chức năng (Functionality), Tương tác (Interactivity), và Cấu trúc không gian (Spatial structure).
+    + *Prototypes as Manifestations (Hiện thân)*: Hiện thân hóa ý tưởng trừu tượng thành đối tượng cụ thể thông qua 3 chiều: Vật liệu (Material), Độ phân giải (Resolution), và Phạm vi (Scope).
+  - *Nguyên lý kinh tế của tạo mẫu (Economic Principle of Prototyping)*: Bản mẫu tốt nhất là bản mẫu đơn giản nhất và hiệu quả nhất, làm cho các tiềm năng và giới hạn của ý tưởng thiết kế trở nên hiển hiện và đo lường được mà không làm méo mó nhận thức tổng thể.
+* **RQ6.2 (Bằng chứng đối đầu & Phát hiện Missing Requirements)**:
+  - Tài liệu đặc tả văn bản hình thức làm quá tải nhận thức do nhồi nhét mọi chi tiết cùng lúc.
+  - Prototype lọc bỏ các chi tiết thừa, cho phép nhà phân tích và người dùng cô lập từng chiều tương tác độc lập $\rightarrow$ phát hiện các luồng nghiệp vụ bị bỏ sót (*Missing Requirements*).
+  - Cung cấp cơ sở lý thuyết giải thích hiện tượng đóng băng tư duy (*Premature Idea Cementing* trong Bjarnason 2023): việc tăng độ trung thực quá sớm trên mọi chiều lọc vi phạm nguyên lý kinh tế của prototype.
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**: Làm rõ xuất sắc các yêu cầu Tương tác (Interactivity), Luồng chức năng (Functionality), và Bố cục không gian (Spatial structure).
+* **Hạn chế & Ghi chú nghiên cứu**: Bài báo mang tính bản thể luận và lý thuyết thiết kế (HCI Theory); đóng vai trò nền tảng triết học cho toàn bộ các nghiên cứu thực nghiệm trong SLR.
+
+### Nghiên cứu 25: Inayat et al. (2015) - SLR on Agile RE Practices & Challenges (Elsevier CHB)
+* **Tác giả & Năm**: Irum Inayat, Siti Salwah Salim, Sabrina Marczak, Maya Daneva, and Shahaboddin Shamshirband (2015).
+* **Nguồn**: *Computers in Human Behavior* (Elsevier), Vol. 51, Part B, pp. 915–929.
+* **DOI / Link**: [`https://doi.org/10.1016/j.chb.2014.10.046`](https://doi.org/10.1016/j.chb.2014.10.046).
+* **File PDF**: [`papers_pdf/25_inayat2015_slr_agile_requirements_engineering.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/25_inayat2015_slr_agile_requirements_engineering.pdf).
+* **Vấn đề bài báo giải quyết**: Sự chuyển dịch từ RE truyền thống (tài liệu cồng kềnh, khó kiểm chứng, rework cao) sang Agile RE (giao tiếp trực tiếp, User Stories ngắn). Tuy nhiên, Agile RE cũng bộc lộ những thách thức lớn: tài liệu quá tối giản (Minimal Documentation), bỏ quên yêu cầu phi chức năng (NFR Neglect), và gia tăng làm lại (Increase in Rework).
+* **RQ6.1 & Giao thức triển khai (How & Mechanism)**:
+  - Nghiên cứu tổng quan hệ thống (SLR) toàn diện trên các cơ sở dữ liệu lớn (IEEE, ScienceDirect, ACM, Springer), xác định 17 thực hành Agile RE và 8 thách thức lớn.
+  - Xếp **Prototyping (Thực hành số 8)** là công cụ trọng yếu để xem xét đặc tả yêu cầu với khách hàng và thu nhận phản hồi kịp thời trước mỗi Sprint.
+  - Prototyping cung cấp cho khách hàng một **"Bản thiết kế trực quan" (Visual Blueprint)** của sản phẩm, giúp chuyển dịch khâu thẩm định yêu cầu (Validation) lên sớm ngay từ đầu chu kỳ.
+* **RQ6.2 (Bằng chứng đối đầu & Giảm thiểu Rework)**:
+  - User Stories thô dễ bị diễn giải sai bởi khách hàng đại diện (Surrogate Customers), gây ra khối lượng làm lại khổng lồ.
+  - Prototyping kết hợp giao tiếp trực tiếp (Face-to-face communication) được chứng minh là giải pháp hàng đầu để bù đắp khiếm khuyết của User Stories và cắt giảm Rework.
+  - Định lý Tomayko (2002) được trích dẫn: *"With prototyping, there are no wrong requirements; the only requirements are those waiting to be discovered"* (Không có yêu cầu nào là sai; chỉ có những yêu cầu đang chờ đợi được phát hiện).
+* **RQ6.3 (Đặc thù loại yêu cầu làm rõ)**:
+  - Khắc phục điểm mù của User Stories (vốn chỉ chú trọng các tính năng nghiệp vụ bề mặt và bỏ quên NFRs như bảo mật, hiệu năng).
+  - Cảnh báo: Việc phát triển nhiều bản High-fidelity Prototypes trong Agile có thể tốn kém chi phí quá mức; cần ưu tiên Low-fi và Rapid Prototyping trong các Sprint đầu.
+* **Hạn chế & Ghi chú nghiên cứu**: Đánh giá dựa trên tổng hợp tài liệu; là cơ sở thực nghiệm cấp cao (SLR evidence) củng cố cho đề xuất Enriched User Stories (Section VI-A).
+
+### Nghiên cứu 26: Berry, Kamsties & Krieger (2003) - Linguistic Sources of Ambiguity (SE Reference Handbook)
+* **Tác giả & Năm**: Daniel M. Berry, Erik Kamsties, and Michael M. Krieger (2003).
+* **Nguồn**: *Technical Report / Reference Handbook, University of Waterloo & University of Essen*, 80 pages.
+* **Link**: [`https://cs.uwaterloo.ca/~dberry/handbook/ambiguityHandbook.pdf`](https://cs.uwaterloo.ca/~dberry/handbook/ambiguityHandbook.pdf).
+* **File PDF**: [`papers_pdf/26_berry2003_linguistic_sources_of_ambiguity.pdf`](file:///e:/SEMESTER%205/swr302-lr-prototyping/papers_pdf/26_berry2003_linguistic_sources_of_ambiguity.pdf).
+* **Vấn đề bài báo giải quyết**: Khảo sát thực nghiệm chứng minh **71.8% tài liệu yêu cầu được viết bằng ngôn ngữ tự nhiên thông thường (Common Natural Language)**. Ngôn ngữ tự nhiên vốn chứa đầy sự đa nghĩa, biến Sự mơ hồ (Ambiguity) thành nguyên nhân số 1 gây ra lỗi phần mềm và tranh chấp hợp đồng.
+* **RQ6.1 & Khung phân loại 4 loại mơ hồ (Ambiguity Taxonomy)**:
+  - Thiết lập mối quan hệ liên ngành giữa Soạn thảo hợp đồng pháp lý và Viết đặc tả phần mềm (SRS).
+  - Định nghĩa chuẩn mực 4 nhóm mơ hồ ngôn ngữ học:
+    + *Structural / Syntactic Ambiguity*: Mơ hồ cấu trúc do liên từ `and/or` hoặc vị trí mệnh đề phụ.
+    + *Scope / Semantic Ambiguity*: Mơ hồ phạm vi tác động của lượng từ (*all, each, every*) hoặc phủ định (*not*).
+    + *Anaphoric / Pragmatic Ambiguity*: Mơ hồ đại từ thay thế (*it, they, this*) không rõ đối tượng tham chiếu.
+    + *Vagueness / Generality*: Mơ hồ định tính, từ ngữ mập mờ thiếu ranh giới đo lường cụ thể (*fast, user-friendly, secure*).
+* **RQ6.2 (Hiện tượng "Giải mơ hồ vô thức" & Vai trò của Prototype)**:
+  - Phát hiện hiện tượng tâm lý ngôn ngữ học nguy hiểm nhất: **"Unconscious Disambiguation" (Giải mơ hồ vô thức)**: Người đọc tự động hiểu câu theo nghĩa đầu tiên xuất hiện trong đầu và tin chắc đó là nghĩa duy nhất, khiến PO và Dev hiểu theo hai hướng trái ngược nhau mà không hề hay biết!
+  - Tài liệu văn bản thô không thể tự giải quyết được hiện tượng này. Đặt màn hình Prototype trực quan kế bên đóng vai trò "khóa cứng ngữ cảnh" (contextual grounding), neo đại từ vào nút bấm cụ thể và ranh giới rõ ràng, triệt tiêu hiểu lầm vô thức.
+* **RQ6.3 (Đặc thù loại yêu cầu & Nền tảng Pilot Test)**:
+  - Là **NỀN TẢNG LÝ THUYẾT TRỰC TIẾP** cho Bộ Checklist 4 loại mơ hồ trong Thực nghiệm Pilot Test của Nhi (Section VI-B).
+  - Giải thích cơ chế vì sao Wireframe triệt tiêu được 93.3% mơ hồ ngôn từ trên 10 User Stories của hệ thống *TravelStay Platform*.
+* **Hạn chế & Ghi chú nghiên cứu**: Cẩm nang tập trung vào phân tích quy tắc ngôn ngữ học; ngày nay được kết hợp với AI và Wireframe để tự động hóa phát hiện và triệt tiêu mơ hồ.
+
 ---
 
 ## 3. Thuyết Minh Ngắn Gọn Lý Do Bổ Sung 8 Papers Mới (Papers 19 - 26)
