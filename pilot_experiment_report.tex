@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=1in]{geometry}
+\usepackage[top=0.85in,bottom=0.85in,left=0.85in,right=0.85in]{geometry}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -11,6 +11,9 @@
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{listings}
+
+\titlespacing*{\section}{0pt}{1.2ex plus 0.3ex minus .2ex}{0.6ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.0ex plus 0.2ex minus .2ex}{0.4ex plus .2ex}
 
 \hypersetup{
     colorlinks=true,
@@ -69,12 +72,11 @@ where $D_{\text{pre}}$ and $D_{\text{post}}$ denote the total number of ambiguit
 
 Direction 3 evaluates wireframe walkthroughs augmented with a think-aloud protocol. Because passive paper mockups struggle to capture performance and security expectations, participants verbalize their thought process during interactive tasks while facilitators prompt them regarding network interruptions, data confidentiality, and latency tolerances.
 
-\newpage
 \section{Pilot audit matrix on user stories}
 
 The pilot study analyzed ten user stories from the unrefined software requirements specification of the Self-Storage Facility Rental and Management System, an undergraduate capstone project. Table~\ref{tab:audit_matrix} documents each statement, the identified ambiguity defects, the wireframe alignment mechanism, and the resulting resolution status.
 
-\begin{table*}[htbp]
+\begin{table}[htbp]
 \centering
 \scriptsize
 \caption{Ambiguity Audit Matrix: Pre- vs. Post-Prototype Inspection}
@@ -91,7 +93,7 @@ The pilot study analyzed ten user stories from the unrefined software requiremen
 \addlinespace
 \textbf{US-04} & As a customer, I want to enter valid card details to pay deposit. & Vagueness: ``valid card details'' lacks field specifications and accepted card brands. & Form specifies Cardholder Name, 16-digit card number with auto-detection, MM/YY expiry, and CVV tooltip. & \textbf{Resolved} (1/1 defect eliminated) \\
 \addlinespace
-\textbf{US-05} & As a customer, I want to cancel booking in reasonable time and get its deposit back. & Vagueness: ``reasonable time''. Anaphoric: ``its deposit''. Scope: refund percentage is unspecified. & Modal displays tiered policy: $>48$h (100\% refund), $24$--$48$h (50\%), $<24$h (0\%). Calculated refund amount is displayed in VN\DJ. & \textbf{Resolved} (3/3 defects eliminated) \\
+\textbf{US-05} & As a customer, I want to cancel booking in reasonable time and get its deposit back. & Vagueness: ``reasonable time''. Anaphoric: ``its deposit''. Scope: refund percentage is unspecified. & Modal displays tiered policy: $>48$h (100\% refund), $24$--$48$h (50\%), $<24$h (0\%). Calculated refund amount is displayed in VND. & \textbf{Resolved} (3/3 defects eliminated) \\
 \addlinespace
 \textbf{US-06} & As a user, the interface must be user-friendly and load storage data efficiently. & Vagueness: ``user-friendly'' and ``efficiently'' are subjective adjectives lacking verifiable criteria. & Design system specifies touch targets $\ge 44 \times 44$px and contrast $\ge 4.5:1$. Static wireframe cannot enforce runtime latency SLA. & \textbf{Partial} (1 latency defect remains) \\
 \addlinespace
@@ -104,7 +106,7 @@ The pilot study analyzed ten user stories from the unrefined software requiremen
 \textbf{US-10} & As system, automatically send reminder before storage move-in date. & Vagueness: trigger window, delivery hour, and message contents are unspecified. & Automated trigger set to $T-24$h (09:00 AM) containing unit address, access pin code, and digital QR key. & \textbf{Resolved} (1/1 defect eliminated) \\
 \bottomrule
 \end{tabularx}
-\end{table*}
+\end{table}
 
 \section{Statistical analysis and Wilcoxon test}
 
