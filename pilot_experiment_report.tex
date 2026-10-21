@@ -32,8 +32,7 @@
 
 \author{\textbf{Nguyen Pham Xuan Nhi} (Student ID: SE201170) \\
 Department of Software Engineering, FPT University, Ho Chi Minh City, Vietnam \\
-Course: SWR302 (Software Requirements Engineering) --- Topic RP6 \\
-Mentor: Minh Khanh}
+Course: SWR302 (Software Requirements Engineering) --- Topic RP6}
 
 \date{October 2026}
 
@@ -54,7 +53,7 @@ This companion technical report presents the full empirical protocol, raw audit 
 
 \section{Executive Summary and Experimental Objectives}
 
-In empirical software engineering literature, Systematic Literature Reviews (SLRs) often propose theoretical frameworks that lack immediate student-level operationalization. In response to mentor feedback (FB-5), this study establishes an empirical bridge between theoretical findings and software engineering practice by executing a preliminary pilot experiment.
+In empirical software engineering literature, Systematic Literature Reviews (SLRs) frequently identify open research gaps that require rigorous, reproducible validation. To establish an empirical bridge between theoretical literature review findings and practical software engineering requirements elicitation, this study executes a preliminary pilot validation experiment.
 
 The objectives of this pilot validation are threefold:
 \begin{enumerate}[leftmargin=*]
@@ -107,7 +106,7 @@ The pilot study was executed on ten real-world user stories extracted from the i
 \addlinespace
 \textbf{US-02} & As a user, I want to receive notification when my booking is confirmed. & \textbf{Anaphoric}: Delivery channel unspecified. \textbf{Structural}: Passive voice ``is confirmed'' obscures whether approval is automated or manual. & Notification settings checkboxes: Email, SMS, App Push. Detail screen shows status badge: \textit{``Awaiting Facility Manager Approval''}. & \textbf{Eliminated 100\%} (2/2 defects resolved) \\
 \addlinespace
-\textbf{US-03} & As an admin, I want to export all paid and cancelled rental records. & \textbf{Structural/Scope}: Ambiguous ``AND'' (conjunction vs. distinct sets). ``All'' lacks date boundary. & Admin dashboard displays two distinct export buttons: \texttt{[Export Paid]} and \texttt{[Export Cancelled]} with date range filter. & \textbf{Eliminated 100\%} (2/2 defects resolved) \\
+\textbf{US-03} & As an admin, I want to export all paid and cancelled rental records. & \textbf{Structural}: Ambiguous conjunction ``AND'' (intersection vs. union of record sets). & Admin dashboard displays two distinct export buttons: \texttt{[Export Paid]} and \texttt{[Export Cancelled]} with date range filter. & \textbf{Eliminated 100\%} (1/1 defect resolved) \\
 \addlinespace
 \textbf{US-04} & As a customer, I want to enter valid card details to pay deposit. & \textbf{Vagueness}: ``valid card details'' lacks field specification and card brand acceptance rules. & Form specifies: Cardholder name, 16-digit card number with auto-detection (Visa/Mastercard), MM/YY expiry, and CVV tooltip. & \textbf{Eliminated 100\%} (1/1 defect resolved) \\
 \addlinespace
