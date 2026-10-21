@@ -1,15 +1,18 @@
 \section{Review methodology}
 \label{sec:methodology}
 
-This Systematic Literature Review is conducted in strict adherence to evidence-based software engineering guidelines and informed by PRISMA reporting principles. The methodological protocol encompasses search strategy definition, study selection via explicit inclusion and exclusion criteria, quality appraisal, and structured data extraction.
+This review follows standard evidence-based software engineering guidelines by Kitchenham and PRISMA reporting principles. To ensure comprehensive coverage, the study combines systematic database queries with backward snowballing starting from core benchmark papers in the domain.
 
 \subsection{Search strategy and electronic databases}
-We queried four leading electronic bibliographic databases indexing premier software engineering literature: IEEE Xplore Digital Library, ACM Digital Library, ScienceDirect (Elsevier), and SpringerLink. To capture seminal and emerging literature that might be indexed outside these primary databases, supplementary backward and forward snowballing was conducted on key surveys and conference proceedings (e.g., IEEE RE, REFSQ, WER).
+Our search strategy connects two complementary sources: (1) foundational seed papers identified from seminal RE literature (such as the PAM model \cite{bjarnason2023empirically} and empirical benchmark experiments \cite{rueda2020requirements}), and (2) systematic searches across four primary electronic databases: IEEE Xplore, ACM Digital Library, ScienceDirect, and SpringerLink. Supplementary snowballing was applied to reference lists to ensure theoretical completeness.
 
-The search string was structured across three conceptual facets connected with Boolean operators: (1) \textit{Facet 1 (Intervention)}, covering terms such as \texttt{"prototyping"}, \texttt{"prototype"}, \texttt{"mock-up"}, \texttt{"wireframe"}, \texttt{"paper prototype"}, and \texttt{"interactive prototype"}; (2) \textit{Facet 2 (RE Phase)}, targeting \texttt{"requirements elicitation"}, \texttt{"requirements validation"}, \texttt{"requirements discovery"}, and \texttt{"requirements engineering"}; and (3) \textit{Facet 3 (Phenomenon / Defect)}, encompassing \texttt{"missing requirements"}, \texttt{"unclear requirements"}, \texttt{"ambiguity"}, \texttt{"completeness"}, \texttt{"tacit knowledge"}, and \texttt{"specification defect"}.
+The search string combined three core facets using Boolean operators:
+(1) \textit{Intervention}: \texttt{"prototyping"}, \texttt{"prototype"}, \texttt{"wireframe"}, \texttt{"mock-up"}, \texttt{"paper prototype"};
+(2) \textit{RE Phase}: \texttt{"requirements elicitation"}, \texttt{"requirements validation"}, \texttt{"requirements discovery"}; and
+(3) \textit{Target Defect}: \texttt{"missing requirements"}, \texttt{"unclear requirements"}, \texttt{"ambiguity"}, \texttt{"tacit knowledge"}.
 
 \subsection{Inclusion and exclusion criteria}
-To guarantee methodological rigor and eliminate non-empirical or out-of-scope publications, studies were evaluated against the criteria detailed in Table~\ref{tab:inclusion_exclusion}.
+Studies were evaluated against explicit criteria detailed in Table~\ref{tab:inclusion_exclusion} to include relevant empirical investigations and exclude out-of-scope work.
 
 \begin{table}[htbp]
 \centering
@@ -20,20 +23,20 @@ To guarantee methodological rigor and eliminate non-empirical or out-of-scope pu
 \textbf{Code} & \textbf{Criterion Description} \\
 \midrule
 \multicolumn{2}{l}{\textit{\textbf{Inclusion Criteria (IC)}}} \\
-\textbf{IC1} & Peer-reviewed journal articles, conference proceedings, or workshop papers published in recognized SE and RE venues. \\
-\textbf{IC2} & Empirical investigation (controlled experiments, quasi-experiments, multi-case studies, or mapping studies) examining prototyping in requirements elicitation or validation. \\
-\textbf{IC3} & Direct evaluation of requirement quality attributes, specifically regarding missing requirements discovery, ambiguity reduction, or requirement typology. \\
+\textbf{IC1} & Peer-reviewed journal articles, conference proceedings, or workshop papers in recognized SE and RE venues. \\
+\textbf{IC2} & Empirical investigations (experiments, case studies, or surveys) evaluating prototyping in requirements elicitation or validation. \\
+\textbf{IC3} & Direct measurement of requirement quality attributes, specifically missing requirements discovery, ambiguity reduction, or requirement types. \\
 \midrule
 \multicolumn{2}{l}{\textit{\textbf{Exclusion Criteria (EC)}}} \\
-\textbf{EC1} & Publications where prototyping refers solely to rapid software coding, architectural prototyping, or hardware emulation without requirements engineering stakeholder involvement. \\
-\textbf{EC2} & Short vision papers ($< 4$ pages), extended abstracts, keynotes, non-peer-reviewed industry white papers, or tertiary overviews. \\
-\textbf{EC3} & Studies lacking transparent empirical data collection, reproducible methodology, or clear defect reporting. \\
+\textbf{EC1} & Technical prototyping focused strictly on coding, architecture, or hardware without RE stakeholder involvement. \\
+\textbf{EC2} & Short papers ($< 4$ pages), extended abstracts, keynotes, or non-peer-reviewed industry white papers. \\
+\textbf{EC3} & Publications lacking empirical data collection or clear evaluation methodology. \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
-\subsection{Study selection protocol and selection funnel}
-The selection process was conducted through a multi-stage screening funnel adhering to PRISMA principles, complemented by backward snowballing to ensure theoretical comprehensiveness. Table~\ref{tab:selection_funnel} outlines the numerical progression across the screening phases.
+\subsection{Study selection protocol and final corpus}
+The selection process followed PRISMA screening stages, supplemented by backward snowballing from reference lists of core benchmark studies \cite{lim2008anatomy, berry2003contract, inayat2015systematic}. Table~\ref{tab:selection_funnel} outlines the numerical yield across screening phases.
 
 \begin{table}[htbp]
 \centering
@@ -44,7 +47,7 @@ The selection process was conducted through a multi-stage screening funnel adher
 \textbf{Stage} & \textbf{Screening Activity} & \textbf{Yield} \\
 \midrule
 \textbf{Stage 1} & Keyword search across 4 databases & 312 \\
-                 & \quad (IEEE Xplore: 98, ACM DL: 74, ScienceDirect: 68, SpringerLink: 72) & \\
+                 & \quad (IEEE: 98, ACM: 74, ScienceDirect: 68, Springer: 72) & \\
 \textbf{Stage 2} & Automated deduplication & 224 \\
 \textbf{Stage 3} & Title and abstract screening against IC/EC & 58 \\
 \textbf{Stage 4} & Full-text detailed quality appraisal & 34 \\
@@ -53,11 +56,9 @@ The selection process was conducted through a multi-stage screening funnel adher
 \end{tabularx}
 \end{table}
 
-Following Wohlin's snowballing guidelines, we supplemented database queries with recursive backward snowballing on reference lists of seminal reviews and high-impact empirical benchmarks. This identified foundational works on prototype conceptual definitions \cite{lim2008anatomy}, natural language ambiguity taxonomies \cite{berry2003contract}, agile requirements communication \cite{inayat2015systematic}, cyber-physical in-situ validation \cite{hoffmann2011automotive}, and elicitation skill evaluation \cite{lending2022rubric}.
+The resulting corpus of 26 studies is organized into two complementary tiers:
+(1) \textit{15 Core Primary Empirical Studies}, delivering quantitative and qualitative evidence addressing RQ6.1, RQ6.2, and RQ6.3 across controlled experiments, case studies, and automated tools \cite{bjarnason2023empirically, rueda2020requirements, uv2023empirical, rej2022evolve, antonelli2022iterative, bano2023videos, gupta2022strategic, acm2022proposal, diaz2021gender, cascon2025ambiguity, hoffmann2011automotive, lending2022rubric, kolthoff2024interlinking, kolthoff2024selfelicitation, wei2023boosting}; and
+(2) \textit{11 Foundational Studies}, providing theoretical baselines for IREB principles, participative evaluation, ambiguity classifications, and agile requirements practices \cite{pohl2016requirements, hickey1998prototyping, abad2018loud, jserd2019protopersona, davis2018maturity, ferrari2016ambiguity, spoletini2018interview, brill2010videos, lim2008anatomy, inayat2015systematic, berry2003contract}.
 
-The resulting corpus of 26 studies is partitioned into two mutually reinforcing tiers: (1) \textit{15 Core Primary Empirical Studies}, delivering direct quantitative and qualitative measurements addressing RQ6.1, RQ6.2, and RQ6.3 across controlled experiments, quasi-experiments, and industrial case studies \cite{bjarnason2023empirically, rueda2020requirements, uv2023empirical, rej2022evolve, antonelli2022iterative, bano2023videos, gupta2022strategic, acm2022proposal, diaz2021gender, cascon2025ambiguity, hoffmann2011automotive, lending2022rubric, kolthoff2024interlinking, kolthoff2024selfelicitation, wei2023boosting}; and (2) \textit{11 Foundational, Theoretical, and Seminal Studies}, providing baselines for IREB standards, participative prototyping, elicitation maturity, interview ambiguity, prototype definitions, and video-based media \cite{pohl2016requirements, hickey1998prototyping, abad2018loud, jserd2019protopersona, davis2018maturity, ferrari2016ambiguity, spoletini2018interview, brill2010videos, lim2008anatomy, inayat2015systematic, berry2003contract}.
-
-\subsection{Quality appraisal and data extraction protocol}
-Each eligible full-text article was assessed across four Quality Appraisal (QA) benchmarks: (QA1) Explicit formulation of research objectives; (QA2) Rigor and transparency of experimental/case design; (QA3) Objective measurement of requirement defect discovery or clarity; and (QA4) Validity threat discussion.
-
-Data extraction was conducted using a standardized form covering: (1) bibliographic information; (2) PAM model dimensions (purpose, scope, media, exploration strategy, use) \cite{bjarnason2023empirically}; (3) empirical findings on missing and unclear requirements (e.g., $p$-values, effect sizes, defect counts); (4) requirement types (functional, non-functional, usability); and (5) comparative insights across elicitation protocols and fidelity levels.
+\subsection{Quality appraisal and data extraction}
+Each candidate study was assessed across four quality benchmarks: clear research objectives, rigor of empirical design, objective defect measurement, and discussion of validity threats. Data was systematically extracted into a standardized matrix capturing PAM dimensions (purpose, scope, media, exploration strategy, use) \cite{bjarnason2023empirically}, empirical findings ($p$-values, effect sizes, defect counts), and requirement categories.
