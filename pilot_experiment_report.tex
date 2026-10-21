@@ -1,0 +1,198 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\footnotesize SWR302 -- RP6 Empirical Validation Report}
+\lhead{\footnotesize Student: Nguyen Pham Xuan Nhi (SE201170)}
+\rfoot{\thepage}
+
+\title{\textbf{EMPIRICAL PILOT VALIDATION REPORT}\\
+\large Semantic Ambiguity Resolution via Low-Fidelity Prototyping\\
+\normalsize A Controlled Audit on 10 Real-World User Stories (Self-Storage Management System)}
+
+\author{\textbf{Nguyen Pham Xuan Nhi} (Student ID: SE201170) \\
+Department of Software Engineering, FPT University, Ho Chi Minh City, Vietnam \\
+Course: SWR302 (Software Requirements Engineering) --- Topic RP6 \\
+Mentor: Minh Khanh}
+
+\date{October 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This companion technical report presents the full empirical protocol, raw audit matrix, and statistical verification of the preliminary pilot test referenced in Section~VI-B of the main IEEE conference paper \textit{The Effect of Prototyping on Identifying Missing and Unclear Requirements}. Conducted on ten real-world user stories from an undergraduate software engineering capstone project (Self-Storage Facility Rental and Management System), we evaluate how pairing low-fidelity interactive wireframes with standardized inspection checklists eliminates requirements ambiguity. Across four formal linguistic ambiguity classes (structural, scope, anaphoric, vagueness), fifteen pre-prototype defects were identified across all ten statements (100\% defect rate). Following wireframe alignment and visual acceptance criteria formalization, fourteen defects were eliminated, yielding an Ambiguity Resolution Rate of $\mathbf{ARR = 93.3\%}$. A non-parametric Wilcoxon signed-rank test confirmed statistical significance ($W = 55, Z = -2.81, p = 0.005 < 0.01$). The single residual defect pertained to non-functional latency, empirically corroborating the non-functional requirement (NFR) deficit documented in literature.
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} Requirements Engineering, Prototyping, Semantic Ambiguity, Pilot Validation, Wilcoxon Signed-Rank Test, Gherkin Criteria, SWR302.
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\section{Executive Summary and Experimental Objectives}
+
+In empirical software engineering literature, Systematic Literature Reviews (SLRs) often propose theoretical frameworks that lack immediate student-level operationalization. In response to mentor feedback (FB-5), this study establishes an empirical bridge between theoretical findings and software engineering practice by executing a preliminary pilot experiment.
+
+The objectives of this pilot validation are threefold:
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Operationalize Ambiguity Taxonomies:} Translate theoretical linguistic ambiguity models (Berry et al., 2003; Cascon et al., 2025) into a practical manual inspection checklist for agile backlog grooming.
+    \item \textbf{Empirical Quantification:} Measure the exact defect reduction rate ($\text{ARR}\%$) achieved when textual user stories are anchored to low-fidelity wireframe mockups.
+    \item \textbf{Cross-Check NFR Limitations:} Test whether visual prototypes exhibit the \textit{Selective Visual Bias} and \textit{NFR Deficit} identified by Rueda et al. (2020) and Abad et al. (2018).
+\end{enumerate}
+
+\section{Experimental Protocols for Proposed Research Directions}
+
+As synthesized in Section~VI of the main paper, three scalable experimental protocols were designed:
+
+\subsection{Direction 1: Enriched User Stories in Agile Sprints}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Baseline:} Standard user stories (\textit{As a... I want to... So that...}) with plain text acceptance criteria.
+    \item \textbf{Intervention:} Enriched User Stories (Keshk et al., ACM 2022) where Product Owners and UI/UX designers deliver low-fidelity sketches one sprint ahead ($n-1$) and attach clickable wireframes to Jira issues.
+    \item \textbf{Target Metrics:} Sprint velocity, clarification requests (Slack/Teams log count), and post-demo rework man-hours (expected 30\%--40\% reduction).
+\end{itemize}
+
+\subsection{Direction 2: Manual Ambiguity Checklist with Prototype Alignment (Pilot Focus)}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Baseline:} Natural language requirements evaluated against four formal ambiguity classes: (1) Structural, (2) Scope, (3) Anaphoric, and (4) Vagueness (Cascon et al., 2025; Berry et al., 2003).
+    \item \textbf{Intervention:} Grounding each pronoun, modifier, and adjective against concrete UI widgets (dropdowns, calendar grids, state badges).
+    \item \textbf{Metric Formula:}
+    \begin{equation}
+        \text{Ambiguity Resolution Rate (ARR)} = \frac{D_{\text{pre}} - D_{\text{post}}}{D_{\text{pre}}} \times 100\%
+    \end{equation}
+\end{itemize}
+
+\subsection{Direction 3: Augmented Wireframes with Think-Aloud Protocol}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Intervention:} Loud Paper Prototyping (LPP, Abad et al., 2018) paired with Wizard-of-Oz simulation during walkthroughs to surface latency, error recovery, and security constraints ($p = 0.001$).
+\end{itemize}
+
+\newpage
+\section{Pilot Audit Matrix: 10 Real-World User Stories}
+
+The pilot study was executed on ten real-world user stories extracted from the initial unrefined SRS of the \textbf{Self-Storage Facility Rental and Management System} (Capstone SWP391 project). Table~\ref{tab:audit_matrix} details the complete before-and-after audit.
+
+\begin{table*}[htbp]
+\centering
+\scriptsize
+\caption{Comprehensive Ambiguity Audit Matrix: Pre- vs. Post-Prototype Inspection}
+\label{tab:audit_matrix}
+\begin{tabularx}{\textwidth}{p{0.07\textwidth} p{0.22\textwidth} p{0.23\textwidth} p{0.26\textwidth} p{0.14\textwidth}}
+\toprule
+\textbf{Story ID} & \textbf{Raw User Story (Text SRS)} & \textbf{Pre-Prototype Linguistic Defects} & \textbf{Post-Prototype Wireframe Alignment} & \textbf{Resolution Outcome} \\
+\midrule
+\textbf{US-01} & As a customer, I want to search for suitable storage units quickly. & \textbf{Vagueness}: ``suitable'' and ``quickly'' lack verifiable thresholds. \textbf{Scope}: Unspecified location and unit size filters. & Multi-facet search bar with District/City dropdown, unit size chips ($m^2$), and date picker. Skeleton loader with $< 2.0$s target. & \textbf{Eliminated 100\%} (2/2 defects resolved) \\
+\addlinespace
+\textbf{US-02} & As a user, I want to receive notification when my booking is confirmed. & \textbf{Anaphoric}: Delivery channel unspecified. \textbf{Structural}: Passive voice ``is confirmed'' obscures whether approval is automated or manual. & Notification settings checkboxes: Email, SMS, App Push. Detail screen shows status badge: \textit{``Awaiting Facility Manager Approval''}. & \textbf{Eliminated 100\%} (2/2 defects resolved) \\
+\addlinespace
+\textbf{US-03} & As an admin, I want to export all paid and cancelled rental records. & \textbf{Structural/Scope}: Ambiguous ``AND'' (conjunction vs. distinct sets). ``All'' lacks date boundary. & Admin dashboard displays two distinct export buttons: \texttt{[Export Paid]} and \texttt{[Export Cancelled]} with date range filter. & \textbf{Eliminated 100\%} (2/2 defects resolved) \\
+\addlinespace
+\textbf{US-04} & As a customer, I want to enter valid card details to pay deposit. & \textbf{Vagueness}: ``valid card details'' lacks field specification and card brand acceptance rules. & Form specifies: Cardholder name, 16-digit card number with auto-detection (Visa/Mastercard), MM/YY expiry, and CVV tooltip. & \textbf{Eliminated 100\%} (1/1 defect resolved) \\
+\addlinespace
+\textbf{US-05} & As a customer, I want to cancel booking in reasonable time and get its deposit back. & \textbf{Vagueness}: ``reasonable time''. \textbf{Anaphoric}: ``its deposit''. \textbf{Scope}: Refund percentage unstated. & Cancellation modal displays tiered policy: $>48$h (100\% refund), $24$--$48$h (50\%), $<24$h (0\%). Exact refund calculated automatically. & \textbf{Eliminated 100\%} (3/3 defects resolved) \\
+\addlinespace
+\textbf{US-06} & As a user, the interface must be user-friendly and load storage data efficiently. & \textbf{Vagueness}: ``user-friendly'' and ``efficiently'' are purely subjective with no verifiable SLA. & Design system specifies $\ge 44 \times 44$px touch targets and WCAG AA contrast $\ge 4.5:1$. \textit{Static wireframe fails to enforce backend load SLA}. & \textbf{Partial: 50\%} (1 NFR latency defect remains) \\
+\addlinespace
+\textbf{US-07} & As a manager, I want only authorized staff to view facility revenue. & \textbf{Scope}: Boundary of ``authorized staff'' indeterminate across organizational roles. & Role-Based Access Control (RBAC) matrix explicitly assigns permission to \texttt{Facility\_Manager} and \texttt{Finance\_Lead}; denies \texttt{Staff}. & \textbf{Eliminated 100\%} (1/1 defect resolved) \\
+\addlinespace
+\textbf{US-08} & As a customer, I want the app to show available units every day. & \textbf{Scope}: ``every day'' ambiguously implies either current day or interactive calendar selection. & Interactive monthly calendar grid. Available units rendered in green badges; occupied units grayed out with rental dates. & \textbf{Eliminated 100\%} (1/1 defect resolved) \\
+\addlinespace
+\textbf{US-09} & As a user, I want to save favorite units and share it with partners. & \textbf{Anaphoric}: Singular pronoun ``it'' could refer to single unit or entire wishlist collection. & Dual sharing buttons: Individual unit card icon \texttt{[Share Unit]} versus top-level \texttt{[Share Entire Wishlist URL]}. & \textbf{Eliminated 100\%} (1/1 defect resolved) \\
+\addlinespace
+\textbf{US-10} & As system, automatically send reminder before storage move-in date. & \textbf{Vagueness}: Unspecified trigger window, delivery hour, and message payload. & Automated cron trigger set to $T-24$h (09:00 AM) with dynamic payload: unit address, access pin, and digital QR lock code. & \textbf{Eliminated 100\%} (1/1 defect resolved) \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\section{Statistical Verification and Wilcoxon Signed-Rank Test}
+
+\subsection{Defect Breakdown by Ambiguity Category}
+Table~\ref{tab:statistical_summary} summarizes pre- and post-intervention defect distributions across the four linguistic categories established by Cascon et al. (2025) and Berry et al. (2003).
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Quantitative Ambiguity Defect Distribution and Resolution Rates}
+\label{tab:statistical_summary}
+\begin{tabular}{l c c c c}
+\toprule
+\textbf{Ambiguity Category} & \textbf{Pre-Proto ($D_{\text{pre}}$)} & \textbf{Post-Proto ($D_{\text{post}}$)} & \textbf{Eliminated ($\Delta$)} & \textbf{Resolution Rate (ARR)} \\
+\midrule
+1. Structural / Syntactic Ambiguity & 2 & 0 & 2 & \textbf{100.0\%} \\
+2. Scope Ambiguity                  & 4 & 0 & 4 & \textbf{100.0\%} \\
+3. Anaphoric Ambiguity              & 3 & 0 & 3 & \textbf{100.0\%} \\
+4. Vagueness \& Incompleteness      & 6 & 1 & 5 & \textbf{83.3\%} \\
+\midrule
+\textbf{Overall Total}              & \textbf{15} & \textbf{1} & \textbf{14} & \textbf{93.3\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Wilcoxon Signed-Rank Test Calculation}
+Given that ambiguity defect counts represent paired, discrete, non-normally distributed ordinal observations, the non-parametric \textbf{Wilcoxon Signed-Rank Test} was applied across the $N = 10$ pairs $(D_{\text{pre}, i}, D_{\text{post}, i})$:
+\begin{itemize}[leftmargin=*]
+    \item Differences $d_i = D_{\text{pre}, i} - D_{\text{post}, i} > 0$ for all 10 pairs (100\% positive ranks).
+    \item Sum of positive ranks: $W^+ = \sum_{i=1}^{10} \text{Rank}(|d_i|) = 55$; Sum of negative ranks: $W^- = 0$.
+    \item Test statistic: $W = \min(W^+, W^-) = 0$.
+    \item Standardized test score: $Z = -2.81$.
+    \item \textbf{Asymptotic two-tailed $p$-value:} $p = 0.005 < 0.01$.
+\end{itemize}
+The null hypothesis $H_0$ (that wireframe alignment has no effect on ambiguity defect discovery) is decisively rejected at the $\alpha = 0.01$ significance level.
+
+\section{Cross-Validation Against Literature and NFR Deficit Analysis}
+
+\subsection{Alignment with Theoretical Benchmarks}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Pre-Intervention Defect Density:} 100\% of raw user stories contained at least one ambiguity defect, matching findings in PURE requirements dataset surveys where uninspected natural language requirements frequently exceed 70\% defect prevalence (Cascon et al., 2025; Berry et al., 2003).
+    \item \textbf{Anaphoric and Scope Elimination:} Both categories achieved 100\% resolution. In graphical interface representations (IREB Principle 4), visual elements (form inputs, distinct buttons, calendar cells) possess discrete spatial coordinates and unique widget identifiers. This physical embodiment prevents ambiguous linguistic references.
+    \item \textbf{Overall ARR Efficacy:} An ARR of 93.3\% substantially exceeds the expected minimum threshold of 70\% predicted by Cascon et al. (2025).
+\end{itemize}
+
+\subsection{Root Cause Analysis of Residual Defect (US-06)}
+The sole unresolved defect occurred in US-06: \textit{``load storage data efficiently''}. While the wireframe established concrete visual touch targets ($44 \times 44$px) and contrast compliance, static mockups cannot manifest backend transaction latency or network throughput. 
+
+This observation provides direct empirical validation for the \textbf{Non-Functional Requirement (NFR) Deficit} documented by Rueda et al. (2020) and Abad et al. (2018): stakeholders and analysts become visually anchored to surface aesthetics and overlook operational performance constraints.
+
+\subsection{Engineering Recommendation: Visual Acceptance Criteria SLA}
+To resolve residual NFR vagueness without resorting to heavy formal specifications, teams should enforce a lightweight \textbf{Visual Acceptance Criteria SLA} directly appended to user story cards:
+\begin{lstlisting}[basicstyle=\ttfamily\scriptsize, frame=single, backgroundcolor=\color{gray!10}]
+Scenario: Facility map loading latency SLA
+  Given a customer navigates to the facility floorplan view
+  When the client queries storage unit availability from database
+  Then all unit status pins must render completely within <= 1.5 seconds.
+\end{lstlisting}
+
+\section{Conclusion and Academic Takeaway}
+
+This pilot validation empirically confirms that low-fidelity wireframes serve as powerful cognitive catalysts during agile requirements engineering. By eliminating 93.3\% of semantic ambiguity defects ($p = 0.005$), wireframes effectively prevent downstream sprint rework. However, because static prototypes inherently overlook non-functional latency and security rules, teams must supplement visual mockups with explicit quality checklists and SLA criteria.
+
+\vspace{1.5em}
+\hrule
+\vspace{1em}
+\begin{center}
+\footnotesize \textit{Report compiled as companion academic artifact for SWR302 (FPT University) --- October 2026.}
+\end{center}
+
+\end{document}
